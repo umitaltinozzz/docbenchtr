@@ -32,22 +32,30 @@ def main() -> int:
         for document in DOCUMENTS
     }
     reachable, ollama_reason = ollama_status()
-    pageindex = PageIndexRetriever(
+    pageindex_default = PageIndexRetriever(
         pdf_paths,
         str(ROOT_PAGEINDEX_DIR()),
         unavailable_reason=None if reachable else ollama_reason,
+        instruction_variant="default",
+    )
+    pageindex_read_pages = PageIndexRetriever(
+        pdf_paths,
+        str(ROOT_PAGEINDEX_DIR()),
+        unavailable_reason=None if reachable else ollama_reason,
+        instruction_variant="read_pages",
     )
     pageindex_tree_search = PageIndexLLMTreeSearchRetriever(
-        pageindex,
+        pageindex_default,
         str(ROOT_PAGEINDEX_DIR()),
     )
 
     try:
         rows, retrievers = run_evaluation(
-            pages, questions, [pageindex, pageindex_tree_search]
+            pages, questions, [pageindex_default, pageindex_read_pages, pageindex_tree_search]
         )
     finally:
-        pageindex.close()
+        pageindex_default.close()
+        pageindex_read_pages.close()
     statuses = [{"method": retriever.name, "reason": ""} for retriever in retrievers]
     summary = summarize(
         rows,
@@ -57,7 +65,9 @@ def main() -> int:
         "cuda" if torch.cuda.is_available() else "cpu",
         len(dropped),
         {
-            **pageindex.results_metadata(),
+            **pageindex_default.results_metadata(),
+            "agentic_default_instructions": pageindex_default.results_metadata(),
+            "agentic_read_pages_instruction": pageindex_read_pages.results_metadata(),
             "llm_tree_search": pageindex_tree_search.results_metadata(),
         },
     )

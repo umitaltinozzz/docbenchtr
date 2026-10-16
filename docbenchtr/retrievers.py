@@ -141,13 +141,13 @@ def ollama_status(model: str = OLLAMA_MODEL, timeout: float = 2.0) -> tuple[bool
         return False, f"{cli_state}Ollama API {OLLAMA_BASE_URL}/api/tags is unreachable: {type(error).__name__}: {error}"
 
 
-def _new_pageindex_client(storage_path: str):
+def _new_pageindex_client(storage_path: str, instruction_variant: str = "read_pages"):
     from pageindex import PageIndexClient
 
     ollama_model = OLLAMA_MODEL
     index_backend = {"api_base": OLLAMA_BASE_URL}
     chat_backend = {"api_base": OLLAMA_BASE_URL}
-    return PageIndexClient(
+    config = dict(
         index={
             "model": f"ollama_chat/{ollama_model}",
             "backend": index_backend,
@@ -159,8 +159,12 @@ def _new_pageindex_client(storage_path: str):
             "model": f"ollama_chat/{ollama_model}",
             "backend": chat_backend,
         },
-        instructions=PAGEINDEX_AGENTIC_RETRIEVAL_INSTRUCTIONS,
     )
+    if instruction_variant == "read_pages":
+        config["instructions"] = PAGEINDEX_AGENTIC_RETRIEVAL_INSTRUCTIONS
+    elif instruction_variant != "default":
+        raise ValueError(f"Unknown PageIndex instruction variant: {instruction_variant!r}")
+    return PageIndexClient(**config)
 
 
 def pageindex_local_preflight(storage_path: str) -> str:
@@ -178,8 +182,15 @@ class PageIndexRetriever(Retriever):
         storage_path: str,
         *,
         unavailable_reason: str | None = None,
+        instruction_variant: str = "read_pages",
     ):
-        self.name = "PageIndex agentic"
+        if instruction_variant not in ("default", "read_pages"):
+            raise ValueError(f"Unknown PageIndex instruction variant: {instruction_variant!r}")
+        self.instruction_variant = instruction_variant
+        self.name = (
+            "PageIndex agentic (default instructions)" if instruction_variant == "default"
+            else "PageIndex agentic (read-pages instruction)"
+        )
         self.client = None
         self.doc_ids: dict[str, str] = {}
         self.document_runs: dict[str, dict[str, Any]] = {}
@@ -208,7 +219,7 @@ class PageIndexRetriever(Retriever):
         resolved_storage = Path(storage_path).resolve()
         resolved_storage.parent.mkdir(parents=True, exist_ok=True)
         try:
-            self.worker = PageIndexWorker(str(resolved_storage))
+            self.worker = PageIndexWorker(str(resolved_storage), instruction_variant)
         except Exception as error:
             reason = f"PageIndex worker setup failed: {type(error).__name__}: {error}"
             self.runtime_reason = reason
@@ -335,7 +346,7 @@ class PageIndexRetriever(Retriever):
         details = result["details"]
         details["idle_retries"] = idle_retries
         if not details.get("ranked_pages"):
-            details["status"] = "failed"
+            details["status"] = "zero_ranking"
             if details.get("page_content_call_count", 0) == 0:
                 details["error"] = (
                     "The agent completed without reading page content; no page ranking was produced."
@@ -404,7 +415,7 @@ class PageIndexLLMTreeSearchRetriever(Retriever):
             )
         except ValueError as error:
             return {
-                "status": "failed",
+                "status": "zero_ranking",
                 "error": str(error),
                 "parse_failure": f"{error}; response={raw[:500]!r}",
                 "tree_search_thinking": None,
@@ -452,8 +463,9 @@ class PageIndexLLMTreeSearchRetriever(Retriever):
 class PageIndexWorker:
     """Persistent SDK worker; SDK operations run to completion without deadlines."""
 
-    def __init__(self, storage_path: str):
+    def __init__(self, storage_path: str, instruction_variant: str = "read_pages"):
         self.storage_path = storage_path
+        self.instruction_variant = instruction_variant
         self.context = multiprocessing.get_context("spawn")
         self.process = None
         self.connection = None
@@ -462,7 +474,7 @@ class PageIndexWorker:
         parent, child = self.context.Pipe(duplex=True)
         process = self.context.Process(
             target=_pageindex_worker_loop,
-            args=(child, self.storage_path),
+            args=(child, self.storage_path, self.instruction_variant),
             name="docbenchtr-pageindex-worker",
         )
         process.start()
@@ -518,10 +530,10 @@ class PageIndexWorker:
         self._terminate()
 
 
-def _pageindex_worker_loop(connection, storage_path: str) -> None:
+def _pageindex_worker_loop(connection, storage_path: str, instruction_variant: str = "read_pages") -> None:
     try:
         _install_pageindex_llm_idle_retries()
-        client = _new_pageindex_client(storage_path)
+        client = _new_pageindex_client(storage_path, instruction_variant)
         connection.send({"ready": True})
     except Exception as error:
         connection.send({"ready": False, "error": f"{type(error).__name__}: {error}"})

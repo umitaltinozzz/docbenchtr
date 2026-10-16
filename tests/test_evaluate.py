@@ -1,8 +1,13 @@
+import sys
+from types import ModuleType
+
 import pytest
 
-from docbenchtr.evaluate import compute_metrics
+from docbenchtr.evaluate import compute_metrics, summarize
 from docbenchtr.retrievers import (
+    PAGEINDEX_AGENTIC_RETRIEVAL_INSTRUCTIONS,
     PageIndexRetriever,
+    _new_pageindex_client,
     derive_pageindex_retrieval,
     derive_pageindex_tree_search_ranking,
     parse_pageindex_tree_search_response,
@@ -84,7 +89,7 @@ def test_pageindex_tree_search_parses_json_and_validates_selected_node_ids():
         )
 
 
-def test_pageindex_agentic_without_ranked_pages_is_failed_not_a_zero_score():
+def test_pageindex_agentic_without_ranked_pages_is_zero_ranking():
     class Worker:
         def request(self, command):
             assert command["operation"] == "query"
@@ -109,8 +114,64 @@ def test_pageindex_agentic_without_ranked_pages_is_failed_not_a_zero_score():
 
     result = retriever.retrieve_with_metadata("question", "doc", 5)
 
-    assert result["status"] == "failed"
+    assert result["status"] == "zero_ranking"
     assert result["tool_call_count"] == 1
     assert result["page_content_call_count"] == 0
     assert result["ranked_pages"] == []
     assert "without reading page content" in result["error"]
+
+
+def test_pageindex_default_variant_omits_custom_instructions(monkeypatch):
+    captured = {}
+
+    class Client:
+        def __init__(self, **kwargs):
+            captured.update(kwargs)
+
+    fake_pageindex = ModuleType("pageindex")
+    fake_pageindex.PageIndexClient = Client
+    monkeypatch.setitem(sys.modules, "pageindex", fake_pageindex)
+
+    _new_pageindex_client("cache", "default")
+    assert "instructions" not in captured
+    _new_pageindex_client("cache", "read_pages")
+    assert captured["instructions"] == PAGEINDEX_AGENTIC_RETRIEVAL_INSTRUCTIONS
+
+
+def test_summarize_counts_empty_ranking_as_zero_and_excludes_infrastructure_error():
+    def row(question_id, question_type, status, ranked_pages, metrics):
+        return {
+            "method": "test method",
+            "question_id": question_id,
+            "question_type": question_type,
+            "status": status,
+            "ranked_pages": ranked_pages,
+            "latency_ms": 10.0,
+            "input_tokens": None,
+            "output_tokens": None,
+            "total_tokens": None,
+            "parse_failure": None,
+            **metrics,
+        }
+
+    zero_metrics = {"recall@1": 0.0, "recall@3": 0.0, "recall@5": 0.0, "reciprocal_rank": 0.0}
+    missing_metrics = {"recall@1": None, "recall@3": None, "recall@5": None, "reciprocal_rank": None}
+    rows = [
+        row("q1", "direct_fact", "zero_ranking", [], zero_metrics),
+        row("q2", "direct_fact", "failed", [], missing_metrics),
+    ]
+
+    summary = summarize(
+        rows,
+        [{"question_type": "direct_fact"}, {"question_type": "direct_fact"}],
+        [{"method": "test method", "reason": ""}],
+        [],
+        "cpu",
+    )
+    method = summary["methods"][0]
+    by_type = method["by_question_type"]["direct_fact"]
+
+    assert method["overall"]["recall@5"] == 0.0
+    assert method["overall"]["reciprocal_rank"] == 0.0
+    assert (method["attempted_count"], method["scored_count"], method["zero_ranking_count"], method["excluded_count"]) == (1, 1, 1, 1)
+    assert (by_type["attempted_count"], by_type["scored_count"], by_type["zero_ranking_count"], by_type["excluded_count"]) == (1, 1, 1, 1)

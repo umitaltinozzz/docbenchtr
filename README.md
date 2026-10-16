@@ -13,7 +13,8 @@ This public pilot reports retrieval only. It evaluates physical PDF pages as ret
 - **BM25 (Turkish stemmed):** Snowball Turkish stemming before lexical ranking.
 - **Dense:** `intfloat/multilingual-e5-base`, with query and passage prefixes.
 - **Hybrid (RRF):** reciprocal rank fusion of the unstemmed BM25 and dense rankings.
-- **PageIndex agentic:** the [PageIndex](https://github.com/VectifyAI/PageIndex) local SDK uses `qwen2.5:7b-instruct` through LiteLLM's `ollama_chat/` route for tool-using chat/search. `tool_call_count` counts every tool call; only successful `get_page_content` results contribute pages to its ranking.
+- **PageIndex agentic (default instructions):** the [PageIndex](https://github.com/VectifyAI/PageIndex) local SDK uses its built-in instructions with `qwen2.5:7b-instruct` through LiteLLM's `ollama_chat/` route for tool-using chat/search.
+- **PageIndex agentic (read-pages instruction):** the same SDK with our additional retrieval instruction requiring a successful `get_page_content` result before answering. This is an explicit modification of the default agentic method. For both rows, `tool_call_count` counts every tool call; only successful `get_page_content` results contribute pages to its ranking.
 - **PageIndex LLM Tree Search:** gives the local model the cached PageIndex tree (titles, node IDs, inclusive physical page ranges, and summaries) plus the question. It requests `{"thinking": ..., "node_list": [...]}` with Ollama JSON-schema output. The ranking expands each selected node's inclusive `start_index..end_index` range in returned `node_list` order and deduplicates pages by first occurrence. Parse failures remain in the per-query results as failed rows.
 
 All methods return ranked, one-based physical PDF page numbers. The dense model uses CUDA when available and otherwise runs on CPU; the actual device is written to the generated results.
@@ -37,7 +38,7 @@ uv run python -m docbenchtr.run_pilot
 
 The run regenerates the verified question set, CSV and JSON results, the chart, and the results block in this README. To download and hash only the source documents, run `uv run python scripts/download_docs.py`.
 
-For PageIndex, install and start Ollama locally and pull `qwen2.5:7b-instruct` before running the pilot. PageIndex agentic uses the SDK's tool definitions through LiteLLM's `ollama_chat/` route, which supports tool calls. PageIndex LLM Tree Search sends the cached tree and question to Ollama's `/api/chat` endpoint with a JSON schema. Both use the local index under `.pageindex/docbenchtr-pilot/` and make no cloud calls. The pipeline checks the local tags endpoint and records per-query failures.
+For PageIndex, install and start Ollama locally and pull `qwen2.5:7b-instruct` before running the pilot. Both agentic variants use the SDK's tool definitions through LiteLLM's `ollama_chat/` route and share the local cached trees under `.pageindex/docbenchtr-pilot/`. PageIndex LLM Tree Search sends the cached tree and question to Ollama's `/api/chat` endpoint with a JSON schema. These methods make no cloud calls. The pipeline checks the local tags endpoint and records per-query failures.
 
 ## Results
 
@@ -57,7 +58,8 @@ No benchmark numbers are published yet. The maintainer should run the full pipel
 - The dense comparison uses a single multilingual embedding model.
 - PDF pagination, extraction quality, edition dates, and the balance of document topics can affect retrieval scores.
 - PageIndex agentic page rankings are reconstructed from successful `get_page_content` tool results, ordered by the agent's tool-call sequence and each result's `returned_pages`; repeated pages keep their first rank. Outline-only calls count in `tool_call_count` but do not rank pages. PageIndex returns no page scores. Per-query traces and SDK token usage, when present, are retained.
-- Agentic queries that produce no ranked pages are retained as failed and left unscored, with the tool-call count and trace preserved; an empty ranking is not presented as a PageIndex recall result.
+- A method that was attempted but produced no usable ranking receives recall@k = 0 and reciprocal rank = 0 and is included in the overall and per-question-type means. This includes completed agentic queries with no successful page reads and LLM Tree Search JSON/schema parse failures. Queries excluded because the document was not indexed or an infrastructure/tool error prevented the attempt remain outside the means. Each method and question type reports attempted, scored, zero-ranking, and excluded counts so coverage is visible.
+- PageIndex agentic page rankings are reconstructed from successful `get_page_content` tool results, ordered by the agent's tool-call sequence and each result's `returned_pages`; repeated pages keep their first rank. Outline-only calls count in `tool_call_count` but do not rank pages. PageIndex returns no page scores. Per-query traces and SDK token usage, when present, are retained.
 - PageIndex LLM Tree Search is a separate non-agentic method. It ranks inclusive one-based page ranges from model-selected cached-tree nodes in returned node order, deduplicating by first occurrence. JSON parse or schema failures are recorded per query and are not silently dropped.
 - PageIndex used the small local `qwen2.5:7b-instruct` model for both indexing and search. Its developers say a basic model is sufficient for indexing but recommend the [best model you can afford for chat/search](https://github.com/VectifyAI/PageIndex#model-recommendations); the 7B search model may disadvantage its results against that recommendation.
 - PageIndex's tree `toc_source`, per-document build time, and any document or query failures are listed in the generated run metadata and per-query files.

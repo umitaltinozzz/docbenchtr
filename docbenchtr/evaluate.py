@@ -92,7 +92,7 @@ def run_evaluation(
             ranked_pages = outcome["ranked_pages"]
             metric_values = (
                 compute_metrics(ranked_pages, question["source_pages"])
-                if outcome["status"] in ("ran", "partial") else {
+                if outcome["status"] in ("ran", "partial", "zero_ranking") else {
                     "recall@1": None,
                     "recall@3": None,
                     "recall@5": None,
@@ -171,8 +171,11 @@ def summarize(
         method_rows = grouped.get(method, [])
         scored_rows = [
             row for row in method_rows
-            if row["status"] in ("ran", "partial") and row["recall@1"] is not None
+            if row["status"] in ("ran", "partial", "zero_ranking") and row["recall@1"] is not None
         ]
+        attempted_rows = [row for row in method_rows if row["status"] in ("ran", "partial", "zero_ranking")]
+        zero_ranking_rows = [row for row in attempted_rows if not row["ranked_pages"]]
+        excluded_rows = [row for row in method_rows if row not in attempted_rows]
         failed_rows = [row for row in method_rows if row["status"] == "failed"]
         not_run_rows = [row for row in method_rows if row["status"] == "not_run"]
         partial_rows = [row for row in method_rows if row["status"] == "partial"]
@@ -209,15 +212,21 @@ def summarize(
         for question_type, type_rows in sorted(by_type[method].items()):
             type_scored = [
                 row for row in type_rows
-                if row["status"] in ("ran", "partial") and row["recall@1"] is not None
+                if row["status"] in ("ran", "partial", "zero_ranking") and row["recall@1"] is not None
             ]
+            type_attempted = [row for row in type_rows if row["status"] in ("ran", "partial", "zero_ranking")]
+            type_zero_ranking = [row for row in type_attempted if not row["ranked_pages"]]
             type_tokens = [
                 row for row in type_rows
                 if isinstance(row["input_tokens"], int) and isinstance(row["output_tokens"], int)
             ]
             type_metrics = {
-                "attempted_question_count": len(type_rows),
+                "attempted_question_count": len(type_attempted),
                 "question_count": len(type_scored),
+                "attempted_count": len(type_attempted),
+                "scored_count": len(type_scored),
+                "zero_ranking_count": len(type_zero_ranking),
+                "excluded_count": len(type_rows) - len(type_attempted),
                 "failed_question_count": sum(row["status"] == "failed" for row in type_rows),
                 "not_run_question_count": sum(row["status"] == "not_run" for row in type_rows),
                 "partial_question_count": sum(row["status"] == "partial" for row in type_rows),
@@ -250,6 +259,10 @@ def summarize(
             "status": method_status,
             "reason": reason,
             "question_count": len(method_rows),
+            "attempted_count": len(attempted_rows),
+            "scored_count": len(scored_rows),
+            "zero_ranking_count": len(zero_ranking_rows),
+            "excluded_count": len(excluded_rows),
             "scored_question_count": len(scored_rows),
             "failed_question_count": len(failed_rows),
             "not_run_question_count": len(not_run_rows),
