@@ -40,92 +40,101 @@ def run_evaluation(
 
     rows = []
     for question in questions:
-        document_id = question["document_id"]
-        full_k = len(all_pages_by_doc[document_id])
+        full_k = len(all_pages_by_doc[question["document_id"]])
         for retriever in retrievers:
-            outcome: dict[str, Any] = {
-                "status": "ran",
-                "error": None,
-                "latency_ms": None,
-                "ranked_pages": [],
-                "input_tokens": None,
-                "output_tokens": None,
-                "total_tokens": None,
-                "retrieval_trace": [],
-                "tool_calls": [],
-                "tool_errors": [],
-                "tool_call_count": None,
-                "page_content_call_count": None,
-                "cited_pages": [],
-                "citation_error": None,
-                "idle_retries": [],
-                "parse_failure": None,
-                "tree_search_thinking": None,
-                "tree_search_node_ids": [],
-            }
-            document_run = getattr(retriever, "document_runs", {}).get(document_id)
-            if document_run and document_run.get("status") not in ("indexed", "reused"):
-                outcome["status"] = "not_run" if document_run.get("status") == "not_run" else "failed"
-                outcome["error"] = document_run.get("error") or "PageIndex document was not indexed"
+            rows.append(evaluate_question(retriever, question, full_k))
+    write_rows(rows)
+    return rows, retrievers
+
+
+def evaluate_question(retriever: Retriever, question: dict[str, Any], full_k: int) -> dict[str, Any]:
+    """Run one retriever on one question and return its scored per-query row."""
+    document_id = question["document_id"]
+    outcome: dict[str, Any] = {
+        "status": "ran",
+        "error": None,
+        "latency_ms": None,
+        "ranked_pages": [],
+        "input_tokens": None,
+        "output_tokens": None,
+        "total_tokens": None,
+        "retrieval_trace": [],
+        "tool_calls": [],
+        "tool_errors": [],
+        "tool_call_count": None,
+        "page_content_call_count": None,
+        "cited_pages": [],
+        "citation_error": None,
+        "idle_retries": [],
+        "parse_failure": None,
+        "tree_search_thinking": None,
+        "tree_search_node_ids": [],
+    }
+    document_run = getattr(retriever, "document_runs", {}).get(document_id)
+    if document_run and document_run.get("status") not in ("indexed", "reused"):
+        outcome["status"] = "not_run" if document_run.get("status") == "not_run" else "failed"
+        outcome["error"] = document_run.get("error") or "PageIndex document was not indexed"
+    else:
+        start = time.perf_counter()
+        try:
+            if hasattr(retriever, "retrieve_with_metadata"):
+                details = retriever.retrieve_with_metadata(
+                    question["question"], document_id, full_k,
+                    question_id=question["question_id"],
+                )
+                outcome.update(details)
             else:
-                start = time.perf_counter()
-                try:
-                    if hasattr(retriever, "retrieve_with_metadata"):
-                        details = retriever.retrieve_with_metadata(
-                            question["question"], document_id, full_k,
-                            question_id=question["question_id"],
-                        )
-                        outcome.update(details)
-                    else:
-                        outcome["ranked_pages"] = retriever.retrieve(
-                            question["question"], document_id, full_k
-                        )
-                except Exception as error:
-                    outcome["status"] = "failed"
-                    outcome["error"] = str(error)
-                    outcome.update(getattr(error, "details", {}))
-                finally:
-                    outcome["latency_ms"] = (time.perf_counter() - start) * 1000
-                if outcome["status"] == "ran" and outcome.get("tool_errors"):
-                    outcome["status"] = "partial"
+                outcome["ranked_pages"] = retriever.retrieve(
+                    question["question"], document_id, full_k
+                )
+        except Exception as error:
+            outcome["status"] = "failed"
+            outcome["error"] = str(error)
+            outcome.update(getattr(error, "details", {}))
+        finally:
+            outcome["latency_ms"] = (time.perf_counter() - start) * 1000
+        if outcome["status"] == "ran" and outcome.get("tool_errors"):
+            outcome["status"] = "partial"
 
-            ranked_pages = outcome["ranked_pages"]
-            metric_values = (
-                compute_metrics(ranked_pages, question["source_pages"])
-                if outcome["status"] in ("ran", "partial", "zero_ranking") else {
-                    "recall@1": None,
-                    "recall@3": None,
-                    "recall@5": None,
-                    "reciprocal_rank": None,
-                }
-            )
-            rows.append({
-                "method": retriever.name,
-                "question_id": question["question_id"],
-                "question_type": question["question_type"],
-                "document_id": document_id,
-                "source_pages": question["source_pages"],
-                "ranked_pages": ranked_pages,
-                **metric_values,
-                "status": outcome["status"],
-                "error": outcome["error"],
-                "latency_ms": outcome["latency_ms"],
-                "input_tokens": outcome["input_tokens"],
-                "output_tokens": outcome["output_tokens"],
-                "total_tokens": outcome["total_tokens"],
-                "retrieval_trace": outcome["retrieval_trace"],
-                "tool_calls": outcome["tool_calls"],
-                "tool_errors": outcome["tool_errors"],
-                "tool_call_count": outcome["tool_call_count"],
-                "page_content_call_count": outcome["page_content_call_count"],
-                "cited_pages": outcome["cited_pages"],
-                "citation_error": outcome["citation_error"],
-                "idle_retries": outcome["idle_retries"],
-                "parse_failure": outcome["parse_failure"],
-                "tree_search_thinking": outcome["tree_search_thinking"],
-                "tree_search_node_ids": outcome["tree_search_node_ids"],
-            })
+    ranked_pages = outcome["ranked_pages"]
+    metric_values = (
+        compute_metrics(ranked_pages, question["source_pages"])
+        if outcome["status"] in ("ran", "partial", "zero_ranking") else {
+            "recall@1": None,
+            "recall@3": None,
+            "recall@5": None,
+            "reciprocal_rank": None,
+        }
+    )
+    return {
+        "method": retriever.name,
+        "question_id": question["question_id"],
+        "question_type": question["question_type"],
+        "document_id": document_id,
+        "source_pages": question["source_pages"],
+        "ranked_pages": ranked_pages,
+        **metric_values,
+        "status": outcome["status"],
+        "error": outcome["error"],
+        "latency_ms": outcome["latency_ms"],
+        "input_tokens": outcome["input_tokens"],
+        "output_tokens": outcome["output_tokens"],
+        "total_tokens": outcome["total_tokens"],
+        "retrieval_trace": outcome["retrieval_trace"],
+        "tool_calls": outcome["tool_calls"],
+        "tool_errors": outcome["tool_errors"],
+        "tool_call_count": outcome["tool_call_count"],
+        "page_content_call_count": outcome["page_content_call_count"],
+        "cited_pages": outcome["cited_pages"],
+        "citation_error": outcome["citation_error"],
+        "idle_retries": outcome["idle_retries"],
+        "parse_failure": outcome["parse_failure"],
+        "tree_search_thinking": outcome["tree_search_thinking"],
+        "tree_search_node_ids": outcome["tree_search_node_ids"],
+    }
 
+
+def write_rows(rows: list[dict[str, Any]]) -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     with (RESULTS_DIR / "results.csv").open("w", newline="", encoding="utf-8") as output:
         fieldnames = [
@@ -151,7 +160,6 @@ def run_evaluation(
                 "tree_search_node_ids": json.dumps(row["tree_search_node_ids"], ensure_ascii=False),
             })
     (RESULTS_DIR / "per_query.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return rows, retrievers
 
 
 def summarize(

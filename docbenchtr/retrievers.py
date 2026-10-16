@@ -1145,7 +1145,9 @@ def _ollama_tree_search(
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(request, timeout=180) as response:
+    # Long trees take minutes of prompt processing on local hardware; use the
+    # same 30-minute inactivity limit as the agentic variants.
+    with urllib.request.urlopen(request, timeout=1800) as response:
         payload = json.loads(response.read().decode("utf-8"))
     message = payload.get("message") if isinstance(payload, dict) else None
     content = message.get("content") if isinstance(message, dict) else None
