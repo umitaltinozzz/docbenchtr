@@ -44,10 +44,87 @@ For PageIndex, install and start Ollama locally and pull `qwen2.5:7b-instruct` b
 
 The generated table and chart below are populated from the run's `results/summary.json`. Per-query values are in [`results/results.csv`](results/results.csv) and [`results/per_query.json`](results/per_query.json).
 
+## How to read the PageIndex rows
+
+These rows are **not a verdict on PageIndex**. Every PageIndex variant here runs on `qwen2.5:7b-instruct`, a small local model that fits an 8 GB laptop GPU, while PageIndex's own documentation recommends the strongest chat model you can afford for tree search. What the pilot does show, at this scale:
+
+- **Agentic mode never reached a page.** With both the default and our stricter instruction, the model requested the document structure but never called `get_page_content`, so all 36 rankings are empty and score zero. A direct request confirmed that the tool definitions reach the model, so this is model behaviour, not a wiring failure.
+- **LLM Tree Search works but trails the classical baselines** (Recall@5 0.403 vs 0.792 for Hybrid), with 12 of 36 queries producing no usable node selection, and it is roughly four orders of magnitude slower.
+- Queries a method attempted but could not answer are **counted as zero, not dropped**; the coverage columns show how many.
+
+Whether PageIndex closes this gap with a frontier model is exactly the question the full DocBenchTR study is designed to answer.
+
 <!-- GENERATED:START -->
 ## Pilot results
 
-No benchmark numbers are published yet. The maintainer should run the full pipeline to generate the results table and chart. The agentic and LLM tree-search methods will appear as separate rows.
+This generated section reads its metrics from `results/summary.json` (per-question records: `results/results.csv` and `results/per_query.json`).
+
+| Method | Attempted | Scored | Zero ranking | Excluded | Recall@1 | Recall@3 | Recall@5 | MRR | Mean query latency |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| BM25 | 36 | 36 | 0 | 0 | 0.278 | 0.653 | 0.764 | 0.532 | 1.325 ms |
+| BM25 (Turkish stemmed) | 36 | 36 | 0 | 0 | 0.250 | 0.708 | 0.722 | 0.526 | 2.367 ms |
+| Dense (multilingual-e5-base) | 36 | 36 | 0 | 0 | 0.403 | 0.667 | 0.750 | 0.627 | 384.373 ms |
+| Hybrid (RRF) | 36 | 36 | 0 | 0 | 0.333 | 0.708 | 0.792 | 0.612 | 14.965 ms |
+| PageIndex agentic (default instructions) | 36 | 36 | 36 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 14365.587 ms |
+| PageIndex agentic (read-pages instruction) | 36 | 36 | 36 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 9251.201 ms |
+| PageIndex LLM Tree Search | 36 | 36 | 12 | 0 | 0.236 | 0.347 | 0.403 | 0.365 | 76580.507 ms |
+
+![Recall@5 by method and question type](results/recall_at_5_by_question_type.png)
+
+### Metrics by question type
+
+| Method | Question type | Attempted | Scored | Zero ranking | Excluded | Recall@1 | Recall@3 | Recall@5 | MRR | Mean query latency |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| BM25 | cross section | 9 | 9 | 0 | 0 | 0.111 | 0.500 | 0.611 | 0.500 | 1.389 ms |
+| BM25 | direct fact | 9 | 9 | 0 | 0 | 0.444 | 0.667 | 0.667 | 0.564 | 1.202 ms |
+| BM25 | distractor | 9 | 9 | 0 | 0 | 0.222 | 0.667 | 0.889 | 0.488 | 1.400 ms |
+| BM25 | paraphrase | 9 | 9 | 0 | 0 | 0.333 | 0.778 | 0.889 | 0.578 | 1.308 ms |
+| BM25 (Turkish stemmed) | cross section | 9 | 9 | 0 | 0 | 0.111 | 0.722 | 0.778 | 0.574 | 2.946 ms |
+| BM25 (Turkish stemmed) | direct fact | 9 | 9 | 0 | 0 | 0.444 | 0.667 | 0.667 | 0.582 | 1.796 ms |
+| BM25 (Turkish stemmed) | distractor | 9 | 9 | 0 | 0 | 0.111 | 0.778 | 0.778 | 0.452 | 2.469 ms |
+| BM25 (Turkish stemmed) | paraphrase | 9 | 9 | 0 | 0 | 0.333 | 0.667 | 0.667 | 0.495 | 2.257 ms |
+| Dense (multilingual-e5-base) | cross section | 9 | 9 | 0 | 0 | 0.278 | 0.667 | 0.778 | 0.741 | 479.459 ms |
+| Dense (multilingual-e5-base) | direct fact | 9 | 9 | 0 | 0 | 0.444 | 0.556 | 0.778 | 0.563 | 285.518 ms |
+| Dense (multilingual-e5-base) | distractor | 9 | 9 | 0 | 0 | 0.333 | 0.667 | 0.667 | 0.524 | 395.568 ms |
+| Dense (multilingual-e5-base) | paraphrase | 9 | 9 | 0 | 0 | 0.556 | 0.778 | 0.778 | 0.682 | 376.947 ms |
+| Hybrid (RRF) | cross section | 9 | 9 | 0 | 0 | 0.222 | 0.500 | 0.833 | 0.667 | 15.230 ms |
+| Hybrid (RRF) | direct fact | 9 | 9 | 0 | 0 | 0.444 | 0.778 | 0.778 | 0.614 | 14.463 ms |
+| Hybrid (RRF) | distractor | 9 | 9 | 0 | 0 | 0.222 | 0.667 | 0.667 | 0.488 | 14.594 ms |
+| Hybrid (RRF) | paraphrase | 9 | 9 | 0 | 0 | 0.444 | 0.889 | 0.889 | 0.678 | 15.573 ms |
+| PageIndex agentic (default instructions) | cross section | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 14812.862 ms |
+| PageIndex agentic (default instructions) | direct fact | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 15086.221 ms |
+| PageIndex agentic (default instructions) | distractor | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 14628.899 ms |
+| PageIndex agentic (default instructions) | paraphrase | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 12934.369 ms |
+| PageIndex agentic (read-pages instruction) | cross section | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 8635.745 ms |
+| PageIndex agentic (read-pages instruction) | direct fact | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 9121.433 ms |
+| PageIndex agentic (read-pages instruction) | distractor | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 8918.523 ms |
+| PageIndex agentic (read-pages instruction) | paraphrase | 9 | 9 | 9 | 0 | 0.000 | 0.000 | 0.000 | 0.000 | 10329.105 ms |
+| PageIndex LLM Tree Search | cross section | 9 | 9 | 3 | 0 | 0.278 | 0.389 | 0.500 | 0.578 | 76242.011 ms |
+| PageIndex LLM Tree Search | direct fact | 9 | 9 | 3 | 0 | 0.222 | 0.333 | 0.333 | 0.278 | 75764.868 ms |
+| PageIndex LLM Tree Search | distractor | 9 | 9 | 3 | 0 | 0.333 | 0.333 | 0.444 | 0.371 | 75916.688 ms |
+| PageIndex LLM Tree Search | paraphrase | 9 | 9 | 3 | 0 | 0.111 | 0.333 | 0.333 | 0.235 | 78398.461 ms |
+
+### Run metadata
+
+- Documents: 3 — Kişisel Verilerin Korunması Kanunu, Tüketicinin Korunması Hakkında Kanun ve İkincil Mevzuatı (Ocak 2021), Yükseköğretim Kanunu.
+- Span-verified pilot questions: 36; excluded after verification: 0.
+- Physical PDF pages extracted: 500 across kvkk_6698: 18, tuketicinin_korunmasi_6502: 340, yuksekogretim_2547: 142.
+- Embedding model: `intfloat/multilingual-e5-base` revision `d128750597153bb5987e10b1c3493a34e5a4502a` on `cuda`.
+- Question set label: **pilot set, auto-drafted from source text, span-verified; not yet human-reviewed**.
+- PageIndex agentic (default instructions) queries: 36 attempted, 36 scored, 36 zero-ranking, 0 excluded.
+- PageIndex agentic (read-pages instruction) queries: 36 attempted, 36 scored, 36 zero-ranking, 0 excluded.
+- PageIndex agentic (default instructions) token counts: available for 36 queries; 140728 input and 15000 output tokens total.
+- PageIndex agentic (read-pages instruction) token counts: available for 36 queries; 143824 input and 15789 output tokens total.
+- PageIndex LLM Tree Search queries: 36 attempted, 36 scored, 12 zero-ranking, 0 excluded; 12 parse failures.
+- PageIndex LLM HTTP safety net: retry a request after 30 minutes without response progress, up to 3 retries; 0 retries recorded; there is no total index or query deadline.
+
+### PageIndex index builds
+
+- `kvkk_6698`: reused; build cached; prior build time unavailable; `toc_source=detected`; cache validation 15.4 s
+- `tuketicinin_korunmasi_6502`: reused; build cached; prior build time unavailable; `toc_source=detected`; cache validation 3.8 s
+- `yuksekogretim_2547`: reused; build cached; prior build time unavailable; `toc_source=detected`; cache validation 3.9 s
+
+PageIndex agentic default-instruction and read-pages-instruction variants use `ollama_chat/qwen2.5:7b-instruct` through Ollama and share the cached trees. The read-pages instruction is an explicit modification to the SDK default. `tool_call_count` counts every agent tool invocation; page ranking uses only successful `get_page_content` results, in tool-call order and each result's `returned_pages` order, retaining each physical page's first occurrence. Outline-only calls count as tool calls but do not enter the ranking. PageIndex LLM Tree Search asks the same local model to select nodes from the cached tree using Ollama's JSON-schema output. It expands each selected node's inclusive one-based `start_index..end_index` range in returned `node_list` order and deduplicates pages by first occurrence. Attempted queries without a usable ranking, including parse failures, score zero; infrastructure exclusions remain outside the means. Both methods return no PageIndex page scores; per-query errors and traces are preserved in `results/per_query.json` and `results/results.csv`.
 <!-- GENERATED:END -->
 
 ## Limitations
