@@ -44,6 +44,8 @@ For PageIndex, install and start Ollama locally and pull `qwen2.5:7b-instruct` b
 
 The generated table and chart below are populated from the run's `results/summary.json`. Per-query values are in [`results/results.csv`](results/results.csv) and [`results/per_query.json`](results/per_query.json).
 
+> **⚠️ Correction (2026-10-16): the PageIndex rows below are INVALID and are being re-run.** Ollama served the model with its default 4,096-token context window (the model supports 32,768). PageIndex prompts were silently truncated: LLM Tree Search inputs reached ~16,400 tokens, and agentic prompts sat at ~3,900 tokens, at the cap. Node summaries were also generated under the same limit. The BM25 / Dense / Hybrid rows are unaffected. Corrected results will replace this section.
+
 ## How to read the PageIndex rows
 
 These rows are **not a verdict on PageIndex**. Every PageIndex variant here runs on `qwen2.5:7b-instruct`, a small local model that fits an 8 GB laptop GPU, while PageIndex's own documentation recommends the strongest chat model you can afford for tree search. What the pilot does show, at this scale:
