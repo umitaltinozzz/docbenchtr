@@ -1,0 +1,223 @@
+{
+  "benchmark": "DocBenchTR public pilot",
+  "dataset_label": "pilot set, auto-drafted from source text, span-verified; not yet human-reviewed",
+  "retrieval_only": true,
+  "generation_and_faithfulness": "out of scope",
+  "num_documents": 3,
+  "num_questions": 36,
+  "num_excluded_questions": 0,
+  "question_type_counts": {
+    "cross_section": 9,
+    "direct_fact": 9,
+    "distractor": 9,
+    "paraphrase": 9
+  },
+  "pages_per_document": {
+    "kvkk_6698": 18,
+    "tuketicinin_korunmasi_6502": 340,
+    "yuksekogretim_2547": 142
+  },
+  "embedding_model": "intfloat/multilingual-e5-base",
+  "embedding_model_revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "embedding_device": "cuda",
+  "page_numbering": "one-based physical PDF page index",
+  "metrics": "page-level Recall@1/3/5, MRR over full returned ranking, and per-query latency",
+  "methods": [
+    {
+      "method": "BM25",
+      "status": "ran",
+      "reason": "",
+      "question_count": 36,
+      "overall": {
+        "recall@1": 0.2777777777777778,
+        "recall@3": 0.6527777777777778,
+        "recall@5": 0.7638888888888888,
+        "reciprocal_rank": 0.5324354657687991,
+        "latency_ms": 1.0864444435962166
+      },
+      "by_question_type": {
+        "cross_section": {
+          "question_count": 9,
+          "recall@1": 0.1111111111111111,
+          "recall@3": 0.5,
+          "recall@5": 0.6111111111111112,
+          "reciprocal_rank": 0.5,
+          "latency_ms": 1.1877888917095132
+        },
+        "direct_fact": {
+          "question_count": 9,
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.5636924803591471,
+          "latency_ms": 1.0048666639098276
+        },
+        "distractor": {
+          "question_count": 9,
+          "recall@1": 0.2222222222222222,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.48827160493827165,
+          "latency_ms": 1.0167111112322245
+        },
+        "paraphrase": {
+          "question_count": 9,
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.5777777777777778,
+          "latency_ms": 1.136411107533301
+        }
+      }
+    },
+    {
+      "method": "BM25 (Turkish stemmed)",
+      "status": "ran",
+      "reason": "",
+      "question_count": 36,
+      "overall": {
+        "recall@1": 0.25,
+        "recall@3": 0.7083333333333334,
+        "recall@5": 0.7222222222222222,
+        "reciprocal_rank": 0.5258789358789359,
+        "latency_ms": 2.5514611111753362
+      },
+      "by_question_type": {
+        "cross_section": {
+          "question_count": 9,
+          "recall@1": 0.1111111111111111,
+          "recall@3": 0.7222222222222222,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.5740740740740741,
+          "latency_ms": 2.6447333350208484
+        },
+        "direct_fact": {
+          "question_count": 9,
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.5822222222222222,
+          "latency_ms": 3.1601333337473787
+        },
+        "distractor": {
+          "question_count": 9,
+          "recall@1": 0.1111111111111111,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.4518999518999519,
+          "latency_ms": 1.9741222220343642
+        },
+        "paraphrase": {
+          "question_count": 9,
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.4953194953194953,
+          "latency_ms": 2.4268555538987533
+        }
+      }
+    },
+    {
+      "method": "Dense (multilingual-e5-base)",
+      "status": "ran",
+      "reason": "",
+      "question_count": 36,
+      "overall": {
+        "recall@1": 0.4027777777777778,
+        "recall@3": 0.6666666666666666,
+        "recall@5": 0.75,
+        "reciprocal_rank": 0.6274797597101519,
+        "latency_ms": 22.990969444233794
+      },
+      "by_question_type": {
+        "cross_section": {
+          "question_count": 9,
+          "recall@1": 0.2777777777777778,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.7407407407407408,
+          "latency_ms": 21.048988886630266
+        },
+        "direct_fact": {
+          "question_count": 9,
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.5555555555555556,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.5632275132275132,
+          "latency_ms": 29.883666665733067
+        },
+        "distractor": {
+          "question_count": 9,
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.5241606614155634,
+          "latency_ms": 17.9037333339996
+        },
+        "paraphrase": {
+          "question_count": 9,
+          "recall@1": 0.5555555555555556,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.6817901234567901,
+          "latency_ms": 23.127488890572245
+        }
+      }
+    },
+    {
+      "method": "Hybrid (RRF)",
+      "status": "ran",
+      "reason": "",
+      "question_count": 36,
+      "overall": {
+        "recall@1": 0.3333333333333333,
+        "recall@3": 0.7083333333333334,
+        "recall@5": 0.7916666666666666,
+        "reciprocal_rank": 0.611629188712522,
+        "latency_ms": 22.912977776690646
+      },
+      "by_question_type": {
+        "cross_section": {
+          "question_count": 9,
+          "recall@1": 0.2222222222222222,
+          "recall@3": 0.5,
+          "recall@5": 0.8333333333333334,
+          "reciprocal_rank": 0.6666666666666666,
+          "latency_ms": 22.343588886239257
+        },
+        "direct_fact": {
+          "question_count": 9,
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.6144179894179894,
+          "latency_ms": 28.149144444291274
+        },
+        "distractor": {
+          "question_count": 9,
+          "recall@1": 0.2222222222222222,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.4876543209876544,
+          "latency_ms": 18.246499999400434
+        },
+        "paraphrase": {
+          "question_count": 9,
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.8888888888888888,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.6777777777777777,
+          "latency_ms": 22.912677776831615
+        }
+      }
+    },
+    {
+      "method": "PageIndex (local Ollama)",
+      "status": "not_run",
+      "reason": "Ollama executable was not found on PATH; Ollama API http://127.0.0.1:11434/api/tags is unreachable: URLError: <urlopen error timed out>. PageIndex local SDK preflight passed (Local SDK config initialized with index model 'ollama_chat/qwen2.5:7b-instruct' and chat model 'ollama_chat/qwen2.5:7b-instruct'.); document indexing and retrieval were not run.",
+      "question_count": 0,
+      "overall": null,
+      "by_question_type": {}
+    }
+  ]
+}

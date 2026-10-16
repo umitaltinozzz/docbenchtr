@@ -43,7 +43,49 @@ For PageIndex, install and start Ollama locally, pull `qwen2.5:7b-instruct`, the
 The generated table and chart below are populated from the run's `results/summary.json`. Per-query values are in [`results/results.csv`](results/results.csv) and [`results/per_query.json`](results/per_query.json).
 
 <!-- GENERATED:START -->
-Run `uv run python -m docbenchtr.run_pilot` to populate this section from the generated result files.
+## Pilot results
+
+This generated section reads its metrics from `results/summary.json` (per-question records: `results/results.csv` and `results/per_query.json`).
+
+| Method | Recall@1 | Recall@3 | Recall@5 | MRR | Mean query latency |
+|---|---:|---:|---:|---:|---:|
+| BM25 | 0.278 | 0.653 | 0.764 | 0.532 | 1.1 ms |
+| BM25 (Turkish stemmed) | 0.250 | 0.708 | 0.722 | 0.526 | 2.6 ms |
+| Dense (multilingual-e5-base) | 0.403 | 0.667 | 0.750 | 0.627 | 23.0 ms |
+| Hybrid (RRF) | 0.333 | 0.708 | 0.792 | 0.612 | 22.9 ms |
+| PageIndex (local Ollama) | not run | not run | not run | not run | not run |
+
+![Recall@5 by method and question type](results/recall_at_5_by_question_type.png)
+
+### Recall@5 by question type
+
+| Method | Question type | Recall@5 | Questions |
+|---|---|---:|---:|
+| BM25 | cross section | 0.611 | 9 |
+| BM25 | direct fact | 0.667 | 9 |
+| BM25 | distractor | 0.889 | 9 |
+| BM25 | paraphrase | 0.889 | 9 |
+| BM25 (Turkish stemmed) | cross section | 0.778 | 9 |
+| BM25 (Turkish stemmed) | direct fact | 0.667 | 9 |
+| BM25 (Turkish stemmed) | distractor | 0.778 | 9 |
+| BM25 (Turkish stemmed) | paraphrase | 0.667 | 9 |
+| Dense (multilingual-e5-base) | cross section | 0.778 | 9 |
+| Dense (multilingual-e5-base) | direct fact | 0.778 | 9 |
+| Dense (multilingual-e5-base) | distractor | 0.667 | 9 |
+| Dense (multilingual-e5-base) | paraphrase | 0.778 | 9 |
+| Hybrid (RRF) | cross section | 0.833 | 9 |
+| Hybrid (RRF) | direct fact | 0.778 | 9 |
+| Hybrid (RRF) | distractor | 0.667 | 9 |
+| Hybrid (RRF) | paraphrase | 0.889 | 9 |
+
+### Run metadata
+
+- Documents: 3 — Kişisel Verilerin Korunması Kanunu, Tüketicinin Korunması Hakkında Kanun ve İkincil Mevzuatı (Ocak 2021), Yükseköğretim Kanunu.
+- Span-verified pilot questions: 36; excluded after verification: 0.
+- Physical PDF pages extracted: 500 across kvkk_6698: 18, tuketicinin_korunmasi_6502: 340, yuksekogretim_2547: 142.
+- Embedding model: `intfloat/multilingual-e5-base` revision `d128750597153bb5987e10b1c3493a34e5a4502a` on `cuda`.
+- Question set label: **pilot set, auto-drafted from source text, span-verified; not yet human-reviewed**.
+- **PageIndex (local Ollama):** not run — Ollama executable was not found on PATH; Ollama API http://127.0.0.1:11434/api/tags is unreachable: URLError: <urlopen error timed out>. PageIndex local SDK preflight passed (Local SDK config initialized with index model 'ollama_chat/qwen2.5:7b-instruct' and chat model 'ollama_chat/qwen2.5:7b-instruct'.); document indexing and retrieval were not run.
 <!-- GENERATED:END -->
 
 ## Limitations
