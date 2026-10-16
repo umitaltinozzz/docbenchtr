@@ -1,0 +1,422 @@
+{
+  "label": "pilot set, auto-drafted from source text, span-verified; not yet human-reviewed",
+  "drafted_count": 36,
+  "verified_count": 36,
+  "dropped_count": 0,
+  "checks": [
+    {
+      "question_id": "kvkk_6698-direct_fact-1",
+      "article_numbers": [
+        "5"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        2
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-direct_fact-2",
+      "article_numbers": [
+        "8"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-direct_fact-3",
+      "article_numbers": [
+        "12"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-paraphrase-1",
+      "article_numbers": [
+        "10"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        4
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-paraphrase-2",
+      "article_numbers": [
+        "11"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-paraphrase-3",
+      "article_numbers": [
+        "9"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-distractor-1",
+      "article_numbers": [
+        "8"
+      ],
+      "distractor_article_number": "5",
+      "verified": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-distractor-2",
+      "article_numbers": [
+        "9"
+      ],
+      "distractor_article_number": "8",
+      "verified": true,
+      "source_pages": [
+        3
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-distractor-3",
+      "article_numbers": [
+        "12"
+      ],
+      "distractor_article_number": "4",
+      "verified": true,
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-cross_section-1",
+      "article_numbers": [
+        "5",
+        "8"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-cross_section-2",
+      "article_numbers": [
+        "8",
+        "12"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        3,
+        5
+      ]
+    },
+    {
+      "question_id": "kvkk_6698-cross_section-3",
+      "article_numbers": [
+        "10",
+        "12"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-direct_fact-1",
+      "article_numbers": [
+        "8"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-direct_fact-2",
+      "article_numbers": [
+        "11"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-direct_fact-3",
+      "article_numbers": [
+        "48"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-paraphrase-1",
+      "article_numbers": [
+        "18"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        12
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-paraphrase-2",
+      "article_numbers": [
+        "54"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        26
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-paraphrase-3",
+      "article_numbers": [
+        "58"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        28
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-distractor-1",
+      "article_numbers": [
+        "8"
+      ],
+      "distractor_article_number": "13",
+      "verified": true,
+      "source_pages": [
+        8
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-distractor-2",
+      "article_numbers": [
+        "11"
+      ],
+      "distractor_article_number": "15",
+      "verified": true,
+      "source_pages": [
+        9
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-distractor-3",
+      "article_numbers": [
+        "48"
+      ],
+      "distractor_article_number": "49",
+      "verified": true,
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-cross_section-1",
+      "article_numbers": [
+        "8",
+        "13"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        8,
+        10
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-cross_section-2",
+      "article_numbers": [
+        "11",
+        "15"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        9,
+        11
+      ]
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-cross_section-3",
+      "article_numbers": [
+        "48",
+        "49"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-direct_fact-1",
+      "article_numbers": [
+        "6"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        5
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-direct_fact-2",
+      "article_numbers": [
+        "13"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        14
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-direct_fact-3",
+      "article_numbers": [
+        "54"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        58
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-paraphrase-1",
+      "article_numbers": [
+        "22"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        20
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-paraphrase-2",
+      "article_numbers": [
+        "23"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-paraphrase-3",
+      "article_numbers": [
+        "33"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        25
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-distractor-1",
+      "article_numbers": [
+        "23"
+      ],
+      "distractor_article_number": "24",
+      "verified": true,
+      "source_pages": [
+        21
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-distractor-2",
+      "article_numbers": [
+        "31"
+      ],
+      "distractor_article_number": "33",
+      "verified": true,
+      "source_pages": [
+        24
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-distractor-3",
+      "article_numbers": [
+        "53/A"
+      ],
+      "distractor_article_number": "53/D",
+      "verified": true,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-cross_section-1",
+      "article_numbers": [
+        "13",
+        "14"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-cross_section-2",
+      "article_numbers": [
+        "22",
+        "33"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        20,
+        25
+      ]
+    },
+    {
+      "question_id": "yuksekogretim_2547-cross_section-3",
+      "article_numbers": [
+        "53/A",
+        "53/D"
+      ],
+      "distractor_article_number": null,
+      "verified": true,
+      "source_pages": [
+        51,
+        55
+      ]
+    }
+  ]
+}
