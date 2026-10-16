@@ -1137,7 +1137,7 @@ def _ollama_tree_search(
         "stream": False,
         "format": schema,
         "messages": [{"role": "user", "content": prompt}],
-        "options": {"temperature": 0, "num_ctx": 32768, "num_predict": 512},
+        "options": {"temperature": 0, "num_ctx": 32768, "num_predict": 4096},
     }, ensure_ascii=False).encode("utf-8")
     request = urllib.request.Request(
         f"{base_url}/api/chat",
