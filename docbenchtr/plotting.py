@@ -13,7 +13,10 @@ from .config import RESULTS_DIR
 
 
 def plot_recall_by_type(summary: dict[str, Any]) -> Path:
-    methods = [method for method in summary["methods"] if method["status"] == "ran"]
+    methods = [
+        method for method in summary["methods"]
+        if method["status"] in ("ran", "partial") and method["overall"] is not None
+    ]
     question_types = sorted(summary["question_type_counts"])
     fig, ax = plt.subplots(figsize=(10.5, 6.2))
     x = np.arange(len(question_types))

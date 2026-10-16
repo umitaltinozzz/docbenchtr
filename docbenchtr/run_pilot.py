@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
+from contextlib import contextmanager
 
 import torch
 
@@ -11,7 +13,7 @@ from .evaluate import run_evaluation, summarize, write_summary
 from .plotting import plot_recall_by_type
 from .questions import draft_questions
 from .reporting import print_results_table, update_readme
-from .retrievers import PageIndexRetriever, ollama_status, pageindex_local_preflight
+from .retrievers import PageIndexLLMTreeSearchRetriever, PageIndexRetriever, ollama_status
 
 
 def main() -> int:
@@ -25,35 +27,40 @@ def main() -> int:
         raise RuntimeError("No source-span-verified questions survived; evaluation stopped.")
     print(f"Kept {len(questions)} span-verified questions; dropped {len(dropped)} failed drafts.")
 
-    pageindex_status = {"method": "PageIndex (local Ollama)", "status": "not_run", "reason": ""}
-    extra_retrievers = []
+    pdf_paths = {
+        document["document_id"]: str(RAW_DIR / document["filename"])
+        for document in DOCUMENTS
+    }
     reachable, ollama_reason = ollama_status()
-    if reachable:
-        try:
-            pdf_paths = {document["document_id"]: str(RAW_DIR / document["filename"]) for document in DOCUMENTS}
-            pageindex = PageIndexRetriever(pdf_paths, str(ROOT_PAGEINDEX_DIR()))
-            extra_retrievers.append(pageindex)
-            pageindex_status = {"method": pageindex.name, "status": "ran", "reason": ""}
-        except Exception as error:
-            pageindex_status["reason"] = f"PageIndex local SDK failed during setup/indexing: {type(error).__name__}: {error}"
-    else:
-        try:
-            sdk_check = pageindex_local_preflight(str(ROOT_PAGEINDEX_DIR()))
-            pageindex_status["reason"] = (
-                f"{ollama_reason}. PageIndex local SDK preflight passed ({sdk_check}); "
-                "document indexing and retrieval were not run."
-            )
-        except Exception as error:
-            pageindex_status["reason"] = (
-                f"{ollama_reason}. PageIndex local SDK preflight failed: "
-                f"{type(error).__name__}: {error}"
-            )
+    pageindex = PageIndexRetriever(
+        pdf_paths,
+        str(ROOT_PAGEINDEX_DIR()),
+        unavailable_reason=None if reachable else ollama_reason,
+    )
+    pageindex_tree_search = PageIndexLLMTreeSearchRetriever(
+        pageindex,
+        str(ROOT_PAGEINDEX_DIR()),
+    )
 
-    rows, retrievers = run_evaluation(pages, questions, extra_retrievers)
-    statuses = [{"method": retriever.name, "status": "ran", "reason": ""} for retriever in retrievers]
-    if not extra_retrievers:
-        statuses.append(pageindex_status)
-    summary = summarize(rows, questions, statuses, pages, "cuda" if torch.cuda.is_available() else "cpu", len(dropped))
+    try:
+        rows, retrievers = run_evaluation(
+            pages, questions, [pageindex, pageindex_tree_search]
+        )
+    finally:
+        pageindex.close()
+    statuses = [{"method": retriever.name, "reason": ""} for retriever in retrievers]
+    summary = summarize(
+        rows,
+        questions,
+        statuses,
+        pages,
+        "cuda" if torch.cuda.is_available() else "cpu",
+        len(dropped),
+        {
+            **pageindex.results_metadata(),
+            "llm_tree_search": pageindex_tree_search.results_metadata(),
+        },
+    )
     write_summary(summary)
     plot_recall_by_type(summary)
     update_readme()
@@ -63,8 +70,59 @@ def main() -> int:
 
 
 def ROOT_PAGEINDEX_DIR():
-    return RESULTS_DIR.parent / ".pageindex"
+    return RESULTS_DIR.parent / ".pageindex" / "docbenchtr-pilot"
+
+
+class PipelineAlreadyRunning(RuntimeError):
+    pass
+
+
+@contextmanager
+def _pipeline_run_lock():
+    """Prevent concurrent one-command runs from racing on cache/results."""
+    lock_path = RESULTS_DIR.parent / ".pageindex" / ".docbenchtr-run.lock"
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    handle = lock_path.open("a+b")
+    try:
+        if os.name == "nt":
+            import msvcrt
+
+            if handle.seek(0, os.SEEK_END) == 0:
+                handle.write(b"\0")
+                handle.flush()
+            handle.seek(0)
+            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError as error:
+        handle.close()
+        raise PipelineAlreadyRunning(
+            "Another DocBenchTR pipeline run is already active."
+        ) from error
+
+    try:
+        yield
+    finally:
+        try:
+            if os.name == "nt":
+                import msvcrt
+
+                handle.seek(0)
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                import fcntl
+
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+        finally:
+            handle.close()
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        with _pipeline_run_lock():
+            sys.exit(main())
+    except PipelineAlreadyRunning as error:
+        print(error, file=sys.stderr)
+        sys.exit(2)

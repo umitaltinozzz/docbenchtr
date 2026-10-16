@@ -11,6 +11,7 @@ SOURCES_PATH = ROOT / "data" / "sources.json"
 EMBEDDING_MODEL = "intfloat/multilingual-e5-base"
 EMBEDDING_MODEL_REVISION = "d128750597153bb5987e10b1c3493a34e5a4502a"
 OLLAMA_MODEL = "qwen2.5:7b-instruct"
+OLLAMA_BASE_URL = "http://127.0.0.1:11434"
 
 DOCUMENTS = [
     {

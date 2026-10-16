@@ -1,4 +1,12 @@
+import pytest
+
 from docbenchtr.evaluate import compute_metrics
+from docbenchtr.retrievers import (
+    PageIndexRetriever,
+    derive_pageindex_retrieval,
+    derive_pageindex_tree_search_ranking,
+    parse_pageindex_tree_search_response,
+)
 
 
 def test_page_level_recall_and_mrr():
@@ -14,3 +22,95 @@ def test_recall_for_multiple_relevant_pages():
     assert metrics["recall@1"] == 0.0
     assert metrics["recall@3"] == 0.0
     assert metrics["recall@5"] == 1.0
+
+
+def test_pageindex_ranking_uses_successful_reads_in_selection_order():
+    events = [
+        {"type": "tool_call", "call_id": "first", "name": "get_page_content",
+         "arguments": {"pages": "9-10,3"}},
+        {"type": "tool_call", "call_id": "second", "name": "get_page_content",
+         "arguments": {"pages": "3,12"}},
+        {"type": "tool_call", "call_id": "outline", "name": "get_document_structure",
+         "arguments": {"part": 1}},
+        {"type": "tool_call", "call_id": "failed", "name": "get_page_content",
+         "arguments": {"pages": "40"}},
+        # Results can arrive out of order; selection order remains tool-call order.
+        {"type": "tool_result", "call_id": "second", "name": "get_page_content",
+         "output": '{"success": true, "returned_pages": "3,12"}'},
+        {"type": "tool_result", "call_id": "failed", "name": "get_page_content",
+         "output": '{"error": "out of range", "success": false}'},
+        {"type": "tool_result", "call_id": "first", "name": "get_page_content",
+         "output": '{"success": true, "returned_pages": "10,9,3"}'},
+    ]
+
+    result = derive_pageindex_retrieval(events)
+
+    assert result["ranked_pages"] == [10, 9, 3, 12]
+    assert result["tool_call_count"] == 4
+    assert result["page_content_call_count"] == 3
+    assert [call["name"] for call in result["tool_calls"]] == [
+        "get_page_content", "get_page_content", "get_document_structure",
+        "get_page_content",
+    ]
+    assert result["tool_errors"] == [{"tool": "get_page_content", "error": "out of range"}]
+
+
+def test_pageindex_tree_search_expands_node_ranges_in_response_order_and_deduplicates():
+    tree = [
+        {"node_id": "first", "start_index": 1, "end_index": 3, "nodes": []},
+        {"node_id": "second", "start_index": 3, "end_index": 5, "nodes": []},
+        {"node_id": "third", "start_index": 7, "end_index": 7, "nodes": []},
+    ]
+
+    ranking = derive_pageindex_tree_search_ranking(tree, ["second", "first", "third"])
+
+    assert ranking == [3, 4, 5, 1, 2, 7]
+
+
+def test_pageindex_tree_search_parses_json_and_validates_selected_node_ids():
+    thinking, node_ids = parse_pageindex_tree_search_response(
+        '{"thinking":"Relevant section first","node_list":["0002","0001"]}',
+        {"0001", "0002"},
+    )
+
+    assert thinking == "Relevant section first"
+    assert node_ids == ["0002", "0001"]
+
+    with pytest.raises(ValueError, match="Invalid JSON"):
+        parse_pageindex_tree_search_response("not json", {"0001"})
+    with pytest.raises(ValueError, match="unknown node IDs"):
+        parse_pageindex_tree_search_response(
+            '{"thinking":"","node_list":["missing"]}', {"0001"}
+        )
+
+
+def test_pageindex_agentic_without_ranked_pages_is_failed_not_a_zero_score():
+    class Worker:
+        def request(self, command):
+            assert command["operation"] == "query"
+            return {
+                "ok": True,
+                "details": {
+                    "ranked_pages": [],
+                    "tool_calls": [{"name": "get_document_structure", "arguments": {}}],
+                    "tool_call_count": 1,
+                    "page_content_call_count": 0,
+                    "retrieval_trace": [],
+                    "tool_errors": [],
+                },
+                "idle_retries": [],
+            }
+
+    retriever = PageIndexRetriever.__new__(PageIndexRetriever)
+    retriever.worker = Worker()
+    retriever.doc_ids = {"doc": "pi-doc"}
+    retriever.document_runs = {}
+    retriever.retry_log = []
+
+    result = retriever.retrieve_with_metadata("question", "doc", 5)
+
+    assert result["status"] == "failed"
+    assert result["tool_call_count"] == 1
+    assert result["page_content_call_count"] == 0
+    assert result["ranked_pages"] == []
+    assert "without reading page content" in result["error"]

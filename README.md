@@ -13,7 +13,8 @@ This public pilot reports retrieval only. It evaluates physical PDF pages as ret
 - **BM25 (Turkish stemmed):** Snowball Turkish stemming before lexical ranking.
 - **Dense:** `intfloat/multilingual-e5-base`, with query and passage prefixes.
 - **Hybrid (RRF):** reciprocal rank fusion of the unstemmed BM25 and dense rankings.
-- **[PageIndex](https://github.com/VectifyAI/PageIndex):** open-source SDK in local mode with an Ollama model, when the local model service is available. A missing or failed local runtime is recorded as **not run**, never replaced with a lookalike implementation.
+- **PageIndex agentic:** the [PageIndex](https://github.com/VectifyAI/PageIndex) local SDK uses `qwen2.5:7b-instruct` through LiteLLM's `ollama_chat/` route for tool-using chat/search. `tool_call_count` counts every tool call; only successful `get_page_content` results contribute pages to its ranking.
+- **PageIndex LLM Tree Search:** gives the local model the cached PageIndex tree (titles, node IDs, inclusive physical page ranges, and summaries) plus the question. It requests `{"thinking": ..., "node_list": [...]}` with Ollama JSON-schema output. The ranking expands each selected node's inclusive `start_index..end_index` range in returned `node_list` order and deduplicates pages by first occurrence. Parse failures remain in the per-query results as failed rows.
 
 All methods return ranked, one-based physical PDF page numbers. The dense model uses CUDA when available and otherwise runs on CPU; the actual device is written to the generated results.
 
@@ -36,7 +37,7 @@ uv run python -m docbenchtr.run_pilot
 
 The run regenerates the verified question set, CSV and JSON results, the chart, and the results block in this README. To download and hash only the source documents, run `uv run python scripts/download_docs.py`.
 
-For PageIndex, install and start Ollama locally, pull `qwen2.5:7b-instruct`, then rerun the pilot. The adapter uses PageIndex's local SDK with LiteLLM's Ollama model route and stores its index under `.pageindex/`; no API key or cloud service is used. The runtime checks the Ollama local tags endpoint and records the precise reason if the service or requested model is unavailable.
+For PageIndex, install and start Ollama locally and pull `qwen2.5:7b-instruct` before running the pilot. PageIndex agentic uses the SDK's tool definitions through LiteLLM's `ollama_chat/` route, which supports tool calls. PageIndex LLM Tree Search sends the cached tree and question to Ollama's `/api/chat` endpoint with a JSON schema. Both use the local index under `.pageindex/docbenchtr-pilot/` and make no cloud calls. The pipeline checks the local tags endpoint and records per-query failures.
 
 ## Results
 
@@ -45,47 +46,7 @@ The generated table and chart below are populated from the run's `results/summar
 <!-- GENERATED:START -->
 ## Pilot results
 
-This generated section reads its metrics from `results/summary.json` (per-question records: `results/results.csv` and `results/per_query.json`).
-
-| Method | Recall@1 | Recall@3 | Recall@5 | MRR | Mean query latency |
-|---|---:|---:|---:|---:|---:|
-| BM25 | 0.278 | 0.653 | 0.764 | 0.532 | 1.1 ms |
-| BM25 (Turkish stemmed) | 0.250 | 0.708 | 0.722 | 0.526 | 2.6 ms |
-| Dense (multilingual-e5-base) | 0.403 | 0.667 | 0.750 | 0.627 | 23.0 ms |
-| Hybrid (RRF) | 0.333 | 0.708 | 0.792 | 0.612 | 22.9 ms |
-| PageIndex (local Ollama) | not run | not run | not run | not run | not run |
-
-![Recall@5 by method and question type](results/recall_at_5_by_question_type.png)
-
-### Recall@5 by question type
-
-| Method | Question type | Recall@5 | Questions |
-|---|---|---:|---:|
-| BM25 | cross section | 0.611 | 9 |
-| BM25 | direct fact | 0.667 | 9 |
-| BM25 | distractor | 0.889 | 9 |
-| BM25 | paraphrase | 0.889 | 9 |
-| BM25 (Turkish stemmed) | cross section | 0.778 | 9 |
-| BM25 (Turkish stemmed) | direct fact | 0.667 | 9 |
-| BM25 (Turkish stemmed) | distractor | 0.778 | 9 |
-| BM25 (Turkish stemmed) | paraphrase | 0.667 | 9 |
-| Dense (multilingual-e5-base) | cross section | 0.778 | 9 |
-| Dense (multilingual-e5-base) | direct fact | 0.778 | 9 |
-| Dense (multilingual-e5-base) | distractor | 0.667 | 9 |
-| Dense (multilingual-e5-base) | paraphrase | 0.778 | 9 |
-| Hybrid (RRF) | cross section | 0.833 | 9 |
-| Hybrid (RRF) | direct fact | 0.778 | 9 |
-| Hybrid (RRF) | distractor | 0.667 | 9 |
-| Hybrid (RRF) | paraphrase | 0.889 | 9 |
-
-### Run metadata
-
-- Documents: 3 — Kişisel Verilerin Korunması Kanunu, Tüketicinin Korunması Hakkında Kanun ve İkincil Mevzuatı (Ocak 2021), Yükseköğretim Kanunu.
-- Span-verified pilot questions: 36; excluded after verification: 0.
-- Physical PDF pages extracted: 500 across kvkk_6698: 18, tuketicinin_korunmasi_6502: 340, yuksekogretim_2547: 142.
-- Embedding model: `intfloat/multilingual-e5-base` revision `d128750597153bb5987e10b1c3493a34e5a4502a` on `cuda`.
-- Question set label: **pilot set, auto-drafted from source text, span-verified; not yet human-reviewed**.
-- **PageIndex (local Ollama):** not run — Ollama executable was not found on PATH; Ollama API http://127.0.0.1:11434/api/tags is unreachable: URLError: <urlopen error timed out>. PageIndex local SDK preflight passed (Local SDK config initialized with index model 'ollama_chat/qwen2.5:7b-instruct' and chat model 'ollama_chat/qwen2.5:7b-instruct'.); document indexing and retrieval were not run.
+No benchmark numbers are published yet. The maintainer should run the full pipeline to generate the results table and chart. The agentic and LLM tree-search methods will appear as separate rows.
 <!-- GENERATED:END -->
 
 ## Limitations
@@ -95,7 +56,11 @@ This generated section reads its metrics from `results/summary.json` (per-questi
 - Evaluation measures retrieval only; generation, answer correctness, and faithfulness are out of scope.
 - The dense comparison uses a single multilingual embedding model.
 - PDF pagination, extraction quality, edition dates, and the balance of document topics can affect retrieval scores.
-- PageIndex uses its local SDK chat agent to obtain page citations; the answer text is ignored, while latency includes the citation-producing agent call. The adapter's output depends on the local SDK and model; failures are reported rather than scored.
+- PageIndex agentic page rankings are reconstructed from successful `get_page_content` tool results, ordered by the agent's tool-call sequence and each result's `returned_pages`; repeated pages keep their first rank. Outline-only calls count in `tool_call_count` but do not rank pages. PageIndex returns no page scores. Per-query traces and SDK token usage, when present, are retained.
+- Agentic queries that produce no ranked pages are retained as failed and left unscored, with the tool-call count and trace preserved; an empty ranking is not presented as a PageIndex recall result.
+- PageIndex LLM Tree Search is a separate non-agentic method. It ranks inclusive one-based page ranges from model-selected cached-tree nodes in returned node order, deduplicating by first occurrence. JSON parse or schema failures are recorded per query and are not silently dropped.
+- PageIndex used the small local `qwen2.5:7b-instruct` model for both indexing and search. Its developers say a basic model is sufficient for indexing but recommend the [best model you can afford for chat/search](https://github.com/VectifyAI/PageIndex#model-recommendations); the 7B search model may disadvantage its results against that recommendation.
+- PageIndex's tree `toc_source`, per-document build time, and any document or query failures are listed in the generated run metadata and per-query files.
 
 ## Roadmap to the full study
 
