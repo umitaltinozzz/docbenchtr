@@ -132,7 +132,7 @@ PageIndex agentic default-instruction and read-pages-instruction variants use `o
 
 ## Hardware control (Colab A100)
 
-To check whether the laptop GPU (RTX 3070 Laptop, 8 GB, ~9% of the model on CPU) shaped the PageIndex numbers, the pilot was re-run on a Colab **NVIDIA A100-SXM4-40GB** with everything else held fixed: the same `qwen2.5:7b-instruct` weights (same Ollama model ID `ad3d627188ab`, base blob `sha256-2bada8a7…`), Ollama 0.40.5, 32,768-token context, 4,096-token output cap, temperature 0, the same 36 questions, the same source PDFs (SHA-256 verified) and the **same cached PageIndex trees**. Notebook: [`colab/run_a100_control.ipynb`](colab/run_a100_control.ipynb) (branch `a100-control` ships the trees and PDFs). Full outputs: [`results/colab_a100_qwen2.5-7b/`](results/colab_a100_qwen2.5-7b/).
+To check whether the laptop GPU (RTX 3070 Laptop, 8 GB, ~9% of the model on CPU) shaped the PageIndex numbers, the pilot was re-run on a Colab **NVIDIA A100-SXM4-40GB** with everything else held fixed: the same `qwen2.5:7b-instruct` weights (same Ollama model ID `ad3d627188ab`, base blob `sha256-2bada8a7…`), Ollama 0.40.5, 32,768-token context, 4,096-token output cap, temperature 0, the same 36 questions, the same source PDFs (SHA-256 verified) and the **same cached PageIndex trees**. Notebook: [`colab/run_a100_control.ipynb`](colab/run_a100_control.ipynb) (the repository ships the cached trees and the pinned PDFs). Full outputs: [`results/colab_a100_qwen2.5-7b/`](results/colab_a100_qwen2.5-7b/).
 
 | Method | Recall@5 laptop | Recall@5 A100 | MRR laptop | MRR A100 | Zero rankings laptop / A100 | Mean latency laptop → A100 |
 |---|---:|---:|---:|---:|---:|---:|
@@ -172,4 +172,4 @@ DocBenchTR, uzun ve maddeli Türkçe belgelerde RAG için farklı erişim yönte
 
 ## License
 
-The code is licensed under the MIT License. The included legal texts remain subject to their source and publication notes. No PDFs or model weights are committed on `main`; the `a100-control` branch carries the three source PDFs (SHA-256 pinned) because Colab hosts cannot reach the `.gov.tr` download URLs.
+The code is licensed under the MIT License. The included legal texts remain subject to their source and publication notes. No model weights are committed. The three source PDFs (SHA-256 pinned) and the cached PageIndex trees are committed because Colab hosts cannot reach the `.gov.tr` download URLs and the A100 runs must reuse the exact same trees.
