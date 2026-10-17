@@ -170,7 +170,19 @@ Recall@5 over all 36 questions. Agentic rows count queries that failed with an e
 - **Model capacity decides the result.** The same Tree Search moves from 0.444 (7B) to 0.917 (27B) Recall@5.
 - **Context length matters for long documents.** At 32k, the 340-page consumer-protection law's document structure plus tool results overflowed the window: Ollama truncated the prompt, dropping the user's question ("no user query found in messages"), and 13-14 agentic queries failed. At 64k these failures disappear.
 - **qwen3.8 Tree Search beats Hybrid by 0.125 Recall@5 and 0.126 MRR**, and both models place the right page first more often (Recall@1 0.50-0.53 vs 0.33).
-- **Caveats.** 36 questions, one run per configuration (see the hardware-control section: rankings vary across GPUs at temperature 0), so differences of a few hundredths are noise; gpt-oss Tree Search vs Hybrid (0.806 vs 0.792) is a tie. PageIndex costs 15-47 s per query against milliseconds. Trees were built by the 7B model, which disadvantages the larger models rather than favouring them. The 64k Modelfile override changes the Ollama model ID (`472dc…` vs `56ead…` at 32k); the weights are the same. Per-query files for these runs are still in Google Drive and will be added.
+- **Caveats.** 36 questions, one run per configuration (see the hardware-control section: rankings vary across GPUs at temperature 0), so differences of a few hundredths are noise; gpt-oss Tree Search vs Hybrid (0.806 vs 0.792) is a tie. PageIndex costs 15-47 s per query against milliseconds. Trees were built by the 7B model, which disadvantages the larger models rather than favouring them. The 64k Modelfile override changes the Ollama model ID (`472dc…` vs `56ead…` at 32k); the weights are the same.
+- **Where the gain comes from.** Recall@5 per document at 64k (12 questions each):
+
+  | Document | Hybrid | Tree Search, qwen3.8 | Tree Search, gpt-oss |
+  |---|---:|---:|---:|
+  | 6698 KVKK (18 pages) | 1.000 | 1.000 | 1.000 |
+  | 6502 Consumer protection (340 pages) | 0.792 | 0.833 | 0.750 |
+  | 2547 Higher education (142 pages) | 0.583 | **0.917** | 0.667 |
+
+  Most of qwen3.8's lead comes from the higher-education law, where the classical methods are weakest; on the longest document the methods are close.
+- **Why some agentic queries failed at 64k.** qwen3.8: 7 queries with `litellm.APIConnectionError: Extra data` (LiteLLM could not parse Ollama's response). gpt-oss: 3 queries with `KeyError: 'message', Got unexpected response from Ollama`. These are LiteLLM/Ollama integration errors with reasoning models, not model answers; they are counted as zero above. At 32k, gpt-oss also tried to call tools that do not exist (`repo_browser.search`, `repo_browser.print_tree`), its built-in harmony tool names.
+
+Per-query outputs for all four runs: [`results/colab_a100_models/`](results/colab_a100_models/).
 
 ## Limitations
 
