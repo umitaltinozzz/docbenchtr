@@ -1,0 +1,61 @@
+Downloading and hashing public source PDFs...
+Extracted 500 physical PDF pages across 3 documents.
+Kept 36 span-verified questions; dropped 0 failed drafts.
+Checking PageIndex cache for kvkk_6698...
+Reused verified PageIndex tree for kvkk_6698.
+Checking PageIndex cache for tuketicinin_korunmasi_6502...
+Reused verified PageIndex tree for tuketicinin_korunmasi_6502.
+Checking PageIndex cache for yuksekogretim_2547...
+Reused verified PageIndex tree for yuksekogretim_2547.
+Checking PageIndex cache for kvkk_6698...
+Reused verified PageIndex tree for kvkk_6698.
+Checking PageIndex cache for tuketicinin_korunmasi_6502...
+Reused verified PageIndex tree for tuketicinin_korunmasi_6502.
+Checking PageIndex cache for yuksekogretim_2547...
+Reused verified PageIndex tree for yuksekogretim_2547.
+
+Batches:   0%|          | 0/2 [00:00<?, ?it/s]
+Batches:  50%|█████     | 1/2 [00:00<00:00,  2.44it/s]
+Batches: 100%|██████████| 2/2 [00:00<00:00,  4.60it/s]
+
+Batches:   0%|          | 0/22 [00:00<?, ?it/s]
+Batches:   5%|▍         | 1/22 [00:00<00:02,  9.01it/s]
+Batches:   9%|▉         | 2/22 [00:00<00:02,  9.11it/s]
+Batches:  14%|█▎        | 3/22 [00:00<00:02,  9.12it/s]
+Batches:  18%|█▊        | 4/22 [00:00<00:01,  9.19it/s]
+Batches:  23%|██▎       | 5/22 [00:00<00:01,  9.22it/s]
+Batches:  27%|██▋       | 6/22 [00:00<00:01,  9.24it/s]
+Batches:  32%|███▏      | 7/22 [00:00<00:01,  9.22it/s]
+Batches:  36%|███▋      | 8/22 [00:00<00:01,  9.23it/s]
+Batches:  41%|████      | 9/22 [00:00<00:01,  9.25it/s]
+Batches:  45%|████▌     | 10/22 [00:01<00:01,  9.27it/s]
+Batches:  50%|█████     | 11/22 [00:01<00:01,  9.30it/s]
+Batches:  55%|█████▍    | 12/22 [00:01<00:01,  9.31it/s]
+Batches:  59%|█████▉    | 13/22 [00:01<00:00,  9.33it/s]
+Batches:  64%|██████▎   | 14/22 [00:01<00:00,  9.34it/s]
+Batches:  68%|██████▊   | 15/22 [00:01<00:00,  9.33it/s]
+Batches:  73%|███████▎  | 16/22 [00:01<00:00,  9.36it/s]
+Batches:  77%|███████▋  | 17/22 [00:01<00:00,  9.32it/s]
+Batches:  82%|████████▏ | 18/22 [00:01<00:00,  9.37it/s]
+Batches:  91%|█████████ | 20/22 [00:02<00:00, 11.46it/s]
+Batches: 100%|██████████| 22/22 [00:02<00:00, 10.48it/s]
+
+Batches:   0%|          | 0/9 [00:00<?, ?it/s]
+Batches:  11%|█         | 1/9 [00:00<00:00,  9.01it/s]
+Batches:  22%|██▏       | 2/9 [00:00<00:00,  9.08it/s]
+Batches:  33%|███▎      | 3/9 [00:00<00:00,  9.11it/s]
+Batches:  44%|████▍     | 4/9 [00:00<00:00,  9.17it/s]
+Batches:  56%|█████▌    | 5/9 [00:00<00:00,  9.16it/s]
+Batches:  67%|██████▋   | 6/9 [00:00<00:00,  9.16it/s]
+Batches:  78%|███████▊  | 7/9 [00:00<00:00,  9.19it/s]
+Batches:  89%|████████▉ | 8/9 [00:00<00:00,  9.23it/s]
+Batches: 100%|██████████| 9/9 [00:00<00:00,  9.35it/s]
+method | attempted | scored | zero ranking | excluded | Recall@1 | Recall@3 | Recall@5 | MRR | mean latency ms
+BM25 | 36 | 36 | 0 | 0 | 0.278 | 0.653 | 0.764 | 0.532 | 1.0
+BM25 (Turkish stemmed) | 36 | 36 | 0 | 0 | 0.250 | 0.708 | 0.722 | 0.526 | 2.2
+Dense (multilingual-e5-base) | 36 | 36 | 0 | 0 | 0.403 | 0.667 | 0.750 | 0.627 | 13.9
+Hybrid (RRF) | 36 | 36 | 0 | 0 | 0.333 | 0.708 | 0.792 | 0.612 | 12.8
+PageIndex agentic (default instructions) | 35 | 35 | 0 | 1 | 0.386 | 0.714 | 0.814 | 0.607 | 19454.1
+PageIndex agentic (read-pages instruction) | 34 | 34 | 0 | 2 | 0.500 | 0.691 | 0.750 | 0.665 | 14564.6
+PageIndex LLM Tree Search | 36 | 36 | 1 | 0 | 0.528 | 0.778 | 0.806 | 0.724 | 19299.6
+Results written to /content/docbenchtr/results

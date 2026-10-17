@@ -53,9 +53,9 @@ These rows are **not a verdict on PageIndex**. Every PageIndex variant here runs
 - **Agentic mode reads pages only some of the time.** In 14 of 36 queries (default instructions) and 12 of 36 (read-pages instruction), the model finished without calling `get_page_content`, so those rankings are empty and score zero. Where it did read pages, its rankings still trail the classical baselines.
 - **LLM Tree Search is the strongest PageIndex variant but trails the classical baselines** (Recall@5 0.472 vs 0.792 for Hybrid), and it is several orders of magnitude slower.
 - Queries a method attempted but could not answer are **counted as zero, not dropped**; the coverage columns show how many.
-- The laptop GPU is not the cause: the same configuration re-run on a Colab A100 gives the same overall picture (see [Hardware control](#hardware-control-colab-a100) below). A run with larger, current models is planned to separate model capacity from method design.
+- The laptop GPU is not the cause: the same configuration re-run on a Colab A100 gives the same overall picture (see [Hardware control](#hardware-control-colab-a100) below). Model capacity is: with current 20-27B models and a 64k context, PageIndex overtakes the classical baselines (see [Current models](#current-models-colab-a100)).
 
-Whether PageIndex closes this gap with a frontier model is exactly the question the full DocBenchTR study is designed to answer.
+**The generated table below is the 7B pilot.** With `qwen3.8:27b` at 64k, PageIndex LLM Tree Search reaches Recall@5 0.917 against 0.792 for Hybrid ([Current models](#current-models-colab-a100)). Whether this holds across more documents, repeated runs and frontier models is what the full DocBenchTR study is designed to answer.
 
 <!-- GENERATED:START -->
 ## Pilot results
@@ -147,6 +147,30 @@ To check whether the laptop GPU (RTX 3070 Laptop, 8 GB, ~9% of the model on CPU)
 - **Classical baselines are identical**, confirming the two environments match.
 - **The GPU changed speed, not the conclusion.** PageIndex stays far below the classical baselines on both machines; the A100 is 15–30× faster per query. No Tree Search query timed out on the A100, so the 8 laptop timeouts were a local artefact.
 - **PageIndex outputs are not reproducible across GPUs even at temperature 0.** The ranked pages are identical in only 11/36 (Tree Search), 16/36 (agentic default) and 20/36 (agentic read-pages) queries. Floating-point differences between GPUs change token choices, and long multi-turn agent runs amplify them. The two agentic variants swap places between the runs, so **their difference is within run-to-run noise**. The full study should run each PageIndex configuration several times and report the mean and spread.
+
+## Current models (Colab A100)
+
+**With a current 27B model and a 64k context, PageIndex outperforms every classical baseline on this pilot.** The same questions, PDFs and cached trees (built with `qwen2.5:7b-instruct`) were run with two newer open models on a Colab A100: `qwen3.8:27b` (Alibaba) and `gpt-oss:20b` (OpenAI). Output cap 32,768 tokens, temperature 0, Ollama 0.40.5. Notebook: [`colab/run_a100_models.ipynb`](colab/run_a100_models.ipynb); run logs with the full tables: [`results/colab_a100_models/logs/`](results/colab_a100_models/logs/).
+
+Recall@5 over all 36 questions. Agentic rows count queries that failed with an error as zero (the scored-only value is in brackets); the classical baselines are identical in every run (Hybrid 0.792, MRR 0.612).
+
+| PageIndex variant | qwen2.5:7b, 32k | qwen3.8:27b, 32k | **qwen3.8:27b, 64k** | gpt-oss:20b, 32k | **gpt-oss:20b, 64k** |
+|---|---:|---:|---:|---:|---:|
+| LLM Tree Search | 0.444 | 0.653 | **0.917** | 0.528 | **0.806** |
+| Agentic, default instructions | 0.153 | 0.583 (0.913, 23 q) | **0.833** (0.909, 33 q) | 0.528 (0.576, 33 q) | **0.791** (0.814, 35 q) |
+| Agentic, read-pages instruction | 0.222 | 0.556 (0.909, 22 q) | **0.792** (0.891, 32 q) | 0.486 | **0.708** (0.750, 34 q) |
+
+| 64k, all 36 questions | Recall@1 | Recall@3 | Recall@5 | MRR | Mean latency |
+|---|---:|---:|---:|---:|---:|
+| Hybrid (RRF) | 0.333 | 0.708 | 0.792 | 0.612 | 13 ms |
+| Dense (multilingual-e5-base) | 0.403 | 0.667 | 0.750 | 0.627 | 14 ms |
+| PageIndex LLM Tree Search, qwen3.8:27b | 0.500 | 0.847 | **0.917** | **0.738** | 27.3 s |
+| PageIndex LLM Tree Search, gpt-oss:20b | **0.528** | 0.778 | 0.806 | 0.724 | 19.3 s |
+
+- **Model capacity decides the result.** The same Tree Search moves from 0.444 (7B) to 0.917 (27B) Recall@5.
+- **Context length matters for long documents.** At 32k, the 340-page consumer-protection law's document structure plus tool results overflowed the window: Ollama truncated the prompt, dropping the user's question ("no user query found in messages"), and 13-14 agentic queries failed. At 64k these failures disappear.
+- **qwen3.8 Tree Search beats Hybrid by 0.125 Recall@5 and 0.126 MRR**, and both models place the right page first more often (Recall@1 0.50-0.53 vs 0.33).
+- **Caveats.** 36 questions, one run per configuration (see the hardware-control section: rankings vary across GPUs at temperature 0), so differences of a few hundredths are noise; gpt-oss Tree Search vs Hybrid (0.806 vs 0.792) is a tie. PageIndex costs 15-47 s per query against milliseconds. Trees were built by the 7B model, which disadvantages the larger models rather than favouring them. The 64k Modelfile override changes the Ollama model ID (`472dc…` vs `56ead…` at 32k); the weights are the same. Per-query files for these runs are still in Google Drive and will be added.
 
 ## Limitations
 
