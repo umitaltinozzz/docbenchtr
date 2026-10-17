@@ -53,7 +53,7 @@ These rows are **not a verdict on PageIndex**. Every PageIndex variant here runs
 - **Agentic mode reads pages only some of the time.** In 14 of 36 queries (default instructions) and 12 of 36 (read-pages instruction), the model finished without calling `get_page_content`, so those rankings are empty and score zero. Where it did read pages, its rankings still trail the classical baselines.
 - **LLM Tree Search is the strongest PageIndex variant but trails the classical baselines** (Recall@5 0.472 vs 0.792 for Hybrid), and it is several orders of magnitude slower.
 - Queries a method attempted but could not answer are **counted as zero, not dropped**; the coverage columns show how many.
-- A re-run of the same configuration on a Colab GPU, and a run with a larger model, are planned to separate model capacity from method design.
+- The laptop GPU is not the cause: the same configuration re-run on a Colab A100 gives the same overall picture (see [Hardware control](#hardware-control-colab-a100) below). A run with larger, current models is planned to separate model capacity from method design.
 
 Whether PageIndex closes this gap with a frontier model is exactly the question the full DocBenchTR study is designed to answer.
 
@@ -130,6 +130,24 @@ This generated section reads its metrics from `results/summary.json` (per-questi
 PageIndex agentic default-instruction and read-pages-instruction variants use `ollama_chat/qwen2.5:7b-instruct` through Ollama and share the cached trees. The read-pages instruction is an explicit modification to the SDK default. `tool_call_count` counts every agent tool invocation; page ranking uses only successful `get_page_content` results, in tool-call order and each result's `returned_pages` order, retaining each physical page's first occurrence. Outline-only calls count as tool calls but do not enter the ranking. PageIndex LLM Tree Search asks the same local model to select nodes from the cached tree using Ollama's JSON-schema output. It expands each selected node's inclusive one-based `start_index..end_index` range in returned `node_list` order and deduplicates pages by first occurrence. Attempted queries without a usable ranking, including parse failures, score zero; infrastructure exclusions remain outside the means. Both methods return no PageIndex page scores; per-query errors and traces are preserved in `results/per_query.json` and `results/results.csv`.
 <!-- GENERATED:END -->
 
+## Hardware control (Colab A100)
+
+To check whether the laptop GPU (RTX 3070 Laptop, 8 GB, ~9% of the model on CPU) shaped the PageIndex numbers, the pilot was re-run on a Colab **NVIDIA A100-SXM4-40GB** with everything else held fixed: the same `qwen2.5:7b-instruct` weights (same Ollama model ID `ad3d627188ab`, base blob `sha256-2bada8a7…`), Ollama 0.40.5, 32,768-token context, 4,096-token output cap, temperature 0, the same 36 questions, the same source PDFs (SHA-256 verified) and the **same cached PageIndex trees**. Notebook: [`colab/run_a100_control.ipynb`](colab/run_a100_control.ipynb) (branch `a100-control` ships the trees and PDFs). Full outputs: [`results/colab_a100_qwen2.5-7b/`](results/colab_a100_qwen2.5-7b/).
+
+| Method | Recall@5 laptop | Recall@5 A100 | MRR laptop | MRR A100 | Zero rankings laptop / A100 | Mean latency laptop → A100 |
+|---|---:|---:|---:|---:|---:|---:|
+| Hybrid (RRF) | 0.792 | 0.792 | 0.612 | 0.612 | 0 / 0 | unchanged |
+| BM25 | 0.764 | 0.764 | 0.532 | 0.532 | 0 / 0 | unchanged |
+| Dense (multilingual-e5-base) | 0.750 | 0.750 | 0.627 | 0.627 | 0 / 0 | unchanged |
+| BM25 (Turkish stemmed) | 0.722 | 0.722 | 0.526 | 0.526 | 0 / 0 | unchanged |
+| PageIndex LLM Tree Search | 0.472 | 0.444 | 0.396 | 0.370 | 0 / 0 | 48.6 s → 3.0 s |
+| PageIndex agentic (default instructions) | 0.222 | 0.153 | 0.218 | 0.098 | 14 / 12 | 273.8 s → 12.6 s |
+| PageIndex agentic (read-pages instruction) | 0.153 | 0.222 | 0.131 | 0.171 | 12 / 13 | 234.0 s → 8.8 s |
+
+- **Classical baselines are identical**, confirming the two environments match.
+- **The GPU changed speed, not the conclusion.** PageIndex stays far below the classical baselines on both machines; the A100 is 15–30× faster per query. No Tree Search query timed out on the A100, so the 8 laptop timeouts were a local artefact.
+- **PageIndex outputs are not reproducible across GPUs even at temperature 0.** The ranked pages are identical in only 11/36 (Tree Search), 16/36 (agentic default) and 20/36 (agentic read-pages) queries. Floating-point differences between GPUs change token choices, and long multi-turn agent runs amplify them. The two agentic variants swap places between the runs, so **their difference is within run-to-run noise**. The full study should run each PageIndex configuration several times and report the mean and spread.
+
 ## Limitations
 
 - This is a small pilot set, not a statistically powered comparison.
@@ -154,4 +172,4 @@ DocBenchTR, uzun ve maddeli Türkçe belgelerde RAG için farklı erişim yönte
 
 ## License
 
-The code is licensed under the MIT License. The included legal texts remain subject to their source and publication notes; no PDFs or model weights are committed.
+The code is licensed under the MIT License. The included legal texts remain subject to their source and publication notes. No PDFs or model weights are committed on `main`; the `a100-control` branch carries the three source PDFs (SHA-256 pinned) because Colab hosts cannot reach the `.gov.tr` download URLs.
