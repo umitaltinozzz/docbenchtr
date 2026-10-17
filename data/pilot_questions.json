@@ -7,6 +7,13 @@
     "source_pages": [
       2
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "açık rızası aranmaksızın",
+        "şartlardan birinin varlığı"
+      ]
+    ],
     "question_type": "direct_fact"
   },
   {
@@ -16,6 +23,13 @@
     "document_id": "kvkk_6698",
     "source_pages": [
       3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ]
     ],
     "question_type": "direct_fact"
   },
@@ -27,6 +41,12 @@
     "source_pages": [
       5
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "teknik ve idari tedbirleri"
+      ]
+    ],
     "question_type": "direct_fact"
   },
   {
@@ -36,6 +56,13 @@
     "document_id": "kvkk_6698",
     "source_pages": [
       4
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "hangi amaçla işleneceği",
+        "hukuki sebebi"
+      ]
     ],
     "question_type": "paraphrase"
   },
@@ -47,6 +74,13 @@
     "source_pages": [
       5
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "haklarına sahiptir",
+        "bilgi talep etme"
+      ]
+    ],
     "question_type": "paraphrase"
   },
   {
@@ -56,6 +90,13 @@
     "document_id": "kvkk_6698",
     "source_pages": [
       3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yeterli korumanın bulunmaması",
+        "Kurulun izninin bulunması"
+      ]
     ],
     "question_type": "paraphrase"
   },
@@ -67,6 +108,13 @@
     "source_pages": [
       3
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ]
+    ],
     "question_type": "distractor"
   },
   {
@@ -77,6 +125,13 @@
     "source_pages": [
       3
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yeterli korumanın bulunmaması",
+        "yazılı olarak taahhüt"
+      ]
+    ],
     "question_type": "distractor"
   },
   {
@@ -86,6 +141,13 @@
     "document_id": "kvkk_6698",
     "source_pages": [
       5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "hukuka aykırı olarak erişilmesini önlemek",
+        "tedbirleri almak"
+      ]
     ],
     "question_type": "distractor"
   },
@@ -98,6 +160,17 @@
       2,
       3
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "açık rızası aranmaksızın",
+        "şartlardan birinin varlığı"
+      ],
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ]
+    ],
     "question_type": "cross_section"
   },
   {
@@ -108,6 +181,16 @@
     "source_pages": [
       3,
       5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ],
+      [
+        "teknik ve idari tedbirleri"
+      ]
     ],
     "question_type": "cross_section"
   },
@@ -120,6 +203,16 @@
       4,
       5
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "hangi amaçla işleneceği",
+        "hukuki sebebi"
+      ],
+      [
+        "teknik ve idari tedbirleri"
+      ]
+    ],
     "question_type": "cross_section"
   },
   {
@@ -129,6 +222,12 @@
     "document_id": "tuketicinin_korunmasi_6502",
     "source_pages": [
       8
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "sözleşmeye aykırı olan maldır"
+      ]
     ],
     "question_type": "direct_fact"
   },
@@ -140,6 +239,13 @@
     "source_pages": [
       9
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "sözleşmeden dönme",
+        "satış bedelinden indirim"
+      ]
+    ],
     "question_type": "direct_fact"
   },
   {
@@ -149,6 +255,16 @@
     "document_id": "tuketicinin_korunmasi_6502",
     "source_pages": [
       21
+    ],
+    "equivalent_pages": {
+      "21": [
+        139
+      ]
+    },
+    "planned_terms": [
+      [
+        "eş zamanlı fiziksel varlığı olmaksızın"
+      ]
     ],
     "question_type": "direct_fact"
   },
@@ -160,6 +276,17 @@
     "source_pages": [
       12
     ],
+    "equivalent_pages": {
+      "12": [
+        54
+      ]
+    },
+    "planned_terms": [
+      [
+        "herhangi bir gerekçe göstermeksizin",
+        "cayma hakkına sahiptir"
+      ]
+    ],
     "question_type": "paraphrase"
   },
   {
@@ -169,6 +296,17 @@
     "document_id": "tuketicinin_korunmasi_6502",
     "source_pages": [
       26
+    ],
+    "equivalent_pages": {
+      "26": [
+        188
+      ]
+    },
+    "planned_terms": [
+      [
+        "kolaylıkla görülebilir ve okunabilir",
+        "birim fiyatını"
+      ]
     ],
     "question_type": "paraphrase"
   },
@@ -180,6 +318,13 @@
     "source_pages": [
       28
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "satış sonrası bakım ve onarım hizmetlerini",
+        "sağlamak zorundadır"
+      ]
+    ],
     "question_type": "paraphrase"
   },
   {
@@ -189,6 +334,13 @@
     "document_id": "tuketicinin_korunmasi_6502",
     "source_pages": [
       8
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "taraflarca kararlaştırılmış olan örnek",
+        "özellikleri taşımaması"
+      ]
     ],
     "question_type": "distractor"
   },
@@ -200,6 +352,13 @@
     "source_pages": [
       9
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "satılanı geri vermeye hazır",
+        "sözleşmeden dönme"
+      ]
+    ],
     "question_type": "distractor"
   },
   {
@@ -209,6 +368,17 @@
     "document_id": "tuketicinin_korunmasi_6502",
     "source_pages": [
       21
+    ],
+    "equivalent_pages": {
+      "21": [
+        139
+      ]
+    },
+    "planned_terms": [
+      [
+        "eş zamanlı fiziksel varlığı olmaksızın",
+        "uzaktan pazarlanmasına"
+      ]
     ],
     "question_type": "distractor"
   },
@@ -221,6 +391,15 @@
       8,
       10
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "sözleşmeye aykırı olan maldır"
+      ],
+      [
+        "sözleşmeye aykırı olan hizmettir"
+      ]
+    ],
     "question_type": "cross_section"
   },
   {
@@ -231,6 +410,17 @@
     "source_pages": [
       9,
       11
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "satış bedelinden indirim",
+        "sözleşmeden dönme"
+      ],
+      [
+        "bedelden indirim",
+        "sözleşmeden dönme"
+      ]
     ],
     "question_type": "cross_section"
   },
@@ -243,6 +433,19 @@
       21,
       22
     ],
+    "equivalent_pages": {
+      "21": [
+        139
+      ]
+    },
+    "planned_terms": [
+      [
+        "eş zamanlı fiziksel varlığı olmaksızın"
+      ],
+      [
+        "banka hizmeti, kredi, sigorta"
+      ]
+    ],
     "question_type": "cross_section"
   },
   {
@@ -252,6 +455,12 @@
     "document_id": "yuksekogretim_2547",
     "source_pages": [
       5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "özerkliğe ve kamu tüzel kişiliğine sahip"
+      ]
     ],
     "question_type": "direct_fact"
   },
@@ -263,6 +472,12 @@
     "source_pages": [
       14
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "rektör, Cumhurbaşkanınca atanır"
+      ]
+    ],
     "question_type": "direct_fact"
   },
   {
@@ -272,6 +487,13 @@
     "document_id": "yuksekogretim_2547",
     "source_pages": [
       58
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "disiplin cezaları",
+        "kınama"
+      ]
     ],
     "question_type": "direct_fact"
   },
@@ -283,6 +505,13 @@
     "source_pages": [
       20
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "eğitim - öğretim",
+        "araştırma"
+      ]
+    ],
     "question_type": "paraphrase"
   },
   {
@@ -292,6 +521,12 @@
     "document_id": "yuksekogretim_2547",
     "source_pages": [
       21
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "kadroları rektörlükçe ilan edilir"
+      ]
     ],
     "question_type": "paraphrase"
   },
@@ -303,6 +538,12 @@
     "source_pages": [
       25
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "araştırma, inceleme ve deneylerde yardımcı olan"
+      ]
+    ],
     "question_type": "paraphrase"
   },
   {
@@ -312,6 +553,12 @@
     "document_id": "yuksekogretim_2547",
     "source_pages": [
       21
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "kadroları rektörlükçe ilan edilir"
+      ]
     ],
     "question_type": "distractor"
   },
@@ -323,6 +570,13 @@
     "source_pages": [
       24
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "öğretim üyesi bulunmayan dersler",
+        "özel bilgi ve uzmanlık"
+      ]
+    ],
     "question_type": "distractor"
   },
   {
@@ -332,6 +586,12 @@
     "document_id": "yuksekogretim_2547",
     "source_pages": [
       51
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yazılı olarak disiplin soruşturması başlatır"
+      ]
     ],
     "question_type": "distractor"
   },
@@ -344,6 +604,16 @@
       14,
       15
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "rektör",
+        "üniversiteyi temsil"
+      ],
+      [
+        "senato, rektörün başkanlığında"
+      ]
+    ],
     "question_type": "cross_section"
   },
   {
@@ -355,6 +625,16 @@
       20,
       25
     ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "eğitim - öğretim",
+        "araştırma"
+      ],
+      [
+        "araştırma, inceleme ve deneylerde yardımcı"
+      ]
+    ],
     "question_type": "cross_section"
   },
   {
@@ -365,6 +645,15 @@
     "source_pages": [
       51,
       55
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yazılı olarak disiplin soruşturması başlatır"
+      ],
+      [
+        "en ağır cezayı gerektiren"
+      ]
     ],
     "question_type": "cross_section"
   }

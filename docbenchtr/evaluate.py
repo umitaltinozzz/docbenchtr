@@ -5,7 +5,6 @@ import json
 import statistics
 import time
 from collections import defaultdict
-from pathlib import Path
 from typing import Any
 
 from .config import EMBEDDING_MODEL_REVISION, RESULTS_DIR
@@ -181,14 +180,17 @@ def summarize(
             row for row in method_rows
             if row["status"] in ("ran", "partial", "zero_ranking") and row["recall@1"] is not None
         ]
-        attempted_rows = [row for row in method_rows if row["status"] in ("ran", "partial", "zero_ranking")]
-        zero_ranking_rows = [row for row in attempted_rows if not row["ranked_pages"]]
-        excluded_rows = [row for row in method_rows if row not in attempted_rows]
         failed_rows = [row for row in method_rows if row["status"] == "failed"]
+        attempted_rows = [
+            row for row in method_rows
+            if row["status"] in ("ran", "partial", "zero_ranking", "failed")
+        ]
+        zero_ranking_rows = [row for row in scored_rows if not row["ranked_pages"]]
+        excluded_rows = [row for row in method_rows if row["status"] == "not_run"]
         not_run_rows = [row for row in method_rows if row["status"] == "not_run"]
         partial_rows = [row for row in method_rows if row["status"] == "partial"]
         parse_failure_rows = [row for row in method_rows if row.get("parse_failure")]
-        if not method_rows or len(scored_rows) == len(method_rows) and not partial_rows:
+        if not method_rows or len(attempted_rows) == len(method_rows) and not failed_rows and not partial_rows:
             method_status = "ran" if method_rows else "not_run"
         elif scored_rows:
             method_status = "partial"
@@ -197,11 +199,22 @@ def summarize(
         else:
             method_status = "not_run"
         latency_rows = [row for row in method_rows if row["latency_ms"] is not None]
+        metric_keys = ("recall@1", "recall@3", "recall@5", "reciprocal_rank")
+        zero_counted_rows = [
+            *scored_rows,
+            *failed_rows,
+        ]
+        scored_only = {
+            key: statistics.fmean(row[key] for row in scored_rows) if scored_rows else None
+            for key in metric_keys
+        }
         overall = None
-        if scored_rows or latency_rows:
+        if attempted_rows or latency_rows:
             overall = {
-                key: statistics.fmean(row[key] for row in scored_rows) if scored_rows else None
-                for key in ("recall@1", "recall@3", "recall@5", "reciprocal_rank")
+                key: statistics.fmean(
+                    (row[key] if row in scored_rows else 0.0) for row in zero_counted_rows
+                ) if zero_counted_rows else None
+                for key in metric_keys
             }
             overall["latency_ms"] = statistics.fmean(
                 row["latency_ms"] for row in latency_rows
@@ -222,8 +235,12 @@ def summarize(
                 row for row in type_rows
                 if row["status"] in ("ran", "partial", "zero_ranking") and row["recall@1"] is not None
             ]
-            type_attempted = [row for row in type_rows if row["status"] in ("ran", "partial", "zero_ranking")]
-            type_zero_ranking = [row for row in type_attempted if not row["ranked_pages"]]
+            type_failed = [row for row in type_rows if row["status"] == "failed"]
+            type_attempted = [
+                row for row in type_rows
+                if row["status"] in ("ran", "partial", "zero_ranking", "failed")
+            ]
+            type_zero_ranking = [row for row in type_scored if not row["ranked_pages"]]
             type_tokens = [
                 row for row in type_rows
                 if isinstance(row["input_tokens"], int) and isinstance(row["output_tokens"], int)
@@ -234,21 +251,29 @@ def summarize(
                 "attempted_count": len(type_attempted),
                 "scored_count": len(type_scored),
                 "zero_ranking_count": len(type_zero_ranking),
-                "excluded_count": len(type_rows) - len(type_attempted),
-                "failed_question_count": sum(row["status"] == "failed" for row in type_rows),
+                "failed_as_zero_count": len(type_failed),
+                "excluded_count": sum(row["status"] == "not_run" for row in type_rows),
+                "failed_question_count": len(type_failed),
                 "not_run_question_count": sum(row["status"] == "not_run" for row in type_rows),
                 "partial_question_count": sum(row["status"] == "partial" for row in type_rows),
             }
-            if type_scored:
+            type_reported = [*type_scored, *type_failed]
+            if type_reported:
                 type_metrics.update({
-                    key: statistics.fmean(row[key] for row in type_scored)
-                    for key in ("recall@1", "recall@3", "recall@5", "reciprocal_rank")
+                    key: statistics.fmean(
+                        [row[key] for row in type_scored] + [0.0] * len(type_failed)
+                    )
+                    for key in metric_keys
                 })
             else:
                 type_metrics.update({
                     "recall@1": None, "recall@3": None, "recall@5": None,
                     "reciprocal_rank": None,
                 })
+            type_metrics["scored_only"] = {
+                key: statistics.fmean(row[key] for row in type_scored) if type_scored else None
+                for key in metric_keys
+            }
             type_latency = [row["latency_ms"] for row in type_rows if row["latency_ms"] is not None]
             type_metrics["latency_ms"] = statistics.fmean(type_latency) if type_latency else None
             type_metrics["token_query_count"] = len(type_tokens)
@@ -270,6 +295,7 @@ def summarize(
             "attempted_count": len(attempted_rows),
             "scored_count": len(scored_rows),
             "zero_ranking_count": len(zero_ranking_rows),
+            "failed_as_zero_count": len(failed_rows),
             "excluded_count": len(excluded_rows),
             "scored_question_count": len(scored_rows),
             "failed_question_count": len(failed_rows),
@@ -277,6 +303,7 @@ def summarize(
             "partial_question_count": len(partial_rows),
             "parse_failure_count": len(parse_failure_rows),
             "overall": overall,
+            "scored_only": scored_only,
             "token_usage": token_usage,
             "by_question_type": type_summary,
         })
@@ -285,12 +312,13 @@ def summarize(
         doc_page_counts[page["document_id"]] += 1
     return {
         "benchmark": "DocBenchTR public pilot",
-        "dataset_label": "pilot set, auto-drafted from source text, span-verified; not yet human-reviewed",
+        "dataset_label": f"pilot set; hand-written question stems and source spans checked; {excluded_questions} planned-term validator failures retained; not yet human-reviewed",
         "retrieval_only": True,
         "generation_and_faithfulness": "out of scope",
         "num_documents": len(doc_page_counts),
         "num_questions": len(questions),
-        "num_excluded_questions": excluded_questions,
+        "num_excluded_questions": 0,
+        "num_validator_failed_questions": excluded_questions,
         "question_type_counts": {
             question_type: sum(q["question_type"] == question_type for q in questions)
             for question_type in sorted({q["question_type"] for q in questions})
@@ -300,7 +328,12 @@ def summarize(
         "embedding_model_revision": EMBEDDING_MODEL_REVISION,
         "embedding_device": model_device,
         "page_numbering": "one-based physical PDF page index",
-        "metrics": "page-level Recall@1/3/5 and MRR; per-query latency and token usage when exposed",
+        "metrics": "page-level Recall@1/3/5 and MRR; failed attempted query = 0; not-run infrastructure exclusions omitted",
+        "scoring_rule": {
+            "failed_query": "zero for Recall@1/3/5 and MRR",
+            "not_run": "excluded when retrieval did not start because the document was unavailable",
+            "scored_only": "reported separately under methods[].scored_only",
+        },
         "pageindex": pageindex_metadata,
         "methods": summary_methods,
     }

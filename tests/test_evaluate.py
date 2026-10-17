@@ -159,11 +159,14 @@ def test_summarize_counts_empty_ranking_as_zero_and_excludes_infrastructure_erro
     rows = [
         row("q1", "direct_fact", "zero_ranking", [], zero_metrics),
         row("q2", "direct_fact", "failed", [], missing_metrics),
+        row("q3", "direct_fact", "ran", [1], {
+            "recall@1": 0.8, "recall@3": 0.8, "recall@5": 0.8, "reciprocal_rank": 0.8,
+        }),
     ]
 
     summary = summarize(
         rows,
-        [{"question_type": "direct_fact"}, {"question_type": "direct_fact"}],
+        [{"question_type": "direct_fact"}, {"question_type": "direct_fact"}, {"question_type": "direct_fact"}],
         [{"method": "test method", "reason": ""}],
         [],
         "cpu",
@@ -171,7 +174,10 @@ def test_summarize_counts_empty_ranking_as_zero_and_excludes_infrastructure_erro
     method = summary["methods"][0]
     by_type = method["by_question_type"]["direct_fact"]
 
-    assert method["overall"]["recall@5"] == 0.0
-    assert method["overall"]["reciprocal_rank"] == 0.0
-    assert (method["attempted_count"], method["scored_count"], method["zero_ranking_count"], method["excluded_count"]) == (1, 1, 1, 1)
-    assert (by_type["attempted_count"], by_type["scored_count"], by_type["zero_ranking_count"], by_type["excluded_count"]) == (1, 1, 1, 1)
+    assert method["overall"]["recall@5"] == 0.8 / 3
+    assert method["overall"]["reciprocal_rank"] == 0.8 / 3
+    assert method["scored_only"]["recall@5"] == 0.4
+    assert (method["attempted_count"], method["scored_count"], method["failed_as_zero_count"], method["zero_ranking_count"], method["excluded_count"]) == (3, 2, 1, 1, 0)
+    assert by_type["recall@5"] == 0.8 / 3
+    assert by_type["scored_only"]["recall@5"] == 0.4
+    assert (by_type["attempted_count"], by_type["scored_count"], by_type["failed_as_zero_count"], by_type["zero_ranking_count"], by_type["excluded_count"]) == (3, 2, 1, 1, 0)

@@ -5,13 +5,13 @@
 <title>DocBenchTR Pilot Özeti</title>
 <style>
   @page { size: A4; margin: 16mm 17mm 16mm 17mm; }
-  body { font-family: "Cambria", "Georgia", serif; font-size: 10.6pt; line-height: 1.42; color: #1d2733; }
+  body { font-family: "Cambria", "Georgia", serif; font-size: 10.6pt; line-height: 1.35; color: #1d2733; }
   h1 { font-family: "Segoe UI", "Arial", sans-serif; font-size: 18pt; line-height: 1.2; margin: 0 0 4px; color: #14324f; }
   .meta { font-family: "Segoe UI", "Arial", sans-serif; font-size: 9pt; color: #55657a; margin-bottom: 10px; }
   .meta a { color: #2f5d8a; }
   .abstract { background: #f3f6fa; border-left: 4px solid #e07a2f; padding: 8px 12px; margin: 8px 0 12px; font-size: 10pt; }
   .abstract b.lbl { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.5pt; letter-spacing: .06em; color: #e07a2f; display: block; margin-bottom: 2px; }
-  h2 { font-family: "Segoe UI", "Arial", sans-serif; font-size: 12.5pt; color: #14324f; margin: 14px 0 4px; border-bottom: 1px solid #d8e0ea; padding-bottom: 2px; }
+  h2 { font-family: "Segoe UI", "Arial", sans-serif; font-size: 12.5pt; color: #14324f; margin: 11px 0 4px; border-bottom: 1px solid #d8e0ea; padding-bottom: 2px; }
   p { margin: 4px 0 6px; text-align: justify; }
   ul, ol { margin: 4px 0 6px 18px; padding: 0; }
   li { margin: 2px 0; }
@@ -59,25 +59,25 @@
 </div>
 
 <div class="headline">
-  <div class="hl-text">Güncel bir dil modeliyle (Qwen 3.8 27B) ve 64k bağlamla <b>PageIndex, en iyi klasik yöntemi geçti.</b> Aynı yöntem küçük bir modelle (7B) çok gerideydi: belirleyici olan model kapasitesi ve bağlam uzunluğu.</div>
+  <div class="hl-text">27B model ve 64k bağlamda Tree Search, Hybrid'den sayısal olarak yüksek skor aldı; ancak 36 soruda fark istatistiksel olarak ayırt edilemiyor. 7B ile PageIndex, Hybrid'in açık ve anlamlı biçimde gerisinde.</div>
   <div class="vs">
     <div class="big pi">0,917</div><div class="lbl">PageIndex<br>Qwen 3.8 27B</div>
     <div class="sep">vs</div>
     <div class="big hy">0,792</div><div class="lbl">Hybrid<br>(BM25 + Dense)</div>
   </div>
-  <div class="unit">Recall@5 · doğru sayfanın ilk 5 sonuç içinde bulunma oranı</div>
+  <div class="unit">Recall@5 · Δ +0,125 · eşleştirilmiş %95 GA [−0,028; +0,278] · kesin işaret testi p=0,227</div>
 </div>
 
 <div class="cards">
   <div class="card"><div class="n">3</div><div class="t">Türk kanunu<br><span>KVKK · Tüketici · Yükseköğretim</span></div></div>
   <div class="card"><div class="n">500</div><div class="t">sayfa<br><span>18 · 340 · 142</span></div></div>
-  <div class="card"><div class="n">36</div><div class="t">doğrulanmış soru<br><span>4 soru tipi</span></div></div>
+  <div class="card"><div class="n">36</div><div class="t">soru<br><span>32 terim kontrolünü geçti · 4 listeli</span></div></div>
   <div class="card"><div class="n">7</div><div class="t">erişim yöntemi<br><span>4 klasik · 3 PageIndex</span></div></div>
 </div>
 
 <figure>
 <img src="figures/fig1_final.png">
-<figcaption><b>Şekil 1.</b> Son yapılandırmada (Colab A100, 64k bağlam) tüm yöntemlerin Recall@5 değeri. Turuncu: PageIndex, mavi: klasik yöntemler; noktalı çizgi Hybrid.</figcaption>
+<figcaption><b>Şekil 1.</b> Son yapılandırmada (Colab A100, 64k bağlam) tüm yöntemlerin Recall@5 değeri. Tree Search ile Hybrid arasındaki eşleştirilmiş aralık sıfırı içeriyor. Turuncu: PageIndex; mavi: klasik yöntemler.</figcaption>
 </figure>
 
 <div class="repo">Kod, veri ve tüm sonuçlar: <a href="https://github.com/umitaltinozzz/docbenchtr">github.com/umitaltinozzz/docbenchtr</a></div>
@@ -85,8 +85,8 @@
 <div class="pagebreak"></div>
 
 <h2>1. Kurulum</h2>
-<p><b>Veri.</b> KVKK (18 sayfa), Tüketicinin Korunması Hakkında Kanun (340 sayfa) ve Yükseköğretim Kanunu (142 sayfa). Her kanundan 12, toplam 36 soru; dört tip: doğrudan bilgi, yeniden ifade, çeldirici, bölümler arası. Her sorunun doğru sayfası, yanıt ifadesinin PDF metninde bulunmasıyla otomatik doğrulandı.</p>
-<p><b>Yöntemler.</b> Klasik: BM25, Türkçe köklü BM25, Dense (multilingual-e5), Hybrid (BM25+Dense, RRF). PageIndex (belgenin içindekiler ağacında dil modeliyle gezinen yöntem): iki ajan varyantı ve LLM Tree Search. <b>Metrikler:</b> Recall@k (doğru sayfa ilk k sonuçta mı) ve MRR. Sonuç veremeyen sorgular atılmadı, sıfır sayıldı.</p>
+<p><b>Veri.</b> KVKK (18 sayfa), Tüketicinin Korunması Hakkında Kanun (340 sayfa) ve Yükseköğretim Kanunu (142 sayfa). Her kanundan 12, toplam 36 elle yazılmış soru; dört tip: doğrudan bilgi, yeniden ifade, çeldirici, bölümler arası. Kaynak sayfa denetimine eklenen plan terimi kontrolünde dört soru başarısız oldu; sonuçlarda tutuldu ve duyarlılık analizinde ayrı gösterildi.</p>
+<p><b>Yöntemler.</b> Klasik: BM25, Türkçe köklü BM25, Dense (multilingual-e5), Hybrid (BM25+Dense, RRF). PageIndex: iki ajan varyantı ve LLM Tree Search. <b>Metrikler:</b> Recall@k ve MRR. Başarısız sorgular sıfır sayıldı; yalnızca başlatılamayan sorgular dışarıda kaldı.</p>
 
 <h2>2. Deney süreci: ne yaptık, ne gördük, nasıl düzelttik</h2>
 <table class="keep">
@@ -101,7 +101,7 @@
 
 <figure>
 <img src="figures/fig2_journey.png">
-<figcaption><b>Şekil 2.</b> PageIndex Tree Search'ün her koşudaki Recall@5 değeri. Kesikli çizgi en iyi klasik yöntem (Hybrid). Aynı 7B model dizüstünde ve A100'de aynı sonucu verdi (ilk iki çubuk); fark, büyük model ve 64k bağlamla geldi (koyu çubuklar).</figcaption>
+<figcaption><b>Şekil 2.</b> PageIndex Tree Search'ün her koşudaki Recall@5 değeri. Kesikli çizgi Hybrid skorunu gösterir. 27B/64k skoru sayısal olarak yüksek olsa da 36 soruda eşleştirilmiş fark ayırt edilebilir değildir.</figcaption>
 </figure>
 
 <h2 style="page-break-before: always">3. Sonuçlar</h2>
@@ -111,19 +111,32 @@
 <tr><td>Hybrid (BM25 + Dense)</td><td class="n">0,333</td><td class="n">0,792</td><td class="n">0,612</td><td class="n">13 ms</td></tr>
 <tr><td>Dense (e5)</td><td class="n">0,403</td><td class="n">0,750</td><td class="n">0,627</td><td class="n">14 ms</td></tr>
 <tr><td>PageIndex Tree Search · gpt-oss 20B</td><td class="n">0,528</td><td class="n">0,806</td><td class="n">0,724</td><td class="n">19 sn</td></tr>
-<tr class="best"><td>PageIndex Tree Search · Qwen 3.8 27B</td><td class="n">0,500</td><td class="n">0,917</td><td class="n">0,738</td><td class="n">27 sn</td></tr>
+<tr><td>PageIndex Tree Search · Qwen 3.8 27B</td><td class="n">0,500</td><td class="n">0,917</td><td class="n">0,738</td><td class="n">27 sn</td></tr>
 </table>
+
+<p class="small"><b>Eşleştirilmiş test (Qwen 3.8 27B, 64k).</b> Tree Search − Hybrid: Recall@5 Δ +0,125; %95 GA [−0,028; +0,278]; 8/3/25 kazanım/kayıp/beraberlik; kesin iki yönlü işaret testi p=0,227. MRR Δ +0,126; %95 GA [−0,045; +0,296]; p=0,307.</p>
+
+<table class="keep">
+<tr><th>Karşılaştırma</th><th>Recall@5 Δ [eşleştirilmiş %95 GA]</th><th>K/B/B</th><th>Kesin p</th></tr>
+<tr><td>Tüm 36 soru</td><td>+0,125 [−0,028; +0,278]</td><td>8/3/25</td><td>0,227</td></tr>
+<tr><td>Terim kontrolünü geçen 32 soru</td><td>+0,156 [0,000; +0,328]</td><td>7/2/23</td><td>0,180</td></tr>
+<tr><td>Genişletilmiş altın etiket, 36 soru</td><td>+0,083 [−0,069; +0,236]</td><td>7/3/26</td><td>0,344</td></tr>
+</table>
+
+<p class="small"><b>Altın sayfa ve taban çizgisi.</b> 6502 için p.139, p.54 ve p.188 eşdeğer kabul edildi; aynı hüküm alternatifi bir ayrı soru hedefi sayılmadı. Hybrid Recall@5 0,792'den 0,833'e, Tree Search 0,917'de kaldı; fark +0,125'ten +0,083'e indi. İlk 5 sayfa baseline'ı genel olarak 0,361'dir (KVKK 1,000; 6502 0,000; 2547 0,083); rastgele sıra beklentisi genel olarak 0,109'dur.</p>
+
+<p class="small"><b>Terim denetiminde kalan sorular:</b> <code>kvkk_6698-paraphrase-2</code>, <code>yuksekogretim_2547-paraphrase-1</code>, <code>yuksekogretim_2547-cross_section-1</code>, <code>yuksekogretim_2547-cross_section-2</code>. Dört soru da ana sonuçlarda sayıldı.</p>
 
 <figure>
 <img src="figures/fig3_documents.png">
-<figcaption><b>Şekil 3.</b> Kanun bazında Recall@5 (her kanunda 12 soru). KVKK'da üç yöntem de tam isabet; PageIndex'in kazancı en çok klasik yöntemlerin zorlandığı Yükseköğretim Kanunu'nda (0,583 → 0,917).</figcaption>
+<figcaption><b>Şekil 3.</b> Kanun bazında Recall@5 (her kanunda 12 soru). KVKK'da üç yöntem de tam isabet; bu belge için ilk beş sayfa baseline'ı da 1,000 Recall@5 alır.</figcaption>
 </figure>
 
 <h2>4. Ne öğrendik</h2>
 <ol>
-<li><b>Model kapasitesi belirleyici.</b> Aynı yöntem 7B modelle 0,44'te, 27B modelle 0,92'de.</li>
+<li><b>7B sonuçları zayıf.</b> PageIndex 7B ile Hybrid'in anlamlı biçimde gerisinde kaldı.</li>
 <li><b>Uzun belgede bağlam belirleyici.</b> 340 sayfalık kanun 32k bağlama sığmadı; 64k'da sorun kalktı.</li>
-<li><b>Donanım sonucu değil hızı değiştiriyor;</b> ama sıcaklık 0'da bile farklı GPU'larda sayfa sıralamaları soruların ancak üçte biri ile yarısında aynı kaldı. Bu yüzden tek koşu yetmez.</li>
+<li><b>Donanım ve tek koşu belirsizlik yaratıyor.</b> Sıcaklık 0'da bile farklı GPU'larda sayfa sıralamaları soruların üçte biri ile yarısında aynı kaldı.</li>
 </ol>
 
 <h2>5. Sonraki test</h2>

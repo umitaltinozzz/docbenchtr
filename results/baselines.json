@@ -1,0 +1,42 @@
+{
+  "original_gold": {
+    "overall": {
+      "first5_recall@5": 0.3611111111111111,
+      "random_order_expected_recall@5": 0.10923164257878422
+    },
+    "by_document": {
+      "kvkk_6698": {
+        "first5_recall@5": 1.0,
+        "random_order_expected_recall@5": 0.2777777777777778
+      },
+      "tuketicinin_korunmasi_6502": {
+        "first5_recall@5": 0.0,
+        "random_order_expected_recall@5": 0.014705882352941124
+      },
+      "yuksekogretim_2547": {
+        "first5_recall@5": 0.08333333333333333,
+        "random_order_expected_recall@5": 0.035211267605633756
+      }
+    }
+  },
+  "expanded_gold": {
+    "overall": {
+      "first5_recall@5": 0.3611111111111111,
+      "random_order_expected_recall@5": 0.11104818778093589
+    },
+    "by_document": {
+      "kvkk_6698": {
+        "first5_recall@5": 1.0,
+        "random_order_expected_recall@5": 0.2777777777777778
+      },
+      "tuketicinin_korunmasi_6502": {
+        "first5_recall@5": 0.0,
+        "random_order_expected_recall@5": 0.020155517959396102
+      },
+      "yuksekogretim_2547": {
+        "first5_recall@5": 0.08333333333333333,
+        "random_order_expected_recall@5": 0.035211267605633756
+      }
+    }
+  }
+}

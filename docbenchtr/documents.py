@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 import shutil
 import subprocess
 import time
@@ -22,7 +21,7 @@ def sha256_file(path: Path) -> str:
 
 
 def download_documents(retries: int = 3, timeout: int = 90) -> list[dict[str, Any]]:
-    """Download source PDFs and write an integrity manifest; never commits PDFs."""
+    """Reuse or download SHA-256-pinned PDFs and write their source manifest."""
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     records: list[dict[str, Any]] = []
     for source in DOCUMENTS:

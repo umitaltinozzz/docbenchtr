@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import os
 import sys
 from contextlib import contextmanager
@@ -25,7 +24,10 @@ def main() -> int:
     questions, dropped = draft_questions(pages)
     if not questions:
         raise RuntimeError("No source-span-verified questions survived; evaluation stopped.")
-    print(f"Kept {len(questions)} span-verified questions; dropped {len(dropped)} failed drafts.")
+    print(
+        f"Retained {len(questions)} questions; {len(dropped)} fail the planned-term validator "
+        "and remain in the scored set."
+    )
 
     pdf_paths = {
         document["document_id"]: str(RAW_DIR / document["filename"])

@@ -9,6 +9,18 @@ from .config import DOCUMENTS, QUESTIONS_PATH, ROOT
 
 ARTICLE_RE = re.compile(r"(?im)^\s*(?:MADDE|Madde)\s+([0-9]+(?:\s*/\s*[A-Z])?)\s*[-–—:]\s*")
 WORD_RE = re.compile(r"[a-zçğıöşü]{3,}", re.IGNORECASE)
+EQUIVALENT_GOLD_PAGES = {
+    "tuketicinin_korunmasi_6502-direct_fact-3": {"21": [139]},
+    "tuketicinin_korunmasi_6502-distractor-3": {"21": [139]},
+    "tuketicinin_korunmasi_6502-cross_section-3": {"21": [139]},
+    "tuketicinin_korunmasi_6502-paraphrase-1": {"12": [54]},
+    "tuketicinin_korunmasi_6502-paraphrase-2": {"26": [188]},
+}
+EQUIVALENT_PROVISIONS = {
+    139: "Mesafeli Sözleşmeler Yönetmeliği tanımlarındaki mesafeli sözleşme tanımı; 6502 m. 48 ile aynı hüküm.",
+    54: "Taksitli satış sözleşmelerinde cayma hakkına ilişkin hüküm; 6502 m. 18 ile eşdeğer hüküm.",
+    188: "Fiyat Etiketi Yönetmeliği m. 5; 6502 m. 54 ile aynı fiyat etiketi gerekliliği.",
+}
 
 # Question stems are tied to article topics in the source PDFs. Answer spans
 # and page numbers are selected from extracted article text at run time.
@@ -85,26 +97,49 @@ QUESTION_PLAN: dict[str, dict[str, list[dict[str, Any]]]] = {
 def normalize_text(value: str) -> str:
     value = unicodedata.normalize("NFKC", value).replace("\u00ad", "")
     value = re.sub(r"(?<=\w)-\s*\n\s*(?=\w)", "", value)
+    value = re.sub(r"(?m)^\s*(?:\d{1,4}|[-–—]\s*\d+\s*[-–—])\s*$", " ", value)
+    # Xpdf places amendment-footnote numbers directly before their note text.
+    value = re.sub(
+        r"\s+\d{1,3}\s+(?=\d{1,2}/\d{1,2}/\d{4}\s+tarihli ve\s+\d+\s+sayılı Kanunun\b)",
+        " ", value, flags=re.IGNORECASE,
+    )
     return " ".join(value.split()).casefold()
 
 
-def verify_answer_spans(question: dict[str, Any], page_lookup: dict[tuple[str, int], str]) -> bool:
-    """Require every exact answer segment to occur on at least one cited page."""
+def answer_span_issues(
+    question: dict[str, Any], page_lookup: dict[tuple[str, int], str]
+) -> list[dict[str, Any]]:
+    """Return provenance and planned-term failures for every selected answer span."""
     document_id = question["document_id"]
     cited_pages = question["source_pages"]
     if not cited_pages:
-        return False
+        return [{"type": "missing_source_pages"}]
     source_texts = [page_lookup.get((document_id, page)) for page in cited_pages]
     if any(text is None for text in source_texts):
-        return False
+        return [{"type": "missing_source_page_text", "pages": cited_pages}]
     answer_segments = [segment.strip() for segment in question["reference_answer"].split(" / ")]
     if not all(answer_segments):
-        return False
+        return [{"type": "empty_answer_segment"}]
     normalized_pages = [normalize_text(text or "") for text in source_texts]
-    return all(
-        any(normalize_text(segment) in page_text for page_text in normalized_pages)
-        for segment in answer_segments
-    )
+    planned_terms = question.get("planned_terms", [])
+    issues: list[dict[str, Any]] = []
+    for index, segment in enumerate(answer_segments):
+        if not any(normalize_text(segment) in page_text for page_text in normalized_pages):
+            issues.append({"type": "answer_not_found", "segment_index": index})
+        terms = planned_terms[index] if index < len(planned_terms) else []
+        missing = [term for term in terms if normalize_text(term) not in normalize_text(segment)]
+        if missing:
+            issues.append({
+                "type": "planned_terms_missing",
+                "segment_index": index,
+                "missing_terms": missing,
+            })
+    return issues
+
+
+def verify_answer_spans(question: dict[str, Any], page_lookup: dict[tuple[str, int], str]) -> bool:
+    """Require source provenance and every planned term in each selected span."""
+    return not answer_span_issues(question, page_lookup)
 
 
 def verify_question_set(questions: list[dict[str, Any]], pages: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -187,19 +222,22 @@ def _pick_span(article: dict[str, Any], terms: list[str]) -> dict[str, Any]:
         ),
         reverse=True,
     )
-    if normalized_terms and not any(term in normalize_text(ranked[0]["answer"]) for term in normalized_terms):
-        # A mismatch is surfaced for the verifier to drop; do not invent a fallback answer.
-        return ranked[0]
+    # Choose the best available source span; the verifier reports any missing terms.
     return ranked[0]
 
 
-def _make_question(doc_id: str, qid: str, prompt: str, spans: list[dict[str, Any]], question_type: str) -> dict[str, Any]:
+def _make_question(
+    doc_id: str, qid: str, prompt: str, spans: list[dict[str, Any]],
+    question_type: str, planned_terms: list[list[str]],
+) -> dict[str, Any]:
     return {
         "question_id": qid,
         "question": prompt,
         "reference_answer": " / ".join(span["answer"] for span in spans),
         "document_id": doc_id,
         "source_pages": sorted({span["page"] for span in spans}),
+        "equivalent_pages": EQUIVALENT_GOLD_PAGES.get(qid, {}),
+        "planned_terms": planned_terms,
         "question_type": question_type,
     }
 
@@ -225,32 +263,129 @@ def draft_questions(pages: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], 
                     question = spec["question"]
                     source_articles = [article_number]
                 question_id = f"{doc_id}-{question_type}-{index}"
-                drafts.append(_make_question(doc_id, question_id, question, spans, question_type))
+                planned_terms = spec["terms"] if question_type == "cross_section" else [spec["terms"]]
+                drafts.append(_make_question(
+                    doc_id, question_id, question, spans, question_type, planned_terms
+                ))
                 draft_log.append({
                     "question_id": question_id,
                     "article_numbers": source_articles,
                     "distractor_article_number": spec.get("distractor_article"),
                 })
 
-    valid, dropped = verify_question_set(drafts, pages)
+    valid, failed = verify_question_set(drafts, pages)
+    # Keep failed validator cases in the published question set for transparency and
+    # scoring. They are identified separately for the sensitivity analysis.
+    retained = valid + failed
+    retained.sort(key=lambda question: next(
+        index for index, draft in enumerate(drafts)
+        if draft["question_id"] == question["question_id"]
+    ))
     QUESTIONS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    QUESTIONS_PATH.write_text(json.dumps(valid, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    QUESTIONS_PATH.write_text(json.dumps(retained, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     valid_ids = {question["question_id"] for question in valid}
+    page_lookup = {(page["document_id"], page["page_number"]): page["text"] for page in pages}
     verification = {
-        "label": "pilot set, auto-drafted from source text, span-verified; not yet human-reviewed",
+        "label": "pilot set; hand-written stems, source spans and planned terms checked; not yet human-reviewed",
         "drafted_count": len(drafts),
         "verified_count": len(valid),
-        "dropped_count": len(dropped),
+        "failed_count": len(failed),
+        "retained_count": len(retained),
+        "dropped_count": 0,
+        "full_document_search": {
+            "text_source": "data/processed/pages.jsonl from pinned PDFs extracted with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout",
+            "page_scope": "all extracted physical pages in each question's document",
+            "normalization": "NFKC, soft-hyphen and line-wrap normalization, blank page-number and Xpdf amendment-footnote noise removal, whitespace collapse, casefold",
+            "purpose": "Search each selected answer segment and every planned term across the complete extracted text for equivalent-page review.",
+        },
         "checks": [
             {
                 **item,
                 "verified": item["question_id"] in valid_ids,
                 "source_pages": next(question["source_pages"] for question in drafts if question["question_id"] == item["question_id"]),
+                "equivalent_pages": next(question["equivalent_pages"] for question in drafts if question["question_id"] == item["question_id"]),
+                "planned_terms": next(question["planned_terms"] for question in drafts if question["question_id"] == item["question_id"]),
+                "issues": answer_span_issues(
+                    next(question for question in drafts if question["question_id"] == item["question_id"]),
+                    page_lookup,
+                ),
             }
             for item in draft_log
         ],
     }
+    verification["full_document_search"]["question_searches"] = _search_question_evidence(
+        retained, pages
+    )
+    verification["equivalent_page_evidence"] = _equivalent_page_evidence(retained, pages)
     (ROOT / "data" / "question_verification.json").write_text(
         json.dumps(verification, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    return valid, dropped
+    return retained, failed
+
+
+def _search_question_evidence(
+    questions: list[dict[str, Any]], pages: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    pages_by_document: dict[str, list[dict[str, Any]]] = {}
+    for page in pages:
+        pages_by_document.setdefault(page["document_id"], []).append(page)
+    evidence = []
+    for question in questions:
+        full_text = pages_by_document.get(question["document_id"], [])
+        normalized = [(page["page_number"], normalize_text(page["text"])) for page in full_text]
+        segments = question["reference_answer"].split(" / ")
+        evidence.append({
+            "question_id": question["question_id"],
+            "document_page_count": len(full_text),
+            "answer_segment_pages": [
+                {
+                    "segment_index": index,
+                    "pages": [page for page, text in normalized if normalize_text(segment) in text],
+                }
+                for index, segment in enumerate(segments)
+            ],
+            "planned_term_pages": [
+                {
+                    "segment_index": index,
+                    "term_pages": {
+                        term: [page for page, text in normalized if normalize_text(term) in text]
+                        for term in terms
+                    },
+                }
+                for index, terms in enumerate(question.get("planned_terms", []))
+            ],
+        })
+    return evidence
+
+
+def _equivalent_page_evidence(
+    questions: list[dict[str, Any]], pages: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    page_lookup = {(page["document_id"], page["page_number"]): page["text"] for page in pages}
+    evidence = []
+    for question in questions:
+        for original_page, equivalent_pages in question.get("equivalent_pages", {}).items():
+            for page_number in equivalent_pages:
+                page_text = normalize_text(page_lookup[(question["document_id"], page_number)])
+                phrase = next(
+                    (normalize_text(term) for group in question.get("planned_terms", [])
+                     for term in group if normalize_text(term) in page_text),
+                    "",
+                )
+                start = page_text.find(phrase) if phrase else -1
+                evidence.append({
+                    "question_id": question["question_id"],
+                    "original_gold_page": int(original_page),
+                    "equivalent_page": page_number,
+                    "provision": EQUIVALENT_PROVISIONS[page_number],
+                    "matched_planned_phrase": phrase,
+                    "normalized_extracted_text_excerpt": (
+                        page_text[max(0, start - 130):start + len(phrase) + 260]
+                        if start >= 0 else page_text[:500]
+                    ),
+                    "text_origin": (
+                        "data/processed/pages.jsonl; pinned PDF processed with pdftotext "
+                        "version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout"
+                    ),
+                })
+    return evidence

@@ -47,7 +47,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -97,7 +117,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -147,7 +187,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -197,7 +257,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -260,7 +340,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -329,7 +429,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -366,6 +486,26 @@
     "tree_search_node_ids": [
       "0004",
       "0003"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ]
     ]
   },
   {
@@ -416,7 +556,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -466,7 +626,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -516,7 +696,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -566,7 +766,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -630,7 +850,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -701,7 +941,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -738,6 +998,26 @@
     "tree_search_node_ids": [
       "0004",
       "0005"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
     ]
   },
   {
@@ -788,7 +1068,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -838,7 +1138,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -888,7 +1208,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -938,7 +1278,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -1004,7 +1364,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -1070,7 +1450,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -1110,6 +1510,26 @@
       "0003",
       "0004",
       "0008"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
     ]
   },
   {
@@ -1160,7 +1580,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -1210,7 +1650,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -1260,7 +1720,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -1310,7 +1790,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -1375,7 +1875,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -1441,7 +1961,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -1478,6 +2018,26 @@
     "tree_search_node_ids": [
       "0003",
       "0007"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ]
     ]
   },
   {
@@ -1528,7 +2088,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -1578,7 +2158,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -1628,7 +2228,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -1678,7 +2298,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -1719,7 +2359,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -1794,7 +2454,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -1834,6 +2514,26 @@
       "0003",
       "0004",
       "0008"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
     ]
   },
   {
@@ -1884,7 +2584,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -1934,7 +2654,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -1984,7 +2724,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -2034,7 +2794,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -2097,7 +2877,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -2163,7 +2963,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 1.0,
+    "cited_recall@3": 1.0,
+    "cited_recall@5": 1.0,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 1.0,
+    "expanded_cited_recall@3": 1.0,
+    "expanded_cited_recall@5": 1.0,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -2199,6 +3019,26 @@
     "tree_search_thinking": "根据问题，我们需要找到关于个人数据跨境传输的条件和程序的相关节点。从文档结构来看，第二节讨论了个人数据处理的原则和条件，包括跨境传输的规定。因此，最相关的节点是0006。",
     "tree_search_node_ids": [
       "0006"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
     ]
   },
   {
@@ -2249,7 +3089,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -2299,7 +3159,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -2349,7 +3229,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -2399,7 +3299,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -2531,7 +3451,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 1.0,
+    "cited_recall@3": 1.0,
+    "cited_recall@5": 1.0,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 1.0,
+    "expanded_cited_recall@3": 1.0,
+    "expanded_cited_recall@5": 1.0,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -2595,7 +3535,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -2632,6 +3592,26 @@
     "tree_search_node_ids": [
       "0005",
       "0004"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
     ]
   },
   {
@@ -2682,7 +3662,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -2732,7 +3732,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -2782,7 +3802,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -2832,7 +3872,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -2898,7 +3958,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 1.0,
+    "cited_recall@3": 1.0,
+    "cited_recall@5": 1.0,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 1.0,
+    "expanded_cited_recall@3": 1.0,
+    "expanded_cited_recall@5": 1.0,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -2964,7 +4044,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 1.0,
+    "cited_recall@3": 1.0,
+    "cited_recall@5": 1.0,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 1.0,
+    "expanded_cited_recall@3": 1.0,
+    "expanded_cited_recall@5": 1.0,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -3000,6 +4100,26 @@
     "tree_search_thinking": "根据问题，我们需要找到关于个人数据跨境传输的规定。在文档树结构中，节点0006直接提到了个人数据跨境传输的条件和程序。",
     "tree_search_node_ids": [
       "0006"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ]
     ]
   },
   {
@@ -3050,7 +4170,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -3100,7 +4240,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -3150,7 +4310,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -3200,7 +4380,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -3269,7 +4469,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -3333,7 +4553,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -3378,6 +4618,26 @@
       "0006",
       "0007",
       "0008"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.2,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
     ]
   },
   {
@@ -3429,7 +4689,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -3480,7 +4764,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -3531,7 +4839,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -3582,7 +4914,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -3647,7 +5003,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -3714,7 +5094,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -3754,6 +5158,30 @@
     "tree_search_node_ids": [
       "0003",
       "0002"
+    ],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      2,
+      3
+    ],
+    "expanded_gold_groups": [
+      [
+        2
+      ],
+      [
+        3
+      ]
     ]
   },
   {
@@ -3805,7 +5233,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -3856,7 +5308,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -3907,7 +5383,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -3958,7 +5458,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -4027,7 +5551,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.5,
+    "cited_recall@3": 0.5,
+    "cited_recall@5": 0.5,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 0.5,
+    "expanded_cited_recall@3": 0.5,
+    "expanded_cited_recall@5": 0.5,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -4094,7 +5642,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -4132,6 +5704,30 @@
     "tree_search_node_ids": [
       "0004",
       "0005"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      3,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        3
+      ],
+      [
+        5
+      ]
     ]
   },
   {
@@ -4183,7 +5779,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.16666666666666666,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -4234,7 +5854,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -4285,7 +5929,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -4336,7 +6004,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -4408,7 +6100,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.5,
+    "cited_recall@3": 0.5,
+    "cited_recall@5": 0.5,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 0.5,
+    "expanded_cited_recall@3": 0.5,
+    "expanded_cited_recall@5": 0.5,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -4475,7 +6191,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.5,
+    "cited_recall@3": 1.0,
+    "cited_recall@5": 1.0,
+    "cited_reciprocal_rank": 1.0,
+    "expanded_cited_recall@1": 0.5,
+    "expanded_cited_recall@3": 1.0,
+    "expanded_cited_recall@5": 1.0,
+    "expanded_cited_reciprocal_rank": 1.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -4517,6 +6257,30 @@
       "0004",
       "0005",
       "0006"
+    ],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      4,
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        4
+      ],
+      [
+        5
+      ]
     ]
   },
   {
@@ -4886,7 +6650,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -5255,7 +7039,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -5624,7 +7428,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -5993,7 +7817,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -6032,7 +7876,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -6071,7 +7935,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -6222,6 +8106,26 @@
     "tree_search_node_ids": [
       "0178",
       "0257"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
     ]
   },
   {
@@ -6591,7 +8495,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -6960,7 +8884,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -7329,7 +9273,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -7698,7 +9662,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -7737,7 +9721,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -7776,7 +9780,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -8063,6 +10087,26 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
     ]
   },
   {
@@ -8432,7 +10476,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.16666666666666666,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -8801,7 +10867,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.14285714285714285,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -9170,7 +11258,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -9539,7 +11649,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -9578,7 +11710,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -9617,7 +11771,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -9904,6 +12080,28 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
     ]
   },
   {
@@ -10273,7 +12471,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -10642,7 +12862,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -11011,7 +13253,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -11380,7 +13644,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -11419,7 +13705,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -11458,7 +13766,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -11745,6 +14075,28 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      12,
+      54
+    ],
+    "expanded_gold_groups": [
+      [
+        12,
+        54
+      ]
     ]
   },
   {
@@ -12114,7 +14466,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.16666666666666666,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -12483,7 +14857,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -12852,7 +15248,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -13221,7 +15639,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.1,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -13259,7 +15699,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -13298,7 +15760,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -13585,6 +16069,28 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      26,
+      188
+    ],
+    "expanded_gold_groups": [
+      [
+        26,
+        188
+      ]
     ]
   },
   {
@@ -13954,7 +16460,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -14323,7 +16849,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -14692,7 +17238,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -15061,7 +17627,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -15100,7 +17686,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -15138,7 +17744,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -15425,6 +18051,26 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      28
+    ],
+    "expanded_gold_groups": [
+      [
+        28
+      ]
     ]
   },
   {
@@ -15794,7 +18440,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -16163,7 +18829,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -16532,7 +19218,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -16901,7 +19607,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -16940,7 +19666,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -16979,7 +19725,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -17266,6 +20032,26 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ]
     ]
   },
   {
@@ -17635,7 +20421,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -18004,7 +20810,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -18373,7 +21199,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -18742,7 +21588,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -18781,7 +21647,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -18820,7 +21706,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -19107,6 +22013,26 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ]
     ]
   },
   {
@@ -19476,7 +22402,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.14285714285714285,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -19845,7 +22793,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.16666666666666666,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -20214,7 +23184,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -20583,7 +23575,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -20622,7 +23636,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -20661,7 +23697,29 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -20948,6 +24006,28 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ]
     ]
   },
   {
@@ -21318,7 +24398,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -21688,7 +24792,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -22058,7 +25186,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -22428,7 +25580,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -22468,7 +25644,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -22507,7 +25707,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -22795,6 +26019,30 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      8,
+      10
+    ],
+    "expanded_gold_groups": [
+      [
+        8
+      ],
+      [
+        10
+      ]
     ]
   },
   {
@@ -23165,7 +26413,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -23535,7 +26807,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -23905,7 +27201,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -24275,7 +27595,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -24315,7 +27659,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -24355,7 +27723,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -24643,6 +28035,30 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      9,
+      11
+    ],
+    "expanded_gold_groups": [
+      [
+        9
+      ],
+      [
+        11
+      ]
     ]
   },
   {
@@ -25013,7 +28429,33 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -25383,7 +28825,33 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -25753,7 +29221,33 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -26123,7 +29617,33 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -26163,7 +29683,33 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -26203,7 +29749,33 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -26491,6 +30063,32 @@
       "0297",
       "0298",
       "0299"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21,
+      22,
+      139
+    ],
+    "expanded_gold_groups": [
+      [
+        21,
+        139
+      ],
+      [
+        22
+      ]
     ]
   },
   {
@@ -26665,7 +30263,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.027777777777777776,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -26839,7 +30457,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.04,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -27013,7 +30651,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.14285714285714285,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -27187,7 +30845,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.07142857142857142,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -27256,7 +30934,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -27322,7 +31020,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -27385,6 +31103,26 @@
       "0026",
       "0038",
       "0044"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      5
+    ],
+    "expanded_gold_groups": [
+      [
+        5
+      ]
     ]
   },
   {
@@ -27559,7 +31297,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -27733,7 +31491,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -27907,7 +31685,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -28081,7 +31879,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -28168,7 +31986,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -28243,7 +32081,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.2,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -28283,6 +32141,26 @@
       "0011",
       "0015",
       "0016"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ]
     ]
   },
   {
@@ -28457,7 +32335,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.045454545454545456,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -28631,7 +32529,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.1,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -28805,7 +32723,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.14285714285714285,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -28979,7 +32917,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.125,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -29039,7 +32997,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -29099,7 +33077,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -29136,6 +33134,26 @@
     "tree_search_node_ids": [
       "0044",
       "0036"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      58
+    ],
+    "expanded_gold_groups": [
+      [
+        58
+      ]
     ]
   },
   {
@@ -29310,7 +33328,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -29484,7 +33522,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.07692307692307693,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -29658,7 +33716,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.1111111111111111,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -29832,7 +33910,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -29895,7 +33993,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -29961,7 +34079,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -30084,6 +34222,26 @@
       "0077",
       "0078",
       "0079"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.058823529411764705,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ]
     ]
   },
   {
@@ -30258,7 +34416,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -30432,7 +34610,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.16666666666666666,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -30606,7 +34804,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -30780,7 +34998,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -30855,7 +35093,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -30929,7 +35187,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -30999,6 +35277,26 @@
       "0068",
       "0075",
       "0080"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
     ]
   },
   {
@@ -31173,7 +35471,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -31347,7 +35665,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -31521,7 +35859,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -31695,7 +36053,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -31764,7 +36142,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -31824,7 +36222,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -31862,6 +36280,26 @@
     "tree_search_node_ids": [
       "0005",
       "0067"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        25
+      ]
     ]
   },
   {
@@ -32036,7 +36474,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -32210,7 +36668,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.5,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -32384,7 +36862,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -32558,7 +37056,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -32624,7 +37142,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -32695,7 +37233,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -32771,6 +37329,26 @@
       "0069",
       "0073",
       "0078"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      21
+    ],
+    "expanded_gold_groups": [
+      [
+        21
+      ]
     ]
   },
   {
@@ -32945,7 +37523,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.2,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -33119,7 +37717,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.14285714285714285,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -33293,7 +37911,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.029411764705882353,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -33467,7 +38105,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.1111111111111111,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -33542,7 +38200,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -33617,7 +38295,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -33656,6 +38354,26 @@
     "tree_search_node_ids": [
       "0022",
       "0046"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      24
+    ],
+    "expanded_gold_groups": [
+      [
+        24
+      ]
     ]
   },
   {
@@ -33830,7 +38548,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -34004,7 +38742,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -34178,7 +38936,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.1111111111111111,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -34352,7 +39130,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.16666666666666666,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -34391,7 +39189,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -34460,7 +39278,27 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -34497,6 +39335,26 @@
     "tree_search_thinking": "首先查找与纪律调查程序相关的节点，因为问题询问的是启动纪律调查的程序。在提供的文档树中，与纪律调查程序相关的节点是Disiplin soruşturması ve savunma hakkı: Madde 53/A- (Ek: 2/12/2016 - 6764/27 md.)。",
     "tree_search_node_ids": [
       "0038"
+    ],
+    "expanded_recall@1": 1.0,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ]
     ]
   },
   {
@@ -34672,7 +39530,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -34847,7 +39729,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -35022,7 +39928,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -35197,7 +40127,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -35261,7 +40215,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -35337,7 +40315,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -35376,6 +40378,30 @@
     "tree_search_node_ids": [
       "0011",
       "0012"
+    ],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 1.0,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      14,
+      15
+    ],
+    "expanded_gold_groups": [
+      [
+        14
+      ],
+      [
+        15
+      ]
     ]
   },
   {
@@ -35551,7 +40577,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.25,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -35726,7 +40776,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -35901,7 +40975,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -36076,7 +41174,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -36140,7 +41262,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -36204,7 +41350,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -36329,6 +41499,30 @@
       "0098",
       "0099",
       "0100"
+    ],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      20,
+      25
+    ],
+    "expanded_gold_groups": [
+      [
+        20
+      ],
+      [
+        25
+      ]
     ]
   },
   {
@@ -36504,7 +41698,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
+    ]
   },
   {
     "method": "BM25 (Turkish stemmed)",
@@ -36679,7 +41897,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
+    ]
   },
   {
     "method": "Dense (multilingual-e5-base)",
@@ -36854,7 +42096,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 0.3333333333333333,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
+    ]
   },
   {
     "method": "Hybrid (RRF)",
@@ -37029,7 +42295,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 0.5,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (default instructions)",
@@ -37112,7 +42402,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
+    ]
   },
   {
     "method": "PageIndex agentic (read-pages instruction)",
@@ -37179,7 +42493,31 @@
     "idle_retries": [],
     "parse_failure": null,
     "tree_search_thinking": null,
-    "tree_search_node_ids": []
+    "tree_search_node_ids": [],
+    "expanded_recall@1": 0.0,
+    "expanded_recall@3": 0.0,
+    "expanded_recall@5": 0.0,
+    "expanded_reciprocal_rank": 0.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
+    ]
   },
   {
     "method": "PageIndex LLM Tree Search",
@@ -37222,6 +42560,30 @@
       "0038",
       "0042",
       "0043"
+    ],
+    "expanded_recall@1": 0.5,
+    "expanded_recall@3": 0.5,
+    "expanded_recall@5": 1.0,
+    "expanded_reciprocal_rank": 1.0,
+    "cited_recall@1": 0.0,
+    "cited_recall@3": 0.0,
+    "cited_recall@5": 0.0,
+    "cited_reciprocal_rank": 0.0,
+    "expanded_cited_recall@1": 0.0,
+    "expanded_cited_recall@3": 0.0,
+    "expanded_cited_recall@5": 0.0,
+    "expanded_cited_reciprocal_rank": 0.0,
+    "expanded_gold_pages": [
+      51,
+      55
+    ],
+    "expanded_gold_groups": [
+      [
+        51
+      ],
+      [
+        55
+      ]
     ]
   }
 ]

@@ -1,8 +1,1389 @@
 {
-  "label": "pilot set, auto-drafted from source text, span-verified; not yet human-reviewed",
+  "label": "pilot set; hand-written stems, source spans and planned terms checked; not yet human-reviewed",
   "drafted_count": 36,
-  "verified_count": 36,
+  "verified_count": 32,
+  "failed_count": 4,
+  "retained_count": 36,
   "dropped_count": 0,
+  "full_document_search": {
+    "text_source": "data/processed/pages.jsonl from pinned PDFs extracted with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout",
+    "page_scope": "all extracted physical pages in each question's document",
+    "normalization": "NFKC, soft-hyphen and line-wrap normalization, blank page-number and Xpdf amendment-footnote noise removal, whitespace collapse, casefold",
+    "purpose": "Search each selected answer segment and every planned term across the complete extracted text for equivalent-page review.",
+    "question_searches": [
+      {
+        "question_id": "kvkk_6698-direct_fact-1",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              2
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "açık rızası aranmaksızın": [
+                2,
+                3
+              ],
+              "şartlardan birinin varlığı": [
+                2,
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-direct_fact-2",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "aktarılabilir": [
+                3,
+                4
+              ],
+              "yeterli önlemler": [
+                3,
+                11
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-direct_fact-3",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "teknik ve idari tedbirleri": [
+                5
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-paraphrase-1",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "hangi amaçla işleneceği": [
+                4,
+                6
+              ],
+              "hukuki sebebi": [
+                4
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-paraphrase-2",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "haklarına sahiptir": [
+                5
+              ],
+              "bilgi talep etme": [
+                4
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-paraphrase-3",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "yeterli korumanın bulunmaması": [
+                3
+              ],
+              "Kurulun izninin bulunması": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-distractor-1",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "aktarılabilir": [
+                3,
+                4
+              ],
+              "yeterli önlemler": [
+                3,
+                11
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-distractor-2",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "yeterli korumanın bulunmaması": [
+                3
+              ],
+              "yazılı olarak taahhüt": [
+                3
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-distractor-3",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "hukuka aykırı olarak erişilmesini önlemek": [
+                5
+              ],
+              "tedbirleri almak": [
+                5
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-cross_section-1",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              2
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "açık rızası aranmaksızın": [
+                2,
+                3
+              ],
+              "şartlardan birinin varlığı": [
+                2,
+                3
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "aktarılabilir": [
+                3,
+                4
+              ],
+              "yeterli önlemler": [
+                3,
+                11
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-cross_section-2",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              3
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "aktarılabilir": [
+                3,
+                4
+              ],
+              "yeterli önlemler": [
+                3,
+                11
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "teknik ve idari tedbirleri": [
+                5
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "kvkk_6698-cross_section-3",
+        "document_page_count": 18,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              4
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "hangi amaçla işleneceği": [
+                4,
+                6
+              ],
+              "hukuki sebebi": [
+                4
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "teknik ve idari tedbirleri": [
+                5
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-direct_fact-1",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              8
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "sözleşmeye aykırı olan maldır": [
+                8
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-direct_fact-2",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              9
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "sözleşmeden dönme": [
+                9,
+                10,
+                11,
+                15,
+                19,
+                20,
+                24,
+                25,
+                50,
+                66,
+                115,
+                116,
+                117,
+                158,
+                166,
+                171,
+                172,
+                198,
+                199
+              ],
+              "satış bedelinden indirim": [
+                9
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-direct_fact-3",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              21
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "eş zamanlı fiziksel varlığı olmaksızın": [
+                21,
+                139
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-paraphrase-1",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              12,
+              54
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "herhangi bir gerekçe göstermeksizin": [
+                12,
+                13,
+                19,
+                20,
+                21,
+                22,
+                23,
+                25,
+                54,
+                68,
+                116,
+                130,
+                131,
+                141,
+                150,
+                156,
+                161,
+                163,
+                164,
+                165,
+                166,
+                182
+              ],
+              "cayma hakkına sahiptir": [
+                12,
+                13,
+                19,
+                20,
+                21,
+                22,
+                23,
+                54,
+                68,
+                116,
+                131,
+                141,
+                150,
+                156
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-paraphrase-2",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              26
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "kolaylıkla görülebilir ve okunabilir": [
+                26,
+                188,
+                189
+              ],
+              "birim fiyatını": [
+                26,
+                188,
+                189,
+                248
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-paraphrase-3",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              28
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "satış sonrası bakım ve onarım hizmetlerini": [
+                28
+              ],
+              "sağlamak zorundadır": [
+                28,
+                131,
+                141,
+                307,
+                308
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-distractor-1",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              8
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "taraflarca kararlaştırılmış olan örnek": [
+                8
+              ],
+              "özellikleri taşımaması": [
+                8,
+                10
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-distractor-2",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              9
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "satılanı geri vermeye hazır": [
+                9
+              ],
+              "sözleşmeden dönme": [
+                9,
+                10,
+                11,
+                15,
+                19,
+                20,
+                24,
+                25,
+                50,
+                66,
+                115,
+                116,
+                117,
+                158,
+                166,
+                171,
+                172,
+                198,
+                199
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-distractor-3",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              21
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "eş zamanlı fiziksel varlığı olmaksızın": [
+                21,
+                139
+              ],
+              "uzaktan pazarlanmasına": [
+                21,
+                22,
+                139,
+                147
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-cross_section-1",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              8
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              10
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "sözleşmeye aykırı olan maldır": [
+                8
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "sözleşmeye aykırı olan hizmettir": [
+                10
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-cross_section-2",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              9
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              11
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "satış bedelinden indirim": [
+                9
+              ],
+              "sözleşmeden dönme": [
+                9,
+                10,
+                11,
+                15,
+                19,
+                20,
+                24,
+                25,
+                50,
+                66,
+                115,
+                116,
+                117,
+                158,
+                166,
+                171,
+                172,
+                198,
+                199
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "bedelden indirim": [
+                10,
+                11,
+                15,
+                66,
+                198,
+                199
+              ],
+              "sözleşmeden dönme": [
+                9,
+                10,
+                11,
+                15,
+                19,
+                20,
+                24,
+                25,
+                50,
+                66,
+                115,
+                116,
+                117,
+                158,
+                166,
+                171,
+                172,
+                198,
+                199
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "tuketicinin_korunmasi_6502-cross_section-3",
+        "document_page_count": 340,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              21
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              22
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "eş zamanlı fiziksel varlığı olmaksızın": [
+                21,
+                139
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "banka hizmeti, kredi, sigorta": [
+                22,
+                147
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-direct_fact-1",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "özerkliğe ve kamu tüzel kişiliğine sahip": [
+                5
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-direct_fact-2",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              14
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "rektör, Cumhurbaşkanınca atanır": [
+                14
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-direct_fact-3",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              58
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "disiplin cezaları": [
+                45,
+                55,
+                56,
+                58,
+                63,
+                64,
+                110,
+                131
+              ],
+              "kınama": [
+                45,
+                46,
+                54,
+                58,
+                61,
+                63
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-paraphrase-1",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              20
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "eğitim - öğretim": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                9,
+                10,
+                12,
+                13,
+                14,
+                15,
+                18,
+                19,
+                20,
+                24,
+                25,
+                34,
+                35,
+                43,
+                65,
+                76,
+                78,
+                79
+              ],
+              "araştırma": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                8,
+                11,
+                12,
+                13,
+                15,
+                18,
+                20,
+                23,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                34,
+                39,
+                40,
+                43,
+                45,
+                46,
+                47,
+                48,
+                52,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                74,
+                75,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                91,
+                92,
+                95,
+                96,
+                98,
+                100,
+                104,
+                109,
+                116,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                128
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-paraphrase-2",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              21
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "kadroları rektörlükçe ilan edilir": [
+                21
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-paraphrase-3",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "araştırma, inceleme ve deneylerde yardımcı olan": [
+                25
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-distractor-1",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              21
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "kadroları rektörlükçe ilan edilir": [
+                21
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-distractor-2",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              24
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "öğretim üyesi bulunmayan dersler": [
+                24
+              ],
+              "özel bilgi ve uzmanlık": [
+                24
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-distractor-3",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              51
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "yazılı olarak disiplin soruşturması başlatır": [
+                51
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-cross_section-1",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              14
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              15
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "rektör": [
+                2,
+                6,
+                9,
+                12,
+                14,
+                15,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                25,
+                26,
+                28,
+                29,
+                30,
+                31,
+                33,
+                34,
+                44,
+                45,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                58,
+                61,
+                62,
+                63,
+                65,
+                66,
+                70,
+                72,
+                73,
+                74,
+                75,
+                81,
+                82,
+                84,
+                95,
+                96,
+                103,
+                122,
+                123,
+                130,
+                132
+              ],
+              "üniversiteyi temsil": []
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "senato, rektörün başkanlığında": [
+                15
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-cross_section-2",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              20
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              25
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "eğitim - öğretim": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                9,
+                10,
+                12,
+                13,
+                14,
+                15,
+                18,
+                19,
+                20,
+                24,
+                25,
+                34,
+                35,
+                43,
+                65,
+                76,
+                78,
+                79
+              ],
+              "araştırma": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                8,
+                11,
+                12,
+                13,
+                15,
+                18,
+                20,
+                23,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                34,
+                39,
+                40,
+                43,
+                45,
+                46,
+                47,
+                48,
+                52,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                74,
+                75,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                91,
+                92,
+                95,
+                96,
+                98,
+                100,
+                104,
+                109,
+                116,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                128
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "araştırma, inceleme ve deneylerde yardımcı": [
+                25
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "yuksekogretim_2547-cross_section-3",
+        "document_page_count": 142,
+        "answer_segment_pages": [
+          {
+            "segment_index": 0,
+            "pages": [
+              51
+            ]
+          },
+          {
+            "segment_index": 1,
+            "pages": [
+              55
+            ]
+          }
+        ],
+        "planned_term_pages": [
+          {
+            "segment_index": 0,
+            "term_pages": {
+              "yazılı olarak disiplin soruşturması başlatır": [
+                51
+              ]
+            }
+          },
+          {
+            "segment_index": 1,
+            "term_pages": {
+              "en ağır cezayı gerektiren": [
+                55
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
   "checks": [
     {
       "question_id": "kvkk_6698-direct_fact-1",
@@ -13,7 +1394,15 @@
       "verified": true,
       "source_pages": [
         2
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "açık rızası aranmaksızın",
+          "şartlardan birinin varlığı"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-direct_fact-2",
@@ -24,7 +1413,15 @@
       "verified": true,
       "source_pages": [
         3
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "aktarılabilir",
+          "yeterli önlemler"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-direct_fact-3",
@@ -35,7 +1432,14 @@
       "verified": true,
       "source_pages": [
         5
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "teknik ve idari tedbirleri"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-paraphrase-1",
@@ -46,7 +1450,15 @@
       "verified": true,
       "source_pages": [
         4
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "hangi amaçla işleneceği",
+          "hukuki sebebi"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-paraphrase-2",
@@ -54,9 +1466,25 @@
         "11"
       ],
       "distractor_article_number": null,
-      "verified": true,
+      "verified": false,
       "source_pages": [
         5
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "haklarına sahiptir",
+          "bilgi talep etme"
+        ]
+      ],
+      "issues": [
+        {
+          "type": "planned_terms_missing",
+          "segment_index": 0,
+          "missing_terms": [
+            "bilgi talep etme"
+          ]
+        }
       ]
     },
     {
@@ -68,7 +1496,15 @@
       "verified": true,
       "source_pages": [
         3
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "yeterli korumanın bulunmaması",
+          "Kurulun izninin bulunması"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-distractor-1",
@@ -79,7 +1515,15 @@
       "verified": true,
       "source_pages": [
         3
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "aktarılabilir",
+          "yeterli önlemler"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-distractor-2",
@@ -90,7 +1534,15 @@
       "verified": true,
       "source_pages": [
         3
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "yeterli korumanın bulunmaması",
+          "yazılı olarak taahhüt"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-distractor-3",
@@ -101,7 +1553,15 @@
       "verified": true,
       "source_pages": [
         5
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "hukuka aykırı olarak erişilmesini önlemek",
+          "tedbirleri almak"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-cross_section-1",
@@ -114,7 +1574,19 @@
       "source_pages": [
         2,
         3
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "açık rızası aranmaksızın",
+          "şartlardan birinin varlığı"
+        ],
+        [
+          "aktarılabilir",
+          "yeterli önlemler"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-cross_section-2",
@@ -127,7 +1599,18 @@
       "source_pages": [
         3,
         5
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "aktarılabilir",
+          "yeterli önlemler"
+        ],
+        [
+          "teknik ve idari tedbirleri"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "kvkk_6698-cross_section-3",
@@ -140,7 +1623,18 @@
       "source_pages": [
         4,
         5
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "hangi amaçla işleneceği",
+          "hukuki sebebi"
+        ],
+        [
+          "teknik ve idari tedbirleri"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-direct_fact-1",
@@ -151,7 +1645,14 @@
       "verified": true,
       "source_pages": [
         8
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "sözleşmeye aykırı olan maldır"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-direct_fact-2",
@@ -162,7 +1663,15 @@
       "verified": true,
       "source_pages": [
         9
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "sözleşmeden dönme",
+          "satış bedelinden indirim"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-direct_fact-3",
@@ -173,7 +1682,18 @@
       "verified": true,
       "source_pages": [
         21
-      ]
+      ],
+      "equivalent_pages": {
+        "21": [
+          139
+        ]
+      },
+      "planned_terms": [
+        [
+          "eş zamanlı fiziksel varlığı olmaksızın"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-paraphrase-1",
@@ -184,7 +1704,19 @@
       "verified": true,
       "source_pages": [
         12
-      ]
+      ],
+      "equivalent_pages": {
+        "12": [
+          54
+        ]
+      },
+      "planned_terms": [
+        [
+          "herhangi bir gerekçe göstermeksizin",
+          "cayma hakkına sahiptir"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-paraphrase-2",
@@ -195,7 +1727,19 @@
       "verified": true,
       "source_pages": [
         26
-      ]
+      ],
+      "equivalent_pages": {
+        "26": [
+          188
+        ]
+      },
+      "planned_terms": [
+        [
+          "kolaylıkla görülebilir ve okunabilir",
+          "birim fiyatını"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-paraphrase-3",
@@ -206,7 +1750,15 @@
       "verified": true,
       "source_pages": [
         28
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "satış sonrası bakım ve onarım hizmetlerini",
+          "sağlamak zorundadır"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-distractor-1",
@@ -217,7 +1769,15 @@
       "verified": true,
       "source_pages": [
         8
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "taraflarca kararlaştırılmış olan örnek",
+          "özellikleri taşımaması"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-distractor-2",
@@ -228,7 +1788,15 @@
       "verified": true,
       "source_pages": [
         9
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "satılanı geri vermeye hazır",
+          "sözleşmeden dönme"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-distractor-3",
@@ -239,7 +1807,19 @@
       "verified": true,
       "source_pages": [
         21
-      ]
+      ],
+      "equivalent_pages": {
+        "21": [
+          139
+        ]
+      },
+      "planned_terms": [
+        [
+          "eş zamanlı fiziksel varlığı olmaksızın",
+          "uzaktan pazarlanmasına"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-cross_section-1",
@@ -252,7 +1832,17 @@
       "source_pages": [
         8,
         10
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "sözleşmeye aykırı olan maldır"
+        ],
+        [
+          "sözleşmeye aykırı olan hizmettir"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-cross_section-2",
@@ -265,7 +1855,19 @@
       "source_pages": [
         9,
         11
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "satış bedelinden indirim",
+          "sözleşmeden dönme"
+        ],
+        [
+          "bedelden indirim",
+          "sözleşmeden dönme"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "tuketicinin_korunmasi_6502-cross_section-3",
@@ -278,7 +1880,21 @@
       "source_pages": [
         21,
         22
-      ]
+      ],
+      "equivalent_pages": {
+        "21": [
+          139
+        ]
+      },
+      "planned_terms": [
+        [
+          "eş zamanlı fiziksel varlığı olmaksızın"
+        ],
+        [
+          "banka hizmeti, kredi, sigorta"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-direct_fact-1",
@@ -289,7 +1905,14 @@
       "verified": true,
       "source_pages": [
         5
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "özerkliğe ve kamu tüzel kişiliğine sahip"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-direct_fact-2",
@@ -300,7 +1923,14 @@
       "verified": true,
       "source_pages": [
         14
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "rektör, Cumhurbaşkanınca atanır"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-direct_fact-3",
@@ -311,7 +1941,15 @@
       "verified": true,
       "source_pages": [
         58
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "disiplin cezaları",
+          "kınama"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-paraphrase-1",
@@ -319,9 +1957,25 @@
         "22"
       ],
       "distractor_article_number": null,
-      "verified": true,
+      "verified": false,
       "source_pages": [
         20
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "eğitim - öğretim",
+          "araştırma"
+        ]
+      ],
+      "issues": [
+        {
+          "type": "planned_terms_missing",
+          "segment_index": 0,
+          "missing_terms": [
+            "eğitim - öğretim"
+          ]
+        }
       ]
     },
     {
@@ -333,7 +1987,14 @@
       "verified": true,
       "source_pages": [
         21
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "kadroları rektörlükçe ilan edilir"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-paraphrase-3",
@@ -344,7 +2005,14 @@
       "verified": true,
       "source_pages": [
         25
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "araştırma, inceleme ve deneylerde yardımcı olan"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-distractor-1",
@@ -355,7 +2023,14 @@
       "verified": true,
       "source_pages": [
         21
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "kadroları rektörlükçe ilan edilir"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-distractor-2",
@@ -366,7 +2041,15 @@
       "verified": true,
       "source_pages": [
         24
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "öğretim üyesi bulunmayan dersler",
+          "özel bilgi ve uzmanlık"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-distractor-3",
@@ -377,7 +2060,14 @@
       "verified": true,
       "source_pages": [
         51
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "yazılı olarak disiplin soruşturması başlatır"
+        ]
+      ],
+      "issues": []
     },
     {
       "question_id": "yuksekogretim_2547-cross_section-1",
@@ -386,10 +2076,29 @@
         "14"
       ],
       "distractor_article_number": null,
-      "verified": true,
+      "verified": false,
       "source_pages": [
         14,
         15
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "rektör",
+          "üniversiteyi temsil"
+        ],
+        [
+          "senato, rektörün başkanlığında"
+        ]
+      ],
+      "issues": [
+        {
+          "type": "planned_terms_missing",
+          "segment_index": 0,
+          "missing_terms": [
+            "üniversiteyi temsil"
+          ]
+        }
       ]
     },
     {
@@ -399,10 +2108,29 @@
         "33"
       ],
       "distractor_article_number": null,
-      "verified": true,
+      "verified": false,
       "source_pages": [
         20,
         25
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "eğitim - öğretim",
+          "araştırma"
+        ],
+        [
+          "araştırma, inceleme ve deneylerde yardımcı"
+        ]
+      ],
+      "issues": [
+        {
+          "type": "planned_terms_missing",
+          "segment_index": 0,
+          "missing_terms": [
+            "eğitim - öğretim"
+          ]
+        }
       ]
     },
     {
@@ -416,7 +2144,64 @@
       "source_pages": [
         51,
         55
-      ]
+      ],
+      "equivalent_pages": {},
+      "planned_terms": [
+        [
+          "yazılı olarak disiplin soruşturması başlatır"
+        ],
+        [
+          "en ağır cezayı gerektiren"
+        ]
+      ],
+      "issues": []
+    }
+  ],
+  "equivalent_page_evidence": [
+    {
+      "question_id": "tuketicinin_korunmasi_6502-direct_fact-3",
+      "original_gold_page": 21,
+      "equivalent_page": 139,
+      "provision": "Mesafeli Sözleşmeler Yönetmeliği tanımlarındaki mesafeli sözleşme tanımı; 6502 m. 48 ile aynı hüküm.",
+      "matched_planned_phrase": "eş zamanlı fiziksel varlığı olmaksızın",
+      "normalized_extracted_text_excerpt": "lanan yazılım, ses, görüntü ve benzeri her türlü gayri maddi malları, e) mesafeli sözleşme: satıcı veya sağlayıcı ile tüketicinin eş zamanlı fiziksel varlığı olmaksızın, mal veya hizmetlerin uzaktan pazarlanmasına yönelik olarak oluşturulmuş bir sistem çerçevesinde, taraflar arasında sözleşmenin kurulduğu ana kadar ve kurulduğu an da dahil olmak üzere uzaktan iletişim araçlarının kullanılması suretiyle kurulan sözleşmeleri, ",
+      "text_origin": "data/processed/pages.jsonl; pinned PDF processed with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout"
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-paraphrase-1",
+      "original_gold_page": 12,
+      "equivalent_page": 54,
+      "provision": "Taksitli satış sözleşmelerinde cayma hakkına ilişkin hüküm; 6502 m. 18 ile eşdeğer hüküm.",
+      "matched_planned_phrase": "herhangi bir gerekçe göstermeksizin",
+      "normalized_extracted_text_excerpt": "eşmesine ilişkin bilgiler. üçüncü bölüm cayma hakkının kullanımı ve sonuçları cayma hakkı madde 7 – (1) tüketici, yedi gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin taksitle satış sözleşmesinden cayma hakkına sahiptir. (2) cayma hakkı süresi, hizmet ifasına ilişkin sözleşmelerde sözleşmenin kurulduğu gün; mal teslimine ilişkin sözleşmelerde ise tüketicinin veya tüketici tarafından belirlenen üçü",
+      "text_origin": "data/processed/pages.jsonl; pinned PDF processed with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout"
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-paraphrase-2",
+      "original_gold_page": 26,
+      "equivalent_page": 188,
+      "provision": "Fiyat Etiketi Yönetmeliği m. 5; 6502 m. 54 ile aynı fiyat etiketi gerekliliği.",
+      "matched_planned_phrase": "kolaylıkla görülebilir ve okunabilir",
+      "normalized_extracted_text_excerpt": " (değişik:rg-27/7/2019-30844) satıcı tarafından perakende satışa arz edilen malların veya ambalajlarının yahut kaplarının üzerine kolaylıkla görülebilir ve okunabilir şekilde yazılı, dijital veya elektronik etiket konulması; etiket konulması mümkün olmayan hâllerde aynı bilgileri kapsayan listelerin görülebilir ve okunabilir şekilde uygun yerlere asılması zorunludur. (2) etiket ve listelerde aşağıda yer alan hususların bul",
+      "text_origin": "data/processed/pages.jsonl; pinned PDF processed with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout"
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-distractor-3",
+      "original_gold_page": 21,
+      "equivalent_page": 139,
+      "provision": "Mesafeli Sözleşmeler Yönetmeliği tanımlarındaki mesafeli sözleşme tanımı; 6502 m. 48 ile aynı hüküm.",
+      "matched_planned_phrase": "eş zamanlı fiziksel varlığı olmaksızın",
+      "normalized_extracted_text_excerpt": "lanan yazılım, ses, görüntü ve benzeri her türlü gayri maddi malları, e) mesafeli sözleşme: satıcı veya sağlayıcı ile tüketicinin eş zamanlı fiziksel varlığı olmaksızın, mal veya hizmetlerin uzaktan pazarlanmasına yönelik olarak oluşturulmuş bir sistem çerçevesinde, taraflar arasında sözleşmenin kurulduğu ana kadar ve kurulduğu an da dahil olmak üzere uzaktan iletişim araçlarının kullanılması suretiyle kurulan sözleşmeleri, ",
+      "text_origin": "data/processed/pages.jsonl; pinned PDF processed with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout"
+    },
+    {
+      "question_id": "tuketicinin_korunmasi_6502-cross_section-3",
+      "original_gold_page": 21,
+      "equivalent_page": 139,
+      "provision": "Mesafeli Sözleşmeler Yönetmeliği tanımlarındaki mesafeli sözleşme tanımı; 6502 m. 48 ile aynı hüküm.",
+      "matched_planned_phrase": "eş zamanlı fiziksel varlığı olmaksızın",
+      "normalized_extracted_text_excerpt": "lanan yazılım, ses, görüntü ve benzeri her türlü gayri maddi malları, e) mesafeli sözleşme: satıcı veya sağlayıcı ile tüketicinin eş zamanlı fiziksel varlığı olmaksızın, mal veya hizmetlerin uzaktan pazarlanmasına yönelik olarak oluşturulmuş bir sistem çerçevesinde, taraflar arasında sözleşmenin kurulduğu ana kadar ve kurulduğu an da dahil olmak üzere uzaktan iletişim araçlarının kullanılması suretiyle kurulan sözleşmeleri, ",
+      "text_origin": "data/processed/pages.jsonl; pinned PDF processed with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "benchmark": "DocBenchTR public pilot",
-  "dataset_label": "pilot set, auto-drafted from source text, span-verified; not yet human-reviewed",
+  "dataset_label": "pilot set; hand-written question stems and source spans checked; 4 planned-term validator failures retained; not yet human-reviewed",
   "retrieval_only": true,
   "generation_and_faithfulness": "out of scope",
   "num_documents": 3,
@@ -21,7 +21,7 @@
   "embedding_model_revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
   "embedding_device": "cuda",
   "page_numbering": "one-based physical PDF page index",
-  "metrics": "page-level Recall@1/3/5 and MRR; per-query latency and token usage when exposed",
+  "metrics": "page-level Recall@1/3/5 and MRR; failed query = 0; not-run infrastructure exclusions omitted",
   "pageindex": {
     "mode": "local",
     "sdk_version": "0.4.0",
@@ -230,82 +230,117 @@
         "total_tokens": 0
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.1111111111111111,
-          "recall@3": 0.5,
-          "recall@5": 0.6111111111111112,
-          "reciprocal_rank": 0.5,
-          "latency_ms": 1.097272777870886,
-          "token_query_count": 0,
-          "input_tokens_total": 0,
-          "output_tokens_total": 0
-        },
         "direct_fact": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
           "recall@1": 0.4444444444444444,
           "recall@3": 0.6666666666666666,
           "recall@5": 0.6666666666666666,
           "reciprocal_rank": 0.5636924803591471,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.5636924803591471
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 0.8816244444460608,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.5777777777777778,
+          "scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.7777777777777778,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.5777777777777778
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 0.9760816667241872,
+          "token_query_count": 0,
+          "input_tokens_total": 0,
+          "output_tokens_total": 0
+        },
+        "distractor": {
           "recall@1": 0.2222222222222222,
           "recall@3": 0.6666666666666666,
           "recall@5": 0.8888888888888888,
           "reciprocal_rank": 0.48827160493827165,
+          "scored_only": {
+            "recall@1": 0.2222222222222222,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.48827160493827165
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 1.0480457776793628,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.1111111111111111,
+          "recall@3": 0.5,
+          "recall@5": 0.6111111111111112,
+          "reciprocal_rank": 0.5,
+          "scored_only": {
+            "recall@1": 0.1111111111111111,
+            "recall@3": 0.5,
+            "recall@5": 0.6111111111111112,
+            "reciprocal_rank": 0.5
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.3333333333333333,
-          "recall@3": 0.7777777777777778,
-          "recall@5": 0.8888888888888888,
-          "reciprocal_rank": 0.5777777777777778,
-          "latency_ms": 0.9760816667241872,
+          "latency_ms": 1.097272777870886,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         }
+      },
+      "failed_as_zero_count": 0,
+      "scored_only": {
+        "recall@1": 0.2777777777777778,
+        "recall@3": 0.6527777777777778,
+        "recall@5": 0.7638888888888888,
+        "reciprocal_rank": 0.5324354657687991
       }
     },
     {
@@ -336,82 +371,117 @@
         "total_tokens": 0
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.1111111111111111,
-          "recall@3": 0.7222222222222222,
-          "recall@5": 0.7777777777777778,
-          "reciprocal_rank": 0.5740740740740741,
-          "latency_ms": 2.5389777776783578,
-          "token_query_count": 0,
-          "input_tokens_total": 0,
-          "output_tokens_total": 0
-        },
         "direct_fact": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
           "recall@1": 0.4444444444444444,
           "recall@3": 0.6666666666666666,
           "recall@5": 0.6666666666666666,
           "reciprocal_rank": 0.5822222222222222,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.5822222222222222
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 1.9272772222191432,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.4953194953194953,
+          "scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.4953194953194953
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 1.944951333522719,
+          "token_query_count": 0,
+          "input_tokens_total": 0,
+          "output_tokens_total": 0
+        },
+        "distractor": {
           "recall@1": 0.1111111111111111,
           "recall@3": 0.7777777777777778,
           "recall@5": 0.7777777777777778,
           "reciprocal_rank": 0.4518999518999519,
+          "scored_only": {
+            "recall@1": 0.1111111111111111,
+            "recall@3": 0.7777777777777778,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.4518999518999519
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 2.363796444519216,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.1111111111111111,
+          "recall@3": 0.7222222222222222,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.5740740740740741,
+          "scored_only": {
+            "recall@1": 0.1111111111111111,
+            "recall@3": 0.7222222222222222,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.5740740740740741
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.3333333333333333,
-          "recall@3": 0.6666666666666666,
-          "recall@5": 0.6666666666666666,
-          "reciprocal_rank": 0.4953194953194953,
-          "latency_ms": 1.944951333522719,
+          "latency_ms": 2.5389777776783578,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         }
+      },
+      "failed_as_zero_count": 0,
+      "scored_only": {
+        "recall@1": 0.25,
+        "recall@3": 0.7083333333333334,
+        "recall@5": 0.7222222222222222,
+        "reciprocal_rank": 0.5258789358789359
       }
     },
     {
@@ -442,82 +512,117 @@
         "total_tokens": 0
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.2777777777777778,
-          "recall@3": 0.6666666666666666,
-          "recall@5": 0.7777777777777778,
-          "reciprocal_rank": 0.7407407407407408,
-          "latency_ms": 14.006681555454431,
-          "token_query_count": 0,
-          "input_tokens_total": 0,
-          "output_tokens_total": 0
-        },
         "direct_fact": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
           "recall@1": 0.4444444444444444,
           "recall@3": 0.5555555555555556,
           "recall@5": 0.7777777777777778,
           "reciprocal_rank": 0.5632275132275132,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.5555555555555556,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.5632275132275132
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 14.360361222113877,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.5555555555555556,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.6817901234567901,
+          "scored_only": {
+            "recall@1": 0.5555555555555556,
+            "recall@3": 0.7777777777777778,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.6817901234567901
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 13.231260222204988,
+          "token_query_count": 0,
+          "input_tokens_total": 0,
+          "output_tokens_total": 0
+        },
+        "distractor": {
           "recall@1": 0.3333333333333333,
           "recall@3": 0.6666666666666666,
           "recall@5": 0.6666666666666666,
           "reciprocal_rank": 0.5241606614155634,
+          "scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.5241606614155634
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 14.05160144450848,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.2777777777777778,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.7407407407407408,
+          "scored_only": {
+            "recall@1": 0.2777777777777778,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.7407407407407408
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.5555555555555556,
-          "recall@3": 0.7777777777777778,
-          "recall@5": 0.7777777777777778,
-          "reciprocal_rank": 0.6817901234567901,
-          "latency_ms": 13.231260222204988,
+          "latency_ms": 14.006681555454431,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         }
+      },
+      "failed_as_zero_count": 0,
+      "scored_only": {
+        "recall@1": 0.4027777777777778,
+        "recall@3": 0.6666666666666666,
+        "recall@5": 0.75,
+        "reciprocal_rank": 0.6274797597101519
       }
     },
     {
@@ -548,82 +653,117 @@
         "total_tokens": 0
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.2222222222222222,
-          "recall@3": 0.5,
-          "recall@5": 0.8333333333333334,
-          "reciprocal_rank": 0.6666666666666666,
-          "latency_ms": 13.265902888835829,
-          "token_query_count": 0,
-          "input_tokens_total": 0,
-          "output_tokens_total": 0
-        },
         "direct_fact": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
           "recall@1": 0.4444444444444444,
           "recall@3": 0.7777777777777778,
           "recall@5": 0.7777777777777778,
           "reciprocal_rank": 0.6144179894179894,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.7777777777777778,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.6144179894179894
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 12.829498666683826,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.8888888888888888,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.6777777777777777,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.8888888888888888,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.6777777777777777
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 12.290440555564905,
+          "token_query_count": 0,
+          "input_tokens_total": 0,
+          "output_tokens_total": 0
+        },
+        "distractor": {
           "recall@1": 0.2222222222222222,
           "recall@3": 0.6666666666666666,
           "recall@5": 0.6666666666666666,
           "reciprocal_rank": 0.4876543209876544,
+          "scored_only": {
+            "recall@1": 0.2222222222222222,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.4876543209876544
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 12.890961333545825,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.2222222222222222,
+          "recall@3": 0.5,
+          "recall@5": 0.8333333333333334,
+          "reciprocal_rank": 0.6666666666666666,
+          "scored_only": {
+            "recall@1": 0.2222222222222222,
+            "recall@3": 0.5,
+            "recall@5": 0.8333333333333334,
+            "reciprocal_rank": 0.6666666666666666
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.4444444444444444,
-          "recall@3": 0.8888888888888888,
-          "recall@5": 0.8888888888888888,
-          "reciprocal_rank": 0.6777777777777777,
-          "latency_ms": 12.290440555564905,
+          "latency_ms": 13.265902888835829,
           "token_query_count": 0,
           "input_tokens_total": 0,
           "output_tokens_total": 0
         }
+      },
+      "failed_as_zero_count": 0,
+      "scored_only": {
+        "recall@1": 0.3333333333333333,
+        "recall@3": 0.7083333333333334,
+        "recall@5": 0.7916666666666666,
+        "reciprocal_rank": 0.611629188712522
       }
     },
     {
@@ -631,20 +771,20 @@
       "reason": "PageIndexQueryError: PageIndexAPIError: The model backend failed: litellm.BadRequestError: Ollama_chatException - KeyError: 'message', Got unexpected response from Ollama: {'error': 'error parsing tool call: raw=\\'We need answer question: \"Ayıplı mal ve ayıplı hizmet hangi sözleşmeye aykırılık durumlarını kapsar?\" They ask which contractual situations are covered as breach of contract by defective goods and services. So need to state that defective goods and services constitute breach of contract when (a) goods not delivered or not installed properly within agreed period; (b) defective goods; (c) for services, failure to start within agreed period or not having required quality. According to text we saw in page 9: \"Ayıplı maldan sorumluluk\" and \"Malın ayıplı olduğunun anlaşılması durumunda tüketici\" etc. Also page 10 includes \"Ayıplı hizmet\" definition.\\n\\nWe need citations from doc pages. Use page 9 and page 10. Provide answer concise.\\n\\nLet\\'s craft answer: Ayıplı mal ve ayıplı hizmet sözleşmeye aykırı durumları şu şekilde kapsar: (1) Malın teslim edilmemesi veya satıcı tarafından veya onun sorumluluğu altında montajının gerçekleşmemesi, malın montajının hatalı yapılması (Ayıplı maldan sorumluluk, MADDE 9). (2) Satıcı, satılan malı satış sözleşmesine uygun olarak teslim etmemesi (MADDE 9). (3) Ayıplı hizmet: hizmetin sözleşmede belirlenen süre içinde başlamaması veya taraflarca kararlaştırılmış ve objektif olarak sahip olması gereken özellikleri taşımaması (MADDE 13). Also mention that for services, failure to start or not meeting quality leads to breach. Use citations.\\n\\nLet\\'s provide citations: <cite doc=\"6502.pdf\" page=\"9\"/> etc.\\n\\nWe should not mention tool calls. Just answer.\\', err=invalid character \\'W\\' looking for beginning of value'}",
       "status": "partial",
       "question_count": 36,
-      "attempted_count": 35,
+      "attempted_count": 36,
       "scored_count": 35,
       "zero_ranking_count": 0,
-      "excluded_count": 1,
+      "excluded_count": 0,
       "scored_question_count": 35,
       "failed_question_count": 1,
       "not_run_question_count": 0,
       "partial_question_count": 0,
       "parse_failure_count": 0,
       "overall": {
-        "recall@1": 0.38571428571428573,
-        "recall@3": 0.7142857142857143,
-        "recall@5": 0.8142857142857143,
-        "reciprocal_rank": 0.6068831168831169,
+        "recall@1": 0.375,
+        "recall@3": 0.6944444444444444,
+        "recall@5": 0.7916666666666666,
+        "reciprocal_rank": 0.5900252525252525,
         "latency_ms": 19454.066286583256
       },
       "token_usage": {
@@ -654,81 +794,130 @@
         "total_tokens": 1761703
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 8,
-          "question_count": 8,
-          "attempted_count": 8,
-          "scored_count": 8,
-          "zero_ranking_count": 0,
-          "excluded_count": 1,
-          "failed_question_count": 1,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.1875,
-          "recall@3": 0.625,
-          "recall@5": 0.8125,
-          "reciprocal_rank": 0.6291666666666667,
-          "latency_ms": 14690.701995222094,
-          "token_query_count": 9,
-          "input_tokens_total": 401945,
-          "output_tokens_total": 11693
-        },
         "direct_fact": {
+          "recall@1": 0.5555555555555556,
+          "recall@3": 0.8888888888888888,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.7222222222222222,
+          "scored_only": {
+            "recall@1": 0.5555555555555556,
+            "recall@3": 0.8888888888888888,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.7222222222222222
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.5555555555555556,
-          "recall@3": 0.8888888888888888,
-          "recall@5": 0.8888888888888888,
-          "reciprocal_rank": 0.7222222222222222,
           "latency_ms": 35853.288276111016,
           "token_query_count": 9,
           "input_tokens_total": 394443,
           "output_tokens_total": 7879
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.2222222222222222,
+          "recall@3": 0.4444444444444444,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.37491582491582487,
+          "scored_only": {
+            "recall@1": 0.2222222222222222,
+            "recall@3": 0.4444444444444444,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.37491582491582487
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 14272.651858222162,
+          "token_query_count": 9,
+          "input_tokens_total": 490513,
+          "output_tokens_total": 10778
+        },
+        "distractor": {
           "recall@1": 0.5555555555555556,
           "recall@3": 0.8888888888888888,
           "recall@5": 0.8888888888888888,
           "reciprocal_rank": 0.7037037037037037,
+          "scored_only": {
+            "recall@1": 0.5555555555555556,
+            "recall@3": 0.8888888888888888,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.7037037037037037
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 12999.623016777756,
           "token_query_count": 9,
           "input_tokens_total": 434753,
           "output_tokens_total": 9699
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.16666666666666666,
+          "recall@3": 0.5555555555555556,
+          "recall@5": 0.7222222222222222,
+          "reciprocal_rank": 0.5592592592592592,
+          "scored_only": {
+            "recall@1": 0.1875,
+            "recall@3": 0.625,
+            "recall@5": 0.8125,
+            "reciprocal_rank": 0.6291666666666667
+          },
           "attempted_question_count": 9,
-          "question_count": 9,
+          "question_count": 8,
           "attempted_count": 9,
-          "scored_count": 9,
+          "scored_count": 8,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 1,
           "excluded_count": 0,
-          "failed_question_count": 0,
+          "failed_question_count": 1,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.2222222222222222,
-          "recall@3": 0.4444444444444444,
-          "recall@5": 0.6666666666666666,
-          "reciprocal_rank": 0.37491582491582487,
-          "latency_ms": 14272.651858222162,
+          "latency_ms": 14690.701995222094,
           "token_query_count": 9,
-          "input_tokens_total": 490513,
-          "output_tokens_total": 10778
+          "input_tokens_total": 401945,
+          "output_tokens_total": 11693
+        }
+      },
+      "failed_as_zero_count": 1,
+      "scored_only": {
+        "recall@1": 0.38571428571428573,
+        "recall@3": 0.7142857142857143,
+        "recall@5": 0.8142857142857143,
+        "reciprocal_rank": 0.6068831168831169
+      },
+      "cited_pages_secondary": {
+        "original_gold": {
+          "cited_recall@1": 0.4444444444444444,
+          "cited_recall@3": 0.5,
+          "cited_recall@5": 0.5,
+          "cited_reciprocal_rank": 0.5092592592592592
+        },
+        "expanded_gold": {
+          "cited_recall@1": 0.4444444444444444,
+          "cited_recall@3": 0.5,
+          "cited_recall@5": 0.5,
+          "cited_reciprocal_rank": 0.5092592592592592
         }
       }
     },
@@ -737,20 +926,20 @@
       "reason": "PageIndexQueryError: PageIndexAPIError: The model backend failed: litellm.BadRequestError: Ollama_chatException - KeyError: 'message', Got unexpected response from Ollama: {'error': 'error parsing tool call: raw=\\'We got page 4 and 5. The question: \"Veri sorumlusu, kişisel verileri korumak için hangi tedbirleri almak zorundadır?\" Means: What measures must the data controller take to protect personal data? Likely from section 12. In page 5 text includes data controller obligations: prevent unlawful processing, preserve, ensure security, technical and administrative measures, etc. We should cite page 5. Also maybe page 4 also includes security obligations? Page 5 contains the obligations. So answer citing page 5 blocks: a, b, c, amac, etc. Provide answer.\\', err=invalid character \\'W\\' looking for beginning of value'}",
       "status": "partial",
       "question_count": 36,
-      "attempted_count": 34,
+      "attempted_count": 36,
       "scored_count": 34,
       "zero_ranking_count": 0,
-      "excluded_count": 2,
+      "excluded_count": 0,
       "scored_question_count": 34,
       "failed_question_count": 2,
       "not_run_question_count": 0,
       "partial_question_count": 0,
       "parse_failure_count": 0,
       "overall": {
-        "recall@1": 0.5,
-        "recall@3": 0.6911764705882353,
-        "recall@5": 0.75,
-        "reciprocal_rank": 0.6651960784313725,
+        "recall@1": 0.4722222222222222,
+        "recall@3": 0.6527777777777778,
+        "recall@5": 0.7083333333333334,
+        "reciprocal_rank": 0.6282407407407408,
         "latency_ms": 14564.554433333342
       },
       "token_usage": {
@@ -760,81 +949,130 @@
         "total_tokens": 2088930
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 8,
-          "question_count": 8,
-          "attempted_count": 8,
-          "scored_count": 8,
-          "zero_ranking_count": 0,
-          "excluded_count": 1,
-          "failed_question_count": 1,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.375,
-          "recall@3": 0.6875,
-          "recall@5": 0.8125,
-          "reciprocal_rank": 0.8375,
-          "latency_ms": 14974.264903444539,
-          "token_query_count": 9,
-          "input_tokens_total": 449337,
-          "output_tokens_total": 11512
-        },
         "direct_fact": {
-          "attempted_question_count": 8,
+          "recall@1": 0.5555555555555556,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.6111111111111112,
+          "scored_only": {
+            "recall@1": 0.625,
+            "recall@3": 0.75,
+            "recall@5": 0.75,
+            "reciprocal_rank": 0.6875
+          },
+          "attempted_question_count": 9,
           "question_count": 8,
-          "attempted_count": 8,
+          "attempted_count": 9,
           "scored_count": 8,
           "zero_ranking_count": 0,
-          "excluded_count": 1,
+          "failed_as_zero_count": 1,
+          "excluded_count": 0,
           "failed_question_count": 1,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.625,
-          "recall@3": 0.75,
-          "recall@5": 0.75,
-          "reciprocal_rank": 0.6875,
           "latency_ms": 13370.068854444577,
           "token_query_count": 9,
           "input_tokens_total": 436365,
           "output_tokens_total": 9555
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.4444444444444444,
+          "recall@5": 0.5555555555555556,
+          "reciprocal_rank": 0.4722222222222222,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.4444444444444444,
+            "recall@5": 0.5555555555555556,
+            "reciprocal_rank": 0.4722222222222222
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 17579.645215999943,
+          "token_query_count": 9,
+          "input_tokens_total": 760256,
+          "output_tokens_total": 12665
+        },
+        "distractor": {
           "recall@1": 0.5555555555555556,
           "recall@3": 0.8888888888888888,
           "recall@5": 0.8888888888888888,
           "reciprocal_rank": 0.6851851851851852,
+          "scored_only": {
+            "recall@1": 0.5555555555555556,
+            "recall@3": 0.8888888888888888,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.6851851851851852
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 12334.23875944431,
           "token_query_count": 9,
           "input_tokens_total": 400077,
           "output_tokens_total": 9163
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.6111111111111112,
+          "recall@5": 0.7222222222222222,
+          "reciprocal_rank": 0.7444444444444445,
+          "scored_only": {
+            "recall@1": 0.375,
+            "recall@3": 0.6875,
+            "recall@5": 0.8125,
+            "reciprocal_rank": 0.8375
+          },
           "attempted_question_count": 9,
-          "question_count": 9,
+          "question_count": 8,
           "attempted_count": 9,
-          "scored_count": 9,
+          "scored_count": 8,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 1,
           "excluded_count": 0,
-          "failed_question_count": 0,
+          "failed_question_count": 1,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.4444444444444444,
-          "recall@3": 0.4444444444444444,
-          "recall@5": 0.5555555555555556,
-          "reciprocal_rank": 0.4722222222222222,
-          "latency_ms": 17579.645215999943,
+          "latency_ms": 14974.264903444539,
           "token_query_count": 9,
-          "input_tokens_total": 760256,
-          "output_tokens_total": 12665
+          "input_tokens_total": 449337,
+          "output_tokens_total": 11512
+        }
+      },
+      "failed_as_zero_count": 2,
+      "scored_only": {
+        "recall@1": 0.5,
+        "recall@3": 0.6911764705882353,
+        "recall@5": 0.75,
+        "reciprocal_rank": 0.6651960784313725
+      },
+      "cited_pages_secondary": {
+        "original_gold": {
+          "cited_recall@1": 0.4444444444444444,
+          "cited_recall@3": 0.4861111111111111,
+          "cited_recall@5": 0.4861111111111111,
+          "cited_reciprocal_rank": 0.5138888888888888
+        },
+        "expanded_gold": {
+          "cited_recall@1": 0.4444444444444444,
+          "cited_recall@3": 0.4861111111111111,
+          "cited_recall@5": 0.4861111111111111,
+          "cited_reciprocal_rank": 0.5138888888888888
         }
       }
     },
@@ -866,83 +1104,909 @@
         "total_tokens": 767723
       },
       "by_question_type": {
-        "cross_section": {
-          "attempted_question_count": 9,
-          "question_count": 9,
-          "attempted_count": 9,
-          "scored_count": 9,
-          "zero_ranking_count": 0,
-          "excluded_count": 0,
-          "failed_question_count": 0,
-          "not_run_question_count": 0,
-          "partial_question_count": 0,
-          "recall@1": 0.3333333333333333,
-          "recall@3": 0.6666666666666666,
-          "recall@5": 0.7777777777777778,
-          "reciprocal_rank": 0.7857142857142857,
-          "latency_ms": 9287.251330888668,
-          "token_query_count": 9,
-          "input_tokens_total": 173167,
-          "output_tokens_total": 6930
-        },
         "direct_fact": {
+          "recall@1": 0.6666666666666666,
+          "recall@3": 0.8888888888888888,
+          "recall@5": 0.8888888888888888,
+          "reciprocal_rank": 0.7777777777777778,
+          "scored_only": {
+            "recall@1": 0.6666666666666666,
+            "recall@3": 0.8888888888888888,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.7777777777777778
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 1,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.6666666666666666,
-          "recall@3": 0.8888888888888888,
-          "recall@5": 0.8888888888888888,
-          "reciprocal_rank": 0.7777777777777778,
           "latency_ms": 33021.88753655547,
           "token_query_count": 9,
           "input_tokens_total": 173112,
           "output_tokens_total": 34321
         },
-        "distractor": {
+        "paraphrase": {
+          "recall@1": 0.4444444444444444,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.6666666666666666,
+          "reciprocal_rank": 0.5555555555555556,
+          "scored_only": {
+            "recall@1": 0.4444444444444444,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.5555555555555556
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
+          "latency_ms": 20205.24679399993,
+          "token_query_count": 9,
+          "input_tokens_total": 173132,
+          "output_tokens_total": 20266
+        },
+        "distractor": {
           "recall@1": 0.6666666666666666,
           "recall@3": 0.8888888888888888,
           "recall@5": 0.8888888888888888,
           "reciprocal_rank": 0.7777777777777778,
+          "scored_only": {
+            "recall@1": 0.6666666666666666,
+            "recall@3": 0.8888888888888888,
+            "recall@5": 0.8888888888888888,
+            "reciprocal_rank": 0.7777777777777778
+          },
+          "attempted_question_count": 9,
+          "question_count": 9,
+          "attempted_count": 9,
+          "scored_count": 9,
+          "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
+          "excluded_count": 0,
+          "failed_question_count": 0,
+          "not_run_question_count": 0,
+          "partial_question_count": 0,
           "latency_ms": 14684.171583333307,
           "token_query_count": 9,
           "input_tokens_total": 173152,
           "output_tokens_total": 13643
         },
-        "paraphrase": {
+        "cross_section": {
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.7777777777777778,
+          "reciprocal_rank": 0.7857142857142857,
+          "scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.7777777777777778,
+            "reciprocal_rank": 0.7857142857142857
+          },
           "attempted_question_count": 9,
           "question_count": 9,
           "attempted_count": 9,
           "scored_count": 9,
           "zero_ranking_count": 0,
+          "failed_as_zero_count": 0,
           "excluded_count": 0,
           "failed_question_count": 0,
           "not_run_question_count": 0,
           "partial_question_count": 0,
-          "recall@1": 0.4444444444444444,
-          "recall@3": 0.6666666666666666,
-          "recall@5": 0.6666666666666666,
-          "reciprocal_rank": 0.5555555555555556,
-          "latency_ms": 20205.24679399993,
+          "latency_ms": 9287.251330888668,
           "token_query_count": 9,
-          "input_tokens_total": 173132,
-          "output_tokens_total": 20266
+          "input_tokens_total": 173167,
+          "output_tokens_total": 6930
+        }
+      },
+      "failed_as_zero_count": 0,
+      "scored_only": {
+        "recall@1": 0.5277777777777778,
+        "recall@3": 0.7777777777777778,
+        "recall@5": 0.8055555555555556,
+        "reciprocal_rank": 0.7242063492063493
+      }
+    }
+  ],
+  "num_validator_failed_questions": 4,
+  "scoring_rule": {
+    "failed_query": "zero for Recall@1/3/5 and MRR",
+    "not_run": "excluded when retrieval did not start because the document was unavailable",
+    "scored_only": "reported separately under methods[].scored_only"
+  },
+  "baselines": {
+    "original_gold": {
+      "overall": {
+        "first5_recall@5": 0.3611111111111111,
+        "random_order_expected_recall@5": 0.10923164257878422
+      },
+      "by_document": {
+        "kvkk_6698": {
+          "first5_recall@5": 1.0,
+          "random_order_expected_recall@5": 0.2777777777777778
+        },
+        "tuketicinin_korunmasi_6502": {
+          "first5_recall@5": 0.0,
+          "random_order_expected_recall@5": 0.014705882352941124
+        },
+        "yuksekogretim_2547": {
+          "first5_recall@5": 0.08333333333333333,
+          "random_order_expected_recall@5": 0.035211267605633756
+        }
+      }
+    },
+    "expanded_gold": {
+      "overall": {
+        "first5_recall@5": 0.3611111111111111,
+        "random_order_expected_recall@5": 0.11104818778093589
+      },
+      "by_document": {
+        "kvkk_6698": {
+          "first5_recall@5": 1.0,
+          "random_order_expected_recall@5": 0.2777777777777778
+        },
+        "tuketicinin_korunmasi_6502": {
+          "first5_recall@5": 0.0,
+          "random_order_expected_recall@5": 0.020155517959396102
+        },
+        "yuksekogretim_2547": {
+          "first5_recall@5": 0.08333333333333333,
+          "random_order_expected_recall@5": 0.035211267605633756
         }
       }
     }
-  ]
+  },
+  "gold_sensitivity": {
+    "primary_gold": "original source_pages (pre-registered labels)",
+    "expanded_gold": "source_pages plus documented equivalent_pages; sensitivity analysis only",
+    "validator_pass_question_count": 32,
+    "methods": {
+      "BM25": {
+        "original_gold": {
+          "recall@1": 0.2777777777777778,
+          "recall@3": 0.6527777777777778,
+          "recall@5": 0.7638888888888888,
+          "reciprocal_rank": 0.5324354657687991
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.2777777777777778,
+          "recall@3": 0.6527777777777778,
+          "recall@5": 0.7638888888888888,
+          "reciprocal_rank": 0.5324354657687991
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.2777777777777778,
+          "expanded_recall@3": 0.6805555555555556,
+          "expanded_recall@5": 0.7638888888888888,
+          "expanded_reciprocal_rank": 0.5370210036876704
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.2777777777777778,
+          "expanded_recall@3": 0.6805555555555556,
+          "expanded_recall@5": 0.7638888888888888,
+          "expanded_reciprocal_rank": 0.5370210036876704
+        }
+      },
+      "BM25 (Turkish stemmed)": {
+        "original_gold": {
+          "recall@1": 0.25,
+          "recall@3": 0.7083333333333334,
+          "recall@5": 0.7222222222222222,
+          "reciprocal_rank": 0.5258789358789359
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.25,
+          "recall@3": 0.7083333333333334,
+          "recall@5": 0.7222222222222222,
+          "reciprocal_rank": 0.5258789358789359
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.25,
+          "expanded_recall@3": 0.7083333333333334,
+          "expanded_recall@5": 0.75,
+          "expanded_reciprocal_rank": 0.5347954822954822
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.25,
+          "expanded_recall@3": 0.7083333333333334,
+          "expanded_recall@5": 0.75,
+          "expanded_reciprocal_rank": 0.5347954822954822
+        }
+      },
+      "Dense (multilingual-e5-base)": {
+        "original_gold": {
+          "recall@1": 0.4027777777777778,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.75,
+          "reciprocal_rank": 0.6274797597101519
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.4027777777777778,
+          "recall@3": 0.6666666666666666,
+          "recall@5": 0.75,
+          "reciprocal_rank": 0.6274797597101519
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.4027777777777778,
+          "expanded_recall@3": 0.7361111111111112,
+          "expanded_recall@5": 0.8194444444444444,
+          "expanded_reciprocal_rank": 0.6491856001659922
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.4027777777777778,
+          "expanded_recall@3": 0.7361111111111112,
+          "expanded_recall@5": 0.8194444444444444,
+          "expanded_reciprocal_rank": 0.6491856001659922
+        }
+      },
+      "Hybrid (RRF)": {
+        "original_gold": {
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.7083333333333334,
+          "recall@5": 0.7916666666666666,
+          "reciprocal_rank": 0.611629188712522
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.3333333333333333,
+          "recall@3": 0.7083333333333334,
+          "recall@5": 0.7916666666666666,
+          "reciprocal_rank": 0.611629188712522
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.3611111111111111,
+          "expanded_recall@3": 0.7361111111111112,
+          "expanded_recall@5": 0.8333333333333334,
+          "expanded_reciprocal_rank": 0.6363205467372134
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.3611111111111111,
+          "expanded_recall@3": 0.7361111111111112,
+          "expanded_recall@5": 0.8333333333333334,
+          "expanded_reciprocal_rank": 0.6363205467372134
+        }
+      },
+      "PageIndex agentic (default instructions)": {
+        "original_gold": {
+          "recall@1": 0.375,
+          "recall@3": 0.6944444444444444,
+          "recall@5": 0.7916666666666666,
+          "reciprocal_rank": 0.5900252525252525
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.38571428571428573,
+          "recall@3": 0.7142857142857143,
+          "recall@5": 0.8142857142857143,
+          "reciprocal_rank": 0.6068831168831169
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.375,
+          "expanded_recall@3": 0.6944444444444444,
+          "expanded_recall@5": 0.7916666666666666,
+          "expanded_reciprocal_rank": 0.5900252525252525
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.38571428571428573,
+          "expanded_recall@3": 0.7142857142857143,
+          "expanded_recall@5": 0.8142857142857143,
+          "expanded_reciprocal_rank": 0.6068831168831169
+        }
+      },
+      "PageIndex agentic (read-pages instruction)": {
+        "original_gold": {
+          "recall@1": 0.4722222222222222,
+          "recall@3": 0.6527777777777778,
+          "recall@5": 0.7083333333333334,
+          "reciprocal_rank": 0.6282407407407408
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.5,
+          "recall@3": 0.6911764705882353,
+          "recall@5": 0.75,
+          "reciprocal_rank": 0.6651960784313725
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.4722222222222222,
+          "expanded_recall@3": 0.6527777777777778,
+          "expanded_recall@5": 0.7083333333333334,
+          "expanded_reciprocal_rank": 0.6282407407407408
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.5,
+          "expanded_recall@3": 0.6911764705882353,
+          "expanded_recall@5": 0.75,
+          "expanded_reciprocal_rank": 0.6651960784313725
+        }
+      },
+      "PageIndex LLM Tree Search": {
+        "original_gold": {
+          "recall@1": 0.5277777777777778,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.8055555555555556,
+          "reciprocal_rank": 0.7242063492063493
+        },
+        "original_gold_scored_only": {
+          "recall@1": 0.5277777777777778,
+          "recall@3": 0.7777777777777778,
+          "recall@5": 0.8055555555555556,
+          "reciprocal_rank": 0.7242063492063493
+        },
+        "expanded_gold": {
+          "expanded_recall@1": 0.5277777777777778,
+          "expanded_recall@3": 0.8055555555555556,
+          "expanded_recall@5": 0.8333333333333334,
+          "expanded_reciprocal_rank": 0.7334656084656085
+        },
+        "expanded_gold_scored_only": {
+          "expanded_recall@1": 0.5277777777777778,
+          "expanded_recall@3": 0.8055555555555556,
+          "expanded_recall@5": 0.8333333333333334,
+          "expanded_reciprocal_rank": 0.7334656084656085
+        }
+      }
+    },
+    "by_document": {
+      "kvkk_6698": {
+        "BM25": {
+          "original_gold": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.8333333333333334,
+            "recall@5": 0.875,
+            "reciprocal_rank": 0.6180555555555556
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.8333333333333334,
+            "recall@5": 0.875,
+            "reciprocal_rank": 0.6180555555555556
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.8333333333333334,
+            "expanded_recall@5": 0.875,
+            "expanded_reciprocal_rank": 0.6180555555555556
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.8333333333333334,
+            "expanded_recall@5": 0.875,
+            "expanded_reciprocal_rank": 0.6180555555555556
+          }
+        },
+        "BM25 (Turkish stemmed)": {
+          "original_gold": {
+            "recall@1": 0.4166666666666667,
+            "recall@3": 0.9583333333333334,
+            "recall@5": 0.9583333333333334,
+            "reciprocal_rank": 0.6944444444444445
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.4166666666666667,
+            "recall@3": 0.9583333333333334,
+            "recall@5": 0.9583333333333334,
+            "reciprocal_rank": 0.6944444444444445
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.4166666666666667,
+            "expanded_recall@3": 0.9583333333333334,
+            "expanded_recall@5": 0.9583333333333334,
+            "expanded_reciprocal_rank": 0.6944444444444445
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.4166666666666667,
+            "expanded_recall@3": 0.9583333333333334,
+            "expanded_recall@5": 0.9583333333333334,
+            "expanded_reciprocal_rank": 0.6944444444444445
+          }
+        },
+        "Dense (multilingual-e5-base)": {
+          "original_gold": {
+            "recall@1": 0.6666666666666666,
+            "recall@3": 0.9583333333333334,
+            "recall@5": 1.0,
+            "reciprocal_rank": 0.8611111111111112
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.6666666666666666,
+            "recall@3": 0.9583333333333334,
+            "recall@5": 1.0,
+            "reciprocal_rank": 0.8611111111111112
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.6666666666666666,
+            "expanded_recall@3": 0.9583333333333334,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.8611111111111112
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.6666666666666666,
+            "expanded_recall@3": 0.9583333333333334,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.8611111111111112
+          }
+        },
+        "Hybrid (RRF)": {
+          "original_gold": {
+            "recall@1": 0.4583333333333333,
+            "recall@3": 0.8333333333333334,
+            "recall@5": 1.0,
+            "reciprocal_rank": 0.7083333333333334
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.4583333333333333,
+            "recall@3": 0.8333333333333334,
+            "recall@5": 1.0,
+            "reciprocal_rank": 0.7083333333333334
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.4583333333333333,
+            "expanded_recall@3": 0.8333333333333334,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.7083333333333334
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.4583333333333333,
+            "expanded_recall@3": 0.8333333333333334,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.7083333333333334
+          }
+        },
+        "PageIndex agentic (default instructions)": {
+          "original_gold": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.7916666666666666,
+            "recall@5": 0.9583333333333334,
+            "reciprocal_rank": 0.6347222222222222
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.7916666666666666,
+            "recall@5": 0.9583333333333334,
+            "reciprocal_rank": 0.6347222222222222
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.9583333333333334,
+            "expanded_reciprocal_rank": 0.6347222222222222
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.9583333333333334,
+            "expanded_reciprocal_rank": 0.6347222222222222
+          }
+        },
+        "PageIndex agentic (read-pages instruction)": {
+          "original_gold": {
+            "recall@1": 0.5,
+            "recall@3": 0.7083333333333334,
+            "recall@5": 0.7916666666666666,
+            "reciprocal_rank": 0.6555555555555556
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.6,
+            "recall@3": 0.85,
+            "recall@5": 0.95,
+            "reciprocal_rank": 0.7866666666666666
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.5,
+            "expanded_recall@3": 0.7083333333333334,
+            "expanded_recall@5": 0.7916666666666666,
+            "expanded_reciprocal_rank": 0.6555555555555556
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.6,
+            "expanded_recall@3": 0.85,
+            "expanded_recall@5": 0.95,
+            "expanded_reciprocal_rank": 0.7866666666666666
+          }
+        },
+        "PageIndex LLM Tree Search": {
+          "original_gold": {
+            "recall@1": 0.625,
+            "recall@3": 0.9583333333333334,
+            "recall@5": 1.0,
+            "reciprocal_rank": 0.875
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.625,
+            "recall@3": 0.9583333333333334,
+            "recall@5": 1.0,
+            "reciprocal_rank": 0.875
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.625,
+            "expanded_recall@3": 0.9583333333333334,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.875
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.625,
+            "expanded_recall@3": 0.9583333333333334,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.875
+          }
+        }
+      },
+      "tuketicinin_korunmasi_6502": {
+        "BM25": {
+          "original_gold": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.625,
+            "recall@5": 0.7083333333333334,
+            "reciprocal_rank": 0.42870370370370364
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.625,
+            "recall@5": 0.7083333333333334,
+            "reciprocal_rank": 0.42870370370370364
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.16666666666666666,
+            "expanded_recall@3": 0.7083333333333334,
+            "expanded_recall@5": 0.7083333333333334,
+            "expanded_reciprocal_rank": 0.44246031746031744
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.16666666666666666,
+            "expanded_recall@3": 0.7083333333333334,
+            "expanded_recall@5": 0.7083333333333334,
+            "expanded_reciprocal_rank": 0.44246031746031744
+          }
+        },
+        "BM25 (Turkish stemmed)": {
+          "original_gold": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.7083333333333334,
+            "recall@5": 0.7083333333333334,
+            "reciprocal_rank": 0.4643217893217893
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.7083333333333334,
+            "recall@5": 0.7083333333333334,
+            "reciprocal_rank": 0.4643217893217893
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.16666666666666666,
+            "expanded_recall@3": 0.7083333333333334,
+            "expanded_recall@5": 0.7916666666666666,
+            "expanded_reciprocal_rank": 0.4910714285714286
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.16666666666666666,
+            "expanded_recall@3": 0.7083333333333334,
+            "expanded_recall@5": 0.7916666666666666,
+            "expanded_reciprocal_rank": 0.4910714285714286
+          }
+        },
+        "Dense (multilingual-e5-base)": {
+          "original_gold": {
+            "recall@1": 0.125,
+            "recall@3": 0.5833333333333334,
+            "recall@5": 0.7916666666666666,
+            "reciprocal_rank": 0.44877136752136754
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.125,
+            "recall@3": 0.5833333333333334,
+            "recall@5": 0.7916666666666666,
+            "reciprocal_rank": 0.44877136752136754
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.125,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.513888888888889
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.125,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 1.0,
+            "expanded_reciprocal_rank": 0.513888888888889
+          }
+        },
+        "Hybrid (RRF)": {
+          "original_gold": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.75,
+            "recall@5": 0.7916666666666666,
+            "reciprocal_rank": 0.5037037037037037
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.75,
+            "recall@5": 0.7916666666666666,
+            "reciprocal_rank": 0.5037037037037037
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.25,
+            "expanded_recall@3": 0.8333333333333334,
+            "expanded_recall@5": 0.9166666666666666,
+            "expanded_reciprocal_rank": 0.5777777777777778
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.25,
+            "expanded_recall@3": 0.8333333333333334,
+            "expanded_recall@5": 0.9166666666666666,
+            "expanded_reciprocal_rank": 0.5777777777777778
+          }
+        },
+        "PageIndex agentic (default instructions)": {
+          "original_gold": {
+            "recall@1": 0.5416666666666666,
+            "recall@3": 0.7916666666666666,
+            "recall@5": 0.8333333333333334,
+            "reciprocal_rank": 0.7083333333333334
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.5909090909090909,
+            "recall@3": 0.8636363636363636,
+            "recall@5": 0.9090909090909091,
+            "reciprocal_rank": 0.7727272727272727
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.5416666666666666,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.8333333333333334,
+            "expanded_reciprocal_rank": 0.7083333333333334
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.5909090909090909,
+            "expanded_recall@3": 0.8636363636363636,
+            "expanded_recall@5": 0.9090909090909091,
+            "expanded_reciprocal_rank": 0.7727272727272727
+          }
+        },
+        "PageIndex agentic (read-pages instruction)": {
+          "original_gold": {
+            "recall@1": 0.5833333333333334,
+            "recall@3": 0.7916666666666666,
+            "recall@5": 0.8333333333333334,
+            "reciprocal_rank": 0.75
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.5833333333333334,
+            "recall@3": 0.7916666666666666,
+            "recall@5": 0.8333333333333334,
+            "reciprocal_rank": 0.75
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.5833333333333334,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.8333333333333334,
+            "expanded_reciprocal_rank": 0.75
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.5833333333333334,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.8333333333333334,
+            "expanded_reciprocal_rank": 0.75
+          }
+        },
+        "PageIndex LLM Tree Search": {
+          "original_gold": {
+            "recall@1": 0.4583333333333333,
+            "recall@3": 0.7083333333333334,
+            "recall@5": 0.75,
+            "reciprocal_rank": 0.6309523809523809
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.4583333333333333,
+            "recall@3": 0.7083333333333334,
+            "recall@5": 0.75,
+            "reciprocal_rank": 0.6309523809523809
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.4583333333333333,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.8333333333333334,
+            "expanded_reciprocal_rank": 0.6587301587301587
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.4583333333333333,
+            "expanded_recall@3": 0.7916666666666666,
+            "expanded_recall@5": 0.8333333333333334,
+            "expanded_reciprocal_rank": 0.6587301587301587
+          }
+        }
+      },
+      "yuksekogretim_2547": {
+        "BM25": {
+          "original_gold": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.5,
+            "recall@5": 0.7083333333333334,
+            "reciprocal_rank": 0.5505471380471381
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.5,
+            "recall@5": 0.7083333333333334,
+            "reciprocal_rank": 0.5505471380471381
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.5,
+            "expanded_recall@5": 0.7083333333333334,
+            "expanded_reciprocal_rank": 0.5505471380471381
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.5,
+            "expanded_recall@5": 0.7083333333333334,
+            "expanded_reciprocal_rank": 0.5505471380471381
+          }
+        },
+        "BM25 (Turkish stemmed)": {
+          "original_gold": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.4583333333333333,
+            "recall@5": 0.5,
+            "reciprocal_rank": 0.41887057387057386
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.16666666666666666,
+            "recall@3": 0.4583333333333333,
+            "recall@5": 0.5,
+            "reciprocal_rank": 0.41887057387057386
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.16666666666666666,
+            "expanded_recall@3": 0.4583333333333333,
+            "expanded_recall@5": 0.5,
+            "expanded_reciprocal_rank": 0.41887057387057386
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.16666666666666666,
+            "expanded_recall@3": 0.4583333333333333,
+            "expanded_recall@5": 0.5,
+            "expanded_reciprocal_rank": 0.41887057387057386
+          }
+        },
+        "Dense (multilingual-e5-base)": {
+          "original_gold": {
+            "recall@1": 0.4166666666666667,
+            "recall@3": 0.4583333333333333,
+            "recall@5": 0.4583333333333333,
+            "reciprocal_rank": 0.572556800497977
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.4166666666666667,
+            "recall@3": 0.4583333333333333,
+            "recall@5": 0.4583333333333333,
+            "reciprocal_rank": 0.572556800497977
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.4166666666666667,
+            "expanded_recall@3": 0.4583333333333333,
+            "expanded_recall@5": 0.4583333333333333,
+            "expanded_reciprocal_rank": 0.572556800497977
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.4166666666666667,
+            "expanded_recall@3": 0.4583333333333333,
+            "expanded_recall@5": 0.4583333333333333,
+            "expanded_reciprocal_rank": 0.572556800497977
+          }
+        },
+        "Hybrid (RRF)": {
+          "original_gold": {
+            "recall@1": 0.375,
+            "recall@3": 0.5416666666666666,
+            "recall@5": 0.5833333333333334,
+            "reciprocal_rank": 0.6228505291005291
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.375,
+            "recall@3": 0.5416666666666666,
+            "recall@5": 0.5833333333333334,
+            "reciprocal_rank": 0.6228505291005291
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.375,
+            "expanded_recall@3": 0.5416666666666666,
+            "expanded_recall@5": 0.5833333333333334,
+            "expanded_reciprocal_rank": 0.6228505291005291
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.375,
+            "expanded_recall@3": 0.5416666666666666,
+            "expanded_recall@5": 0.5833333333333334,
+            "expanded_reciprocal_rank": 0.6228505291005291
+          }
+        },
+        "PageIndex agentic (default instructions)": {
+          "original_gold": {
+            "recall@1": 0.25,
+            "recall@3": 0.5,
+            "recall@5": 0.5833333333333334,
+            "reciprocal_rank": 0.427020202020202
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.25,
+            "recall@3": 0.5,
+            "recall@5": 0.5833333333333334,
+            "reciprocal_rank": 0.427020202020202
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.25,
+            "expanded_recall@3": 0.5,
+            "expanded_recall@5": 0.5833333333333334,
+            "expanded_reciprocal_rank": 0.427020202020202
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.25,
+            "expanded_recall@3": 0.5,
+            "expanded_recall@5": 0.5833333333333334,
+            "expanded_reciprocal_rank": 0.427020202020202
+          }
+        },
+        "PageIndex agentic (read-pages instruction)": {
+          "original_gold": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.4583333333333333,
+            "recall@5": 0.5,
+            "reciprocal_rank": 0.4791666666666667
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.3333333333333333,
+            "recall@3": 0.4583333333333333,
+            "recall@5": 0.5,
+            "reciprocal_rank": 0.4791666666666667
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.4583333333333333,
+            "expanded_recall@5": 0.5,
+            "expanded_reciprocal_rank": 0.4791666666666667
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.3333333333333333,
+            "expanded_recall@3": 0.4583333333333333,
+            "expanded_recall@5": 0.5,
+            "expanded_reciprocal_rank": 0.4791666666666667
+          }
+        },
+        "PageIndex LLM Tree Search": {
+          "original_gold": {
+            "recall@1": 0.5,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.6666666666666666
+          },
+          "original_gold_scored_only": {
+            "recall@1": 0.5,
+            "recall@3": 0.6666666666666666,
+            "recall@5": 0.6666666666666666,
+            "reciprocal_rank": 0.6666666666666666
+          },
+          "expanded_gold": {
+            "expanded_recall@1": 0.5,
+            "expanded_recall@3": 0.6666666666666666,
+            "expanded_recall@5": 0.6666666666666666,
+            "expanded_reciprocal_rank": 0.6666666666666666
+          },
+          "expanded_gold_scored_only": {
+            "expanded_recall@1": 0.5,
+            "expanded_recall@3": 0.6666666666666666,
+            "expanded_recall@5": 0.6666666666666666,
+            "expanded_reciprocal_rank": 0.6666666666666666
+          }
+        }
+      }
+    }
+  }
 }
