@@ -28,7 +28,9 @@ def download_documents(retries: int = 3, timeout: int = 90) -> list[dict[str, An
     for source in DOCUMENTS:
         path = RAW_DIR / source["filename"]
         last_error: Exception | None = None
-        for attempt in range(retries):
+        # A pinned local copy (e.g. on hosts that cannot reach .gov.tr) is used as is.
+        reused_local_copy = path.exists() and sha256_file(path) == source.get("expected_sha256")
+        for attempt in range(0 if reused_local_copy else retries):
             try:
                 request = urllib.request.Request(
                     source["source_url"],
@@ -63,6 +65,7 @@ def download_documents(retries: int = 3, timeout: int = 90) -> list[dict[str, An
             "sha256": digest,
             "bytes": path.stat().st_size,
             "downloaded_from": source["source_url"],
+            "reused_local_copy": reused_local_copy,
         }
         records.append(record)
 
