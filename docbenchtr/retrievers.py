@@ -23,7 +23,8 @@ from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
 
 from .config import (
-    EMBEDDING_MODEL, EMBEDDING_MODEL_REVISION, OLLAMA_BASE_URL, OLLAMA_MODEL, OLLAMA_NUM_PREDICT,
+    EMBEDDING_MODEL, EMBEDDING_MODEL_REVISION, OLLAMA_BASE_URL, OLLAMA_MODEL, OLLAMA_NUM_CTX,
+    OLLAMA_NUM_PREDICT,
 )
 
 
@@ -1139,7 +1140,7 @@ def _ollama_tree_search(
         "stream": False,
         "format": schema,
         "messages": [{"role": "user", "content": prompt}],
-        "options": {"temperature": 0, "num_ctx": 32768, "num_predict": OLLAMA_NUM_PREDICT},
+        "options": {"temperature": 0, "num_ctx": OLLAMA_NUM_CTX, "num_predict": OLLAMA_NUM_PREDICT},
     }, ensure_ascii=False).encode("utf-8")
     request = urllib.request.Request(
         f"{base_url}/api/chat",
