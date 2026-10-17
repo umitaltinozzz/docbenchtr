@@ -7,15 +7,16 @@ from contextlib import contextmanager
 import torch
 
 from .config import DOCUMENTS, RAW_DIR, RESULTS_DIR
+from .cache import prepare_cache
 from .documents import download_documents, extract_pdf_pages
 from .evaluate import run_evaluation, summarize, write_summary
-from .plotting import plot_recall_by_type
 from .questions import draft_questions
 from .reporting import print_results_table, update_readme
 from .retrievers import PageIndexLLMTreeSearchRetriever, PageIndexRetriever, ollama_status
 
 
 def main() -> int:
+    from .plotting import plot_recall_by_type
     print("Downloading and hashing public source PDFs...")
     sources = download_documents()
     pages = extract_pdf_pages(sources)
@@ -82,7 +83,7 @@ def main() -> int:
 
 
 def ROOT_PAGEINDEX_DIR():
-    return RESULTS_DIR.parent / ".pageindex" / "docbenchtr-pilot"
+    return prepare_cache()
 
 
 class PipelineAlreadyRunning(RuntimeError):

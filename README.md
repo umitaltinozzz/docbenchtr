@@ -306,7 +306,37 @@ The [17 October 2026 review by Barış Şavk](docs/reviews/2026-10-17_review_bar
 
 **Fixed in this revision:** softened the headline and added paired bootstrap intervals and exact sign tests; made failed-query-as-zero the reported rule; added the 6502 equivalent gold pages and original-versus-expanded rescoring; retained and listed the four planned-term validator failures; added first-five and random-order baselines, citation-page scores, saved-ranking analysis, CI tests, and pinned Colab checkouts.
 
-**Still open for the full study:** compare Hybrid after reranking its top 20 with the same LLM; repeat each configuration; rebuild the trees with the 27B model; expand to a larger human-reviewed question set; and use unified text extraction across methods.
+**Prepared for run 3, awaiting measurement:** same-model Hybrid top-20 reranking, three search repeats, and trees built by the 27B model. The larger human-reviewed question set and unified text extraction remain open for the full study. Preparing this protocol does not change any published scores.
+
+## Next run
+
+Open [`colab/run3_a100.ipynb`](colab/run3_a100.ipynb) in Colab, choose **Runtime → Change runtime type → A100 GPU**, then **Run all**. Authorize Drive and upload the local Git bundle when the source cell asks. The notebook checks out its full `REPO_COMMIT` parameter, including unpushed commits via `SOURCE_MODE='bundle'`; it never follows `main`. To package the current local history without pushing: `git bundle create .run3/docbenchtr-run3.bundle HEAD` (create `.run3/` first). Upload the notebook through **File → Upload notebook** and select the bundle when prompted. The final notebook pin identifies the tested implementation commit; a later commit only sets that pin.
+
+Run 3 uses `qwen3.8:27b` for both indexing and search, a 65,536-token context, a 32,768-token output cap, temperature 0, and three repeats of the four classical methods, PageIndex Tree Search, the default PageIndex agent, and **Hybrid + LLM rerank**. Planning budget: **4–8 A100 hours**; at an assumed 15 compute units/hour, **60–120 units**. Replace that assumed rate with the assigned rate in Colab's resource panel. The notebook explains the estimate using the previous A100 latencies; indexing and reranking have not been timed yet.
+
+The runner is `python -m docbenchtr.run_repeats --repeats 3 --output-root PATH --resume`. Its environment settings are:
+
+| Variable | Purpose | Default |
+|---|---|---|
+| `DOCBENCHTR_INDEX_MODEL` | PageIndex tree and summary model | `qwen2.5:7b-instruct` |
+| `DOCBENCHTR_OLLAMA_MODEL` | Agent, Tree Search and reranking model | `qwen2.5:7b-instruct` |
+| `DOCBENCHTR_NUM_CTX` | Context for every native Ollama request | `32768` |
+| `DOCBENCHTR_NUM_PREDICT` | Output cap for every native Ollama request | `4096` |
+| `DOCBENCHTR_CACHE_ROOT` | Parent of model-specific index caches | `.pageindex/models/` |
+| `DOCBENCHTR_OLLAMA_BASE_URL` | Ollama endpoint; notebook uses a dedicated port | `http://127.0.0.1:11434` |
+| `DOCBENCHTR_MODEL_DIGESTS` | JSON model-to-weight-digest map, supplied by notebook | `{}` |
+
+New caches are separated by a portable model slug plus context/output settings. Each document's SDK manifest records its index model, weight digest when supplied, source hash, and generation settings. Cache validation rejects mismatched provenance. The committed `.pageindex/docbenchtr-pilot/` trees are read-only; the original 7B configuration can copy them into its own namespace without modifying the originals. Run 3 builds fresh 27B trees once, then reuses those trees for all three repeats. It measures search variability conditional on a fixed index, not variability across tree builds.
+
+Hybrid + LLM rerank sends the same search model the **full text of Hybrid's first 20 pages**, using the same `num_ctx`, `num_predict`, and temperature. JSON-schema output must be an exact permutation of those candidates. The complete ranking appends the unchanged Hybrid tail. Invalid responses fail and score zero; there is no fallback that would hide failures. Its page texts come from the classical extractor; PageIndex still uses PDFium.
+
+The native Ollama adapter preserves PageIndex 0.4.0's default agent instructions and tools, while buffering each `/api/chat` response before forwarding SDK events. Tool arguments are emitted once, reasoning is preserved across tool calls, and Ollama error objects are surfaced explicitly. To prevent loss of the user question, an auditable context guard reserves the output budget, conservatively estimates prompt size using UTF-8 bytes, and shortens oversized tool results oldest first. Shortening is recorded in `transport_events`; oversized fixed prompts fail explicitly. Genuine provider tool-parsing errors can still fail a query and remain in the results. Regression tests use the recorded A100 error bodies/traces, a stubbed round trip through PageIndex's actual default agent/tools, and both indexing completion paths.
+
+Drive outputs are under `MyDrive/docbenchtr_colab/run3/<commit>/results/index_<model>/search_<model>/ctx65536_out32768/repeat_001/` (then `002`, `003`). Every row has `run_index`, index/search model names, and a per-question progress line. Checkpoints allow `--resume` without retrying already-recorded failures. Each repeat includes CSV/JSON, summary, source/question metadata, the index manifest and environment record; trees and logs are also retained on Drive. Different code, weights, questions, page text or trees cannot silently mix on resume.
+
+After a disconnect, reconnect to an A100 and **Run all** with the same parameters. The saved bundle, model-specific trees and completed query rows are reused. Stopping the runner cell also terminates its PageIndex worker; the unfinished query is attempted again on resume. Source/question metadata and tree provenance are saved before querying, so interrupted runs remain inspectable.
+
+The configuration's `aggregate.json` reports metric means and **sample SD across repeat means**, per-question metric distributions, strict-majority top-five page votes and full-recall outcomes. Paired comparisons reuse the existing paired-analysis functions: match repeats within each question, average them, then bootstrap the **36 questions**, with exact two-sided sign tests against Hybrid. Original and expanded gold are both reported. Failed attempts score zero; infrastructure exclusions are counted. Repeated questions still share targets, and three repeats do not increase the number of independent questions. The final cell downloads a results-and-trees ZIP; then select **Runtime → Disconnect and delete runtime**.
 
 ## Kısa Türkçe özet
 

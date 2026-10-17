@@ -293,7 +293,7 @@ def draft_questions(pages: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], 
         "retained_count": len(retained),
         "dropped_count": 0,
         "full_document_search": {
-            "text_source": "data/processed/pages.jsonl from pinned PDFs extracted with pdftotext version 4.06 [www.xpdfreader.com], -enc UTF-8 -layout",
+            "text_source": "data/processed/pages.jsonl from pinned PDFs; pdftotext -enc UTF-8 -layout (actual extractor version in data/sources.json)",
             "page_scope": "all extracted physical pages in each question's document",
             "normalization": "NFKC, soft-hyphen and line-wrap normalization, blank page-number and Xpdf amendment-footnote noise removal, whitespace collapse, casefold",
             "purpose": "Search each selected answer segment and every planned term across the complete extracted text for equivalent-page review.",

@@ -24,7 +24,7 @@ from sentence_transformers import SentenceTransformer
 
 from .config import (
     EMBEDDING_MODEL, EMBEDDING_MODEL_REVISION, OLLAMA_BASE_URL, OLLAMA_MODEL, OLLAMA_NUM_CTX,
-    OLLAMA_NUM_PREDICT,
+    OLLAMA_NUM_PREDICT, PAGEINDEX_INDEX_MODEL, MODEL_DIGESTS, ROOT,
 )
 
 
@@ -145,21 +145,22 @@ def ollama_status(model: str = OLLAMA_MODEL, timeout: float = 2.0) -> tuple[bool
 
 
 def _new_pageindex_client(storage_path: str, instruction_variant: str = "read_pages"):
+    # The committed 7B cache is an immutable reference for earlier experiments.
+    if Path(storage_path).resolve() == (ROOT / ".pageindex" / "docbenchtr-pilot").resolve():
+        raise ValueError("Use a model-specific cache folder; the published 7B trees are read-only")
     from pageindex import PageIndexClient
-
-    ollama_model = OLLAMA_MODEL
     index_backend = {"api_base": OLLAMA_BASE_URL}
     chat_backend = {"api_base": OLLAMA_BASE_URL}
     config = dict(
         index={
-            "model": f"ollama_chat/{ollama_model}",
+            "model": f"ollama_chat/{PAGEINDEX_INDEX_MODEL}",
             "backend": index_backend,
             "storage_path": storage_path,
             "optimize": "merge",
             "summary_concurrency": 1,
         },
         chat={
-            "model": f"ollama_chat/{ollama_model}",
+            "model": f"ollama_chat/{OLLAMA_MODEL}",
             "backend": chat_backend,
         },
     )
@@ -260,6 +261,7 @@ class PageIndexRetriever(Retriever):
                     "toc_source_error": result.get("toc_source_error"),
                     "pageindex_doc_id": result["doc_id"],
                     "source_sha256": result.get("source_sha256"),
+                    "index_model": result.get("index_model"),
                     "idle_retry_count": len(idle_retries),
                     "error": None,
                 }
@@ -287,8 +289,12 @@ class PageIndexRetriever(Retriever):
         return {
             "mode": "local",
             "sdk_version": sdk_version,
-            "index_model": self.model,
+            "index_model": f"ollama_chat/{PAGEINDEX_INDEX_MODEL}",
             "chat_model": self.model,
+            "transport": "native Ollama /api/chat; buffered SDK stream bridge",
+            "num_ctx": OLLAMA_NUM_CTX,
+            "num_predict": OLLAMA_NUM_PREDICT,
+            "temperature": 0,
             "pdfium_parser_workers": 1,
             "ollama_base_url": OLLAMA_BASE_URL,
             "llm_http_idle_timeout_seconds": self.llm_idle_timeout_seconds,
@@ -535,6 +541,11 @@ class PageIndexWorker:
 
 def _pageindex_worker_loop(connection, storage_path: str, instruction_variant: str = "read_pages") -> None:
     try:
+        from importlib.metadata import version
+        if version("pageindex") != "0.4.0":
+            raise RuntimeError("The native adapter requires pageindex==0.4.0")
+        from .ollama_native import install
+        install()
         _install_pageindex_llm_idle_retries()
         client = _new_pageindex_client(storage_path, instruction_variant)
         connection.send({"ready": True})
@@ -601,7 +612,7 @@ def _prepare_or_index_document(client: Any, pdf_path: str) -> dict[str, Any]:
     pdf = Path(pdf_path)
     source_sha256 = hashlib.sha256(pdf.read_bytes()).hexdigest()
     source_pages = LocalAPI._extract_page_texts(str(pdf))
-    cached = _find_valid_cached_document(client, pdf.name, source_pages)
+    cached = _find_valid_cached_document(client, pdf.name, source_pages, source_sha256)
     if cached is not None:
         toc_source = cached.get("toc_source")
         toc_source_error = None
@@ -622,11 +633,15 @@ def _prepare_or_index_document(client: Any, pdf_path: str) -> dict[str, Any]:
             "toc_source": toc_source,
             "toc_source_error": toc_source_error,
             "source_sha256": source_sha256,
+            "index_model": PAGEINDEX_INDEX_MODEL,
         }
 
     started = time.perf_counter()
     source: dict[str, Any] = {}
-    metadata = {"source_sha256": source_sha256}
+    metadata = {"source_sha256": source_sha256, "index_model": PAGEINDEX_INDEX_MODEL,
+                "index_model_digest": MODEL_DIGESTS.get(PAGEINDEX_INDEX_MODEL),
+                "num_ctx": OLLAMA_NUM_CTX, "num_predict": OLLAMA_NUM_PREDICT,
+                "temperature": 0, "transport": "ollama_native"}
     with _capture_pageindex_toc_source(source, metadata):
         submitted = client.submit_document(
             str(pdf),
@@ -644,10 +659,13 @@ def _prepare_or_index_document(client: Any, pdf_path: str) -> dict[str, Any]:
         "toc_source": source.get("toc_source"),
         "toc_source_error": None,
         "source_sha256": source_sha256,
+        "index_model": PAGEINDEX_INDEX_MODEL,
     }
 
 
-def _find_valid_cached_document(client: Any, filename: str, source_pages: list[str]) -> dict[str, Any] | None:
+def _find_valid_cached_document(
+    client: Any, filename: str, source_pages: list[str], source_sha256: str | None = None,
+) -> dict[str, Any] | None:
     """Find a complete same-name cache whose stored text and node spans match."""
     store = getattr(getattr(client, "_api", None), "_store", None)
     if store is None:
@@ -655,6 +673,16 @@ def _find_valid_cached_document(client: Any, filename: str, source_pages: list[s
 
     filename_re = re.compile(rf"^{re.escape(Path(filename).stem)}(?:_\d+)?\.pdf$", re.IGNORECASE)
     for metadata in store.list_metas():
+        provenance = metadata.get("metadata") or {}
+        if (provenance.get("index_model") != PAGEINDEX_INDEX_MODEL
+                or provenance.get("num_ctx") != OLLAMA_NUM_CTX
+                or provenance.get("num_predict") != OLLAMA_NUM_PREDICT
+                or provenance.get("temperature") != 0):
+            continue
+        if source_sha256 is not None and provenance.get("source_sha256") != source_sha256:
+            continue
+        if MODEL_DIGESTS.get(PAGEINDEX_INDEX_MODEL) and provenance.get("index_model_digest") != MODEL_DIGESTS[PAGEINDEX_INDEX_MODEL]:
+            continue
         if not filename_re.fullmatch(metadata.get("name", "")):
             continue
         if metadata.get("status") != "completed" or metadata.get("pageNum") != len(source_pages):
@@ -712,7 +740,7 @@ def _is_http_timeout(error: BaseException, httpx_timeout_type: type[BaseExceptio
     visited: set[int] = set()
     while current is not None and id(current) not in visited:
         visited.add(id(current))
-        if isinstance(current, httpx_timeout_type):
+        if isinstance(current, (httpx_timeout_type, TimeoutError)):
             return True
         if type(current).__name__.lower() in {
             "timeout", "readtimeout", "connecttimeout", "writetimeout", "pooltimeout",
@@ -826,6 +854,9 @@ def _run_pageindex_query(
     events: list[dict[str, Any]] = []
     answer_parts: list[str] = []
     streams: list[Any] = []
+    from .ollama_native import TRANSPORT_EVENTS, _THINKING
+    TRANSPORT_EVENTS.clear()
+    _THINKING.clear()
     try:
         with _capture_pageindex_streams(streams):
             stream = client.chat(
@@ -841,12 +872,14 @@ def _run_pageindex_query(
     except Exception as error:
         details = derive_pageindex_retrieval(events)
         details.update(_usage_from_pageindex_streams(streams))
+        details["transport_events"] = list(TRANSPORT_EVENTS)
         raise PageIndexQueryError(
             f"{type(error).__name__}: {error}", details=details
         ) from error
 
     details = derive_pageindex_retrieval(events)
     details.update(_usage_from_pageindex_streams(streams))
+    details["transport_events"] = list(TRANSPORT_EVENTS)
     citations = []
     try:
         citations = client.get_citations("".join(answer_parts), doc_id=pageindex_doc_id)
@@ -1135,39 +1168,15 @@ def _ollama_tree_search(
         "most relevant first. Use only IDs in the tree. The thinking field should give "
         "a brief high-level selection rationale. Return the requested JSON object."
     )
-    body = json.dumps({
-        "model": model,
-        "stream": False,
-        "format": schema,
+    from .ollama_native import chat, usage
+    payload = chat({
+        "model": model, "format": schema,
         "messages": [{"role": "user", "content": prompt}],
-        "options": {"temperature": 0, "num_ctx": OLLAMA_NUM_CTX, "num_predict": OLLAMA_NUM_PREDICT},
-    }, ensure_ascii=False).encode("utf-8")
-    request = urllib.request.Request(
-        f"{base_url}/api/chat",
-        data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    # Long trees take minutes of prompt processing on local hardware; use the
-    # same 30-minute inactivity limit as the agentic variants.
-    with urllib.request.urlopen(request, timeout=1800) as response:
-        payload = json.loads(response.read().decode("utf-8"))
-    message = payload.get("message") if isinstance(payload, dict) else None
-    content = message.get("content") if isinstance(message, dict) else None
+    }, base_url)
+    content = payload["message"].get("content")
     if not isinstance(content, str):
         raise RuntimeError("Ollama /api/chat returned no message content")
-    prompt_tokens = payload.get("prompt_eval_count")
-    completion_tokens = payload.get("eval_count")
-    usage = {
-        "input_tokens": prompt_tokens if isinstance(prompt_tokens, int) else None,
-        "output_tokens": completion_tokens if isinstance(completion_tokens, int) else None,
-        "total_tokens": (
-            prompt_tokens + completion_tokens
-            if isinstance(prompt_tokens, int) and isinstance(completion_tokens, int)
-            else None
-        ),
-    }
-    return content, usage
+    return content, usage(payload)
 
 
 def derive_pageindex_retrieval(events: list[dict[str, Any]]) -> dict[str, Any]:

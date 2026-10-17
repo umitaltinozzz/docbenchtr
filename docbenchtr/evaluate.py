@@ -4,6 +4,7 @@ import csv
 import json
 import statistics
 import time
+from pathlib import Path
 from collections import defaultdict
 from typing import Any
 
@@ -99,10 +100,8 @@ def evaluate_question(retriever: Retriever, question: dict[str, Any], full_k: in
     metric_values = (
         compute_metrics(ranked_pages, question["source_pages"])
         if outcome["status"] in ("ran", "partial", "zero_ranking") else {
-            "recall@1": None,
-            "recall@3": None,
-            "recall@5": None,
-            "reciprocal_rank": None,
+            key: 0.0 if outcome["status"] == "failed" else None
+            for key in ("recall@1", "recall@3", "recall@5", "reciprocal_rank")
         }
     )
     return {
@@ -130,12 +129,16 @@ def evaluate_question(retriever: Retriever, question: dict[str, Any], full_k: in
         "parse_failure": outcome["parse_failure"],
         "tree_search_thinking": outcome["tree_search_thinking"],
         "tree_search_node_ids": outcome["tree_search_node_ids"],
+        "transport_events": outcome.get("transport_events", []),
+        "rerank_candidates": outcome.get("rerank_candidates", []),
+        "rerank_response": outcome.get("rerank_response"),
     }
 
 
-def write_rows(rows: list[dict[str, Any]]) -> None:
-    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    with (RESULTS_DIR / "results.csv").open("w", newline="", encoding="utf-8") as output:
+def write_rows(rows: list[dict[str, Any]], output_dir: Path = RESULTS_DIR) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    csv_temporary = output_dir / "results.csv.tmp"
+    with csv_temporary.open("w", newline="", encoding="utf-8") as output:
         fieldnames = [
             "method", "question_id", "question_type", "document_id", "source_pages",
             "ranked_pages", "recall@1", "recall@3", "recall@5", "reciprocal_rank",
@@ -144,21 +147,17 @@ def write_rows(rows: list[dict[str, Any]]) -> None:
             "page_content_call_count", "cited_pages", "citation_error", "idle_retries",
             "parse_failure", "tree_search_thinking", "tree_search_node_ids",
         ]
+        fieldnames += sorted({key for row in rows for key in row} - set(fieldnames))
         writer = csv.DictWriter(output, fieldnames=fieldnames)
         writer.writeheader()
         for row in rows:
-            writer.writerow({
-                **row,
-                "source_pages": json.dumps(row["source_pages"]),
-                "ranked_pages": json.dumps(row["ranked_pages"]),
-                "retrieval_trace": json.dumps(row["retrieval_trace"], ensure_ascii=False),
-                "tool_calls": json.dumps(row["tool_calls"], ensure_ascii=False),
-                "tool_errors": json.dumps(row["tool_errors"], ensure_ascii=False),
-                "cited_pages": json.dumps(row["cited_pages"]),
-                "idle_retries": json.dumps(row["idle_retries"], ensure_ascii=False),
-                "tree_search_node_ids": json.dumps(row["tree_search_node_ids"], ensure_ascii=False),
-            })
-    (RESULTS_DIR / "per_query.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            writer.writerow({key: json.dumps(value, ensure_ascii=False)
+                             if isinstance(value, (list, dict)) else value
+                             for key, value in row.items()})
+    csv_temporary.replace(output_dir / "results.csv")
+    temporary = output_dir / "per_query.json.tmp"
+    temporary.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(output_dir / "per_query.json")
 
 
 def summarize(
@@ -339,6 +338,6 @@ def summarize(
     }
 
 
-def write_summary(summary: dict[str, Any]) -> None:
-    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    (RESULTS_DIR / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+def write_summary(summary: dict[str, Any], output_dir: Path = RESULTS_DIR) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

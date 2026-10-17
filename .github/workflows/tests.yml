@@ -16,6 +16,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install CPU-only test dependencies
-        run: python -m pip install pytest==8.4.1 numpy==2.2.6 rank-bm25==0.2.2 snowballstemmer==3.0.1
+        run: python -m pip install pytest==8.4.1 numpy==2.2.6 rank-bm25==0.2.2 snowballstemmer==3.0.1 pageindex==0.4.0 litellm==1.105.1 openai-agents==0.20.0 openai==2.54.0
       - name: Run tests
         run: python -m pytest

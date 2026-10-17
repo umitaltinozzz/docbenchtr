@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import os
+import hashlib
+import re
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,11 +16,23 @@ EMBEDDING_MODEL = "intfloat/multilingual-e5-base"
 EMBEDDING_MODEL_REVISION = "d128750597153bb5987e10b1c3493a34e5a4502a"
 # The published pilot uses qwen2.5:7b-instruct; other runs override it per process.
 OLLAMA_MODEL = os.environ.get("DOCBENCHTR_OLLAMA_MODEL", "qwen2.5:7b-instruct")
-OLLAMA_BASE_URL = "http://127.0.0.1:11434"
+PAGEINDEX_INDEX_MODEL = os.environ.get("DOCBENCHTR_INDEX_MODEL", "qwen2.5:7b-instruct")
+MODEL_DIGESTS = json.loads(os.environ.get("DOCBENCHTR_MODEL_DIGESTS", "{}"))
+OLLAMA_BASE_URL = os.environ.get("DOCBENCHTR_OLLAMA_BASE_URL", "http://127.0.0.1:11434")
 # Context window requested per call (the published pilot uses 32,768).
 OLLAMA_NUM_CTX = int(os.environ.get("DOCBENCHTR_NUM_CTX", "32768"))
-# Per-response output cap for LLM Tree Search (the agentic route reads it from the Modelfile).
+# Shared per-response cap for indexing, agentic search, tree search and reranking.
 OLLAMA_NUM_PREDICT = int(os.environ.get("DOCBENCHTR_NUM_PREDICT", "4096"))
+
+
+def model_slug(model: str) -> str:
+    """Portable, collision-resistant folder name (including Windows/Drive)."""
+    return re.sub(r"[^A-Za-z0-9._-]", "-", model)[:80] + "-" + hashlib.sha256(model.encode()).hexdigest()[:10]
+
+
+def pageindex_cache_dir(index_model: str = PAGEINDEX_INDEX_MODEL) -> Path:
+    root = Path(os.environ.get("DOCBENCHTR_CACHE_ROOT", str(ROOT / ".pageindex" / "models")))
+    return root / model_slug(index_model) / f"ctx{OLLAMA_NUM_CTX}_out{OLLAMA_NUM_PREDICT}"
 
 DOCUMENTS = [
     {
