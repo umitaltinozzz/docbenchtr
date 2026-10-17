@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>DocBenchTR Pilot Özeti</title>
+<style>
+  @page { size: A4; margin: 16mm 17mm 16mm 17mm; }
+  body { font-family: "Cambria", "Georgia", serif; font-size: 10.6pt; line-height: 1.42; color: #1d2733; }
+  h1 { font-family: "Segoe UI", "Arial", sans-serif; font-size: 18pt; line-height: 1.2; margin: 0 0 4px; color: #14324f; }
+  .meta { font-family: "Segoe UI", "Arial", sans-serif; font-size: 9pt; color: #55657a; margin-bottom: 10px; }
+  .meta a { color: #2f5d8a; }
+  .abstract { background: #f3f6fa; border-left: 4px solid #e07a2f; padding: 8px 12px; margin: 8px 0 12px; font-size: 10pt; }
+  .abstract b.lbl { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.5pt; letter-spacing: .06em; color: #e07a2f; display: block; margin-bottom: 2px; }
+  h2 { font-family: "Segoe UI", "Arial", sans-serif; font-size: 12.5pt; color: #14324f; margin: 14px 0 4px; border-bottom: 1px solid #d8e0ea; padding-bottom: 2px; }
+  p { margin: 4px 0 6px; text-align: justify; }
+  ul, ol { margin: 4px 0 6px 18px; padding: 0; }
+  li { margin: 2px 0; }
+  table { border-collapse: collapse; width: 100%; font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.8pt; margin: 6px 0 4px; }
+  th { background: #14324f; color: #fff; text-align: left; padding: 4px 6px; font-weight: 600; }
+  td { padding: 3.5px 6px; border-bottom: 1px solid #e3e8ef; vertical-align: top; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.best td { background: #fdf0e6; font-weight: 600; }
+  figure { margin: 8px 0 6px; page-break-inside: avoid; }
+  figure img { width: 100%; }
+  figcaption { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.6pt; color: #55657a; margin-top: 2px; }
+  .step { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8pt; font-weight: 700; color: #fff; background: #2f5d8a; border-radius: 3px; padding: 1px 5px; margin-right: 4px; }
+  .err { background: #c0392b; }
+  .ok { background: #2e9e6b; }
+  .keep { page-break-inside: avoid; }
+  .small { font-size: 9pt; color: #55657a; }
+</style>
+</head>
+<body>
+
+<h1>DocBenchTR Pilot Çalışması: Türkçe Mevzuatta PageIndex ve Klasik Erişim Yöntemleri</h1>
+<div class="meta">Ümit Altınöz (2403022065) · Danışman: Dr. Öğr. Üyesi Aykut Güven · Beykent Üniversitesi, Bilgisayar Mühendisliği · Ekim 2026<br>
+Kod, veri ve tüm sonuçlar: <a href="https://github.com/umitaltinozzz/docbenchtr">github.com/umitaltinozzz/docbenchtr</a></div>
+
+<div class="abstract"><b class="lbl">ÖZET</b>
+Üç Türk kanununda (500 sayfa, 36 soru) doğru sayfayı bulma başarısını yedi yöntemle ölçtük. Küçük bir modelle (7B) PageIndex klasik yöntemlerin çok gerisinde kaldı; aynı deney farklı GPU'da da aynı sonucu verdi. Güncel ve daha büyük bir modelle (Qwen 3.8 27B) ve 64k bağlamla ise PageIndex en iyi klasik yöntemi geçti: <b>Recall@5 0,917 / 0,792</b>. Sonucu belirleyen yöntemden çok <b>model kapasitesi ve bağlam uzunluğu</b> oldu. Yol boyunca üç teknik hata bulduk ve düzelttik; hepsi bu raporda ve GitHub deposunda açıkça kayıtlı.
+</div>
+
+<h2>1. Kurulum</h2>
+<p><b>Veri.</b> KVKK (18 sayfa), Tüketicinin Korunması Hakkında Kanun (340 sayfa) ve Yükseköğretim Kanunu (142 sayfa). Her kanundan 12, toplam 36 soru; dört tip: doğrudan bilgi, yeniden ifade, çeldirici, bölümler arası. Her sorunun doğru sayfası, yanıt ifadesinin PDF metninde bulunmasıyla otomatik doğrulandı.</p>
+<p><b>Yöntemler.</b> Klasik: BM25, Türkçe köklü BM25, Dense (multilingual-e5), Hybrid (BM25+Dense, RRF). PageIndex (belgenin içindekiler ağacında dil modeliyle gezinen yöntem): iki ajan varyantı ve LLM Tree Search. <b>Metrikler:</b> Recall@k (doğru sayfa ilk k sonuçta mı) ve MRR. Sonuç veremeyen sorgular atılmadı, sıfır sayıldı.</p>
+
+<h2>2. Deney süreci: ne yaptık, ne gördük, nasıl düzelttik</h2>
+<table class="keep">
+<tr><th style="width:4%">#</th><th style="width:42%">Ne yaptık / ne gördük</th><th style="width:34%">Nasıl düzelttik</th><th style="width:20%">Sonuç (Tree Search R@5)</th></tr>
+<tr><td>1</td><td>Dizüstü bilgisayarda (RTX 3070, 8 GB) Qwen2.5 7B ile ilk koşu. <span class="step err">HATA</span>Ollama'nın varsayılan 4.096 token bağlamı PageIndex istemlerini sessizce kesiyordu; PageIndex satırları anlamsız çıktı.</td><td>Sonuçlar geçersiz ilan edildi; bağlam 32.768'e çıkarıldı, ağaçlar yeniden kuruldu.</td><td>—</td></tr>
+<tr><td>2</td><td>32k ile yeniden koşu (6 saat). <span class="step err">HATA</span>Tree Search'te 180 sn'lik istemci zaman aşımı 8 soruyu yarım bıraktı.</td><td>Zaman aşımı 30 dk yapıldı, 8 soru yeniden koşuldu.</td><td class="n">0,472</td></tr>
+<tr><td>3</td><td>Sonuç kötü çıkınca soru: dizüstü GPU mu sorunlu? Aynı her şeyle Colab A100'de tekrarladık.</td><td><span class="step ok">KONTROL</span>Klasik skorlar birebir aynı; PageIndex sadece 15–30 kat hızlandı.</td><td class="n">0,444</td></tr>
+<tr><td>4</td><td>Güncel modeller (Qwen 3.8 27B, gpt-oss 20B), 32k. <span class="step err">HATA</span>340 sayfalık kanunun yapısı 32k'ya sığmadı; soru metni kesilip düştü, 13–14 ajan sorgusu hata verdi.</td><td>Bağlam 64k'ya çıkarıldı.</td><td class="n">0,653 / 0,528</td></tr>
+<tr class="best"><td>5</td><td>Güncel modeller, 64k bağlam.</td><td>—</td><td class="n">0,917 / 0,806</td></tr>
+</table>
+<p class="small">Satır 4–5'te ilk değer Qwen 3.8 27B, ikinci değer gpt-oss 20B. Hybrid her koşuda 0,792.</p>
+
+<figure>
+<img src="figures/fig2_journey.png">
+<figcaption><b>Şekil 1.</b> PageIndex Tree Search'ün her koşudaki Recall@5 değeri. Kesikli çizgi en iyi klasik yöntem (Hybrid). Aynı 7B model dizüstünde ve A100'de aynı sonucu verdi (ilk iki çubuk); fark, büyük model ve 64k bağlamla geldi (koyu çubuklar).</figcaption>
+</figure>
+
+<h2>3. Sonuçlar</h2>
+<figure>
+<img src="figures/fig1_final.png">
+<figcaption><b>Şekil 2.</b> Son yapılandırmada (A100, 64k bağlam) tüm yöntemlerin Recall@5 değeri. Turuncu: PageIndex, mavi: klasik yöntemler. Noktalı çizgi Hybrid.</figcaption>
+</figure>
+
+<table>
+<tr><th>Yöntem (64k, 36 soru)</th><th>Recall@1</th><th>Recall@5</th><th>MRR</th><th>Soru başına süre</th></tr>
+<tr><td>Hybrid (BM25 + Dense)</td><td class="n">0,333</td><td class="n">0,792</td><td class="n">0,612</td><td class="n">13 ms</td></tr>
+<tr><td>Dense (e5)</td><td class="n">0,403</td><td class="n">0,750</td><td class="n">0,627</td><td class="n">14 ms</td></tr>
+<tr><td>PageIndex Tree Search · gpt-oss 20B</td><td class="n">0,528</td><td class="n">0,806</td><td class="n">0,724</td><td class="n">19 sn</td></tr>
+<tr class="best"><td>PageIndex Tree Search · Qwen 3.8 27B</td><td class="n">0,500</td><td class="n">0,917</td><td class="n">0,738</td><td class="n">27 sn</td></tr>
+</table>
+
+<figure>
+<img src="figures/fig3_documents.png">
+<figcaption><b>Şekil 3.</b> Kanun bazında Recall@5 (her kanunda 12 soru). KVKK'da üç yöntem de tam isabet; PageIndex'in kazancı en çok klasik yöntemlerin zorlandığı Yükseköğretim Kanunu'nda (0,583 → 0,917).</figcaption>
+</figure>
+
+<h2>4. Ne öğrendik</h2>
+<ol>
+<li><b>Model kapasitesi belirleyici.</b> Aynı yöntem 7B modelle 0,44'te, 27B modelle 0,92'de.</li>
+<li><b>Uzun belgede bağlam belirleyici.</b> 340 sayfalık kanun 32k bağlama sığmadı; 64k'da sorun kalktı.</li>
+<li><b>Donanım sonucu değil hızı değiştiriyor;</b> ama sıcaklık 0'da bile farklı GPU'larda sayfa sıralamaları soruların ancak üçte biri ile yarısında aynı kaldı. Bu yüzden tek koşu yetmez.</li>
+<li><b>Bu katmanı ölçmek önemli.</b> Bağımsız TRLawBench sonuçlarında (Beta Space Studio / Yargı PRO) Qwen 3.8 27B, Türk hukuku sınav sorularında tek başına 59, mevzuat arama katmanıyla 83 puan alıyor. Yani küçük modellerde başarıyı büyük ölçüde doğru belgeyi bulan katman belirliyor; DocBenchTR tam olarak bunu ölçüyor.</li>
+</ol>
+
+<h2>5. Sınırlılıklar ve sonraki adımlar</h2>
+<p><b>Sınırlılıklar.</b> 36 soru ve her yapılandırma için tek koşu: birkaç yüzdelik farklar gürültüdür (gpt-oss 0,806 ile Hybrid 0,792 başa baş). Ağaçlar 7B modelle kuruldu. PageIndex sorgu başına 20–30 sn sürerken klasik yöntemler milisaniye sürüyor. Sorular henüz insan incelemesinden geçmedi.</p>
+<p><b>Sonraki adımlar.</b> (1) <b>Adillik kontrolü:</b> Hybrid'in ilk 20 sonucunu aynı Qwen 3.8 modeline yeniden sıralatmak; PageIndex bunu da geçerse kazanç yöntemindir, geçemezse dil modelinindir. (2) Her yapılandırmayı 3 kez koşup ortalama ve sapma vermek. (3) Ağaçları büyük modelle yeniden kurmak. (4) 10–15 kanuna ve insan kontrollü sorulara genişlemek. (5) Kapalı API modellerini (Gemini, Claude, GPT) eklemek.</p>
+
+</body>
+</html>
