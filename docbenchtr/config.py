@@ -14,6 +14,8 @@ EMBEDDING_MODEL_REVISION = "d128750597153bb5987e10b1c3493a34e5a4502a"
 # The published pilot uses qwen2.5:7b-instruct; other runs override it per process.
 OLLAMA_MODEL = os.environ.get("DOCBENCHTR_OLLAMA_MODEL", "qwen2.5:7b-instruct")
 OLLAMA_BASE_URL = "http://127.0.0.1:11434"
+# Per-response output cap for LLM Tree Search (the agentic route reads it from the Modelfile).
+OLLAMA_NUM_PREDICT = int(os.environ.get("DOCBENCHTR_NUM_PREDICT", "4096"))
 
 DOCUMENTS = [
     {
