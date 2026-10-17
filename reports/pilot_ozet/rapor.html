@@ -28,17 +28,61 @@
   .ok { background: #2e9e6b; }
   .keep { page-break-inside: avoid; }
   .small { font-size: 9pt; color: #55657a; }
+  .hero { background: linear-gradient(120deg, #14324f 0%, #2f5d8a 100%); color: #fff; padding: 16px 18px 14px; border-radius: 6px; }
+  .hero h1 { color: #fff; font-size: 19pt; margin: 4px 0 8px; }
+  .kicker { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8pt; letter-spacing: .12em; color: #f2b483; font-weight: 700; }
+  .who { font-family: "Segoe UI", "Arial", sans-serif; font-size: 9.2pt; color: #dbe6f2; }
+  .headline { border: 1px solid #e6d3c2; background: #fff8f2; border-radius: 6px; padding: 12px 16px 10px; margin: 12px 0 10px; }
+  .hl-text { font-size: 11.2pt; line-height: 1.45; }
+  .vs { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 10px 0 2px; }
+  .big { font-family: "Segoe UI", "Arial", sans-serif; font-size: 30pt; font-weight: 800; line-height: 1; }
+  .big.pi { color: #e07a2f; } .big.hy { color: #2f5d8a; }
+  .vs .lbl { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.5pt; color: #55657a; line-height: 1.25; }
+  .sep { font-family: "Segoe UI", "Arial", sans-serif; font-size: 12pt; color: #9aa5b1; margin: 0 10px; }
+  .unit { text-align: center; font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.3pt; color: #8a97a8; }
+  .cards { display: flex; gap: 8px; margin: 4px 0 6px; }
+  .card { flex: 1; background: #f3f6fa; border-top: 3px solid #2f5d8a; border-radius: 4px; padding: 8px 10px; display: flex; align-items: center; gap: 8px; }
+  .card .n { font-family: "Segoe UI", "Arial", sans-serif; font-size: 20pt; font-weight: 800; color: #14324f; }
+  .card .t { font-family: "Segoe UI", "Arial", sans-serif; font-size: 8.8pt; line-height: 1.2; color: #1d2733; }
+  .card .t span { color: #8a97a8; font-size: 7.6pt; }
+  .repo { font-family: "Segoe UI", "Arial", sans-serif; font-size: 9pt; text-align: center; color: #55657a; margin-top: 6px; }
+  .repo a { color: #2f5d8a; }
+  .pagebreak { page-break-after: always; }
 </style>
 </head>
 <body>
 
-<h1>DocBenchTR Pilot Çalışması: Türkçe Mevzuatta PageIndex ve Klasik Erişim Yöntemleri</h1>
-<div class="meta">Ümit Altınöz (2403022065) · Danışman: Dr. Öğr. Üyesi Aykut Güven · Beykent Üniversitesi, Bilgisayar Mühendisliği · Ekim 2026<br>
-Kod, veri ve tüm sonuçlar: <a href="https://github.com/umitaltinozzz/docbenchtr">github.com/umitaltinozzz/docbenchtr</a></div>
-
-<div class="abstract"><b class="lbl">ÖZET</b>
-Üç Türk kanununda (500 sayfa, 36 soru) doğru sayfayı bulma başarısını yedi yöntemle ölçtük. Küçük bir modelle (7B) PageIndex klasik yöntemlerin çok gerisinde kaldı; aynı deney farklı GPU'da da aynı sonucu verdi. Güncel ve daha büyük bir modelle (Qwen 3.8 27B) ve 64k bağlamla ise PageIndex en iyi klasik yöntemi geçti: <b>Recall@5 0,917 / 0,792</b>. Sonucu belirleyen yöntemden çok <b>model kapasitesi ve bağlam uzunluğu</b> oldu. Yol boyunca üç teknik hata bulduk ve düzelttik; hepsi bu raporda ve GitHub deposunda açıkça kayıtlı.
+<div class="hero">
+  <div class="kicker">DOCBENCHTR · PİLOT ÇALIŞMA ÖZETİ · EKİM 2026</div>
+  <h1>Türkçe Mevzuatta Doğru Sayfayı Bulmak: PageIndex ve Klasik Erişim Yöntemleri</h1>
+  <div class="who">Ümit Altınöz (2403022065) &nbsp;·&nbsp; Danışman: Dr. Öğr. Üyesi Aykut Güven<br>Beykent Üniversitesi, Bilgisayar Mühendisliği</div>
 </div>
+
+<div class="headline">
+  <div class="hl-text">Güncel bir dil modeliyle (Qwen 3.8 27B) ve 64k bağlamla <b>PageIndex, en iyi klasik yöntemi geçti.</b> Aynı yöntem küçük bir modelle (7B) çok gerideydi: belirleyici olan model kapasitesi ve bağlam uzunluğu.</div>
+  <div class="vs">
+    <div class="big pi">0,917</div><div class="lbl">PageIndex<br>Qwen 3.8 27B</div>
+    <div class="sep">vs</div>
+    <div class="big hy">0,792</div><div class="lbl">Hybrid<br>(BM25 + Dense)</div>
+  </div>
+  <div class="unit">Recall@5 · doğru sayfanın ilk 5 sonuç içinde bulunma oranı</div>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="n">3</div><div class="t">Türk kanunu<br><span>KVKK · Tüketici · Yükseköğretim</span></div></div>
+  <div class="card"><div class="n">500</div><div class="t">sayfa<br><span>18 · 340 · 142</span></div></div>
+  <div class="card"><div class="n">36</div><div class="t">doğrulanmış soru<br><span>4 soru tipi</span></div></div>
+  <div class="card"><div class="n">7</div><div class="t">erişim yöntemi<br><span>4 klasik · 3 PageIndex</span></div></div>
+</div>
+
+<figure>
+<img src="figures/fig1_final.png">
+<figcaption><b>Şekil 1.</b> Son yapılandırmada (Colab A100, 64k bağlam) tüm yöntemlerin Recall@5 değeri. Turuncu: PageIndex, mavi: klasik yöntemler; noktalı çizgi Hybrid.</figcaption>
+</figure>
+
+<div class="repo">Kod, veri ve tüm sonuçlar: <a href="https://github.com/umitaltinozzz/docbenchtr">github.com/umitaltinozzz/docbenchtr</a></div>
+
+<div class="pagebreak"></div>
 
 <h2>1. Kurulum</h2>
 <p><b>Veri.</b> KVKK (18 sayfa), Tüketicinin Korunması Hakkında Kanun (340 sayfa) ve Yükseköğretim Kanunu (142 sayfa). Her kanundan 12, toplam 36 soru; dört tip: doğrudan bilgi, yeniden ifade, çeldirici, bölümler arası. Her sorunun doğru sayfası, yanıt ifadesinin PDF metninde bulunmasıyla otomatik doğrulandı.</p>
@@ -57,14 +101,10 @@ Kod, veri ve tüm sonuçlar: <a href="https://github.com/umitaltinozzz/docbencht
 
 <figure>
 <img src="figures/fig2_journey.png">
-<figcaption><b>Şekil 1.</b> PageIndex Tree Search'ün her koşudaki Recall@5 değeri. Kesikli çizgi en iyi klasik yöntem (Hybrid). Aynı 7B model dizüstünde ve A100'de aynı sonucu verdi (ilk iki çubuk); fark, büyük model ve 64k bağlamla geldi (koyu çubuklar).</figcaption>
+<figcaption><b>Şekil 2.</b> PageIndex Tree Search'ün her koşudaki Recall@5 değeri. Kesikli çizgi en iyi klasik yöntem (Hybrid). Aynı 7B model dizüstünde ve A100'de aynı sonucu verdi (ilk iki çubuk); fark, büyük model ve 64k bağlamla geldi (koyu çubuklar).</figcaption>
 </figure>
 
-<h2>3. Sonuçlar</h2>
-<figure>
-<img src="figures/fig1_final.png">
-<figcaption><b>Şekil 2.</b> Son yapılandırmada (A100, 64k bağlam) tüm yöntemlerin Recall@5 değeri. Turuncu: PageIndex, mavi: klasik yöntemler. Noktalı çizgi Hybrid.</figcaption>
-</figure>
+<h2 style="page-break-before: always">3. Sonuçlar</h2>
 
 <table>
 <tr><th>Yöntem (64k, 36 soru)</th><th>Recall@1</th><th>Recall@5</th><th>MRR</th><th>Soru başına süre</th></tr>
@@ -84,12 +124,10 @@ Kod, veri ve tüm sonuçlar: <a href="https://github.com/umitaltinozzz/docbencht
 <li><b>Model kapasitesi belirleyici.</b> Aynı yöntem 7B modelle 0,44'te, 27B modelle 0,92'de.</li>
 <li><b>Uzun belgede bağlam belirleyici.</b> 340 sayfalık kanun 32k bağlama sığmadı; 64k'da sorun kalktı.</li>
 <li><b>Donanım sonucu değil hızı değiştiriyor;</b> ama sıcaklık 0'da bile farklı GPU'larda sayfa sıralamaları soruların ancak üçte biri ile yarısında aynı kaldı. Bu yüzden tek koşu yetmez.</li>
-<li><b>Bu katmanı ölçmek önemli.</b> Bağımsız TRLawBench sonuçlarında (Beta Space Studio / Yargı PRO) Qwen 3.8 27B, Türk hukuku sınav sorularında tek başına 59, mevzuat arama katmanıyla 83 puan alıyor. Yani küçük modellerde başarıyı büyük ölçüde doğru belgeyi bulan katman belirliyor; DocBenchTR tam olarak bunu ölçüyor.</li>
 </ol>
 
-<h2>5. Sınırlılıklar ve sonraki adımlar</h2>
-<p><b>Sınırlılıklar.</b> 36 soru ve her yapılandırma için tek koşu: birkaç yüzdelik farklar gürültüdür (gpt-oss 0,806 ile Hybrid 0,792 başa baş). Ağaçlar 7B modelle kuruldu. PageIndex sorgu başına 20–30 sn sürerken klasik yöntemler milisaniye sürüyor. Sorular henüz insan incelemesinden geçmedi.</p>
-<p><b>Sonraki adımlar.</b> (1) <b>Adillik kontrolü:</b> Hybrid'in ilk 20 sonucunu aynı Qwen 3.8 modeline yeniden sıralatmak; PageIndex bunu da geçerse kazanç yöntemindir, geçemezse dil modelinindir. (2) Her yapılandırmayı 3 kez koşup ortalama ve sapma vermek. (3) Ağaçları büyük modelle yeniden kurmak. (4) 10–15 kanuna ve insan kontrollü sorulara genişlemek. (5) Kapalı API modellerini (Gemini, Claude, GPT) eklemek.</p>
+<h2>5. Sonraki test</h2>
+<p>Bu pilotta PageIndex ağaçları (belgelerin bölüm yapısı ve bölüm özetleri) küçük modelle, Qwen2.5 7B ile kurulmuştu; büyük modeller yalnızca arama aşamasında kullanıldı. Sonraki testte <b>ağaçları doğrudan Qwen 3.8 27B ile kuracağız</b> ve aynı 36 soruyla aramayı tekrarlayacağız. Böylece hem ağaç kalitesinin sonuca etkisini göreceğiz hem de kurulumdan aramaya kadar tek bir model kullanan, tutarlı bir yapılandırmayı ölçmüş olacağız.</p>
 
 </body>
 </html>
