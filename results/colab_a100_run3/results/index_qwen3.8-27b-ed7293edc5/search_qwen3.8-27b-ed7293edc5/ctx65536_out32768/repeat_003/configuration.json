@@ -1,0 +1,32 @@
+{
+  "commit": "77c6dbb6bf8cf60890be54a057491de4f6231755",
+  "index_model": "qwen3.8:27b",
+  "model_digests": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813"
+  },
+  "search_model": "qwen3.8:27b",
+  "num_ctx": 65536,
+  "num_predict": 32768,
+  "temperature": 0,
+  "repeats": 3,
+  "code_sha256": {
+    "docbenchtr/__init__.py": "e3df2e69cd72686ae8eb253f2ea8e0e02787e2423c215e8fbe517314e7641cc7",
+    "docbenchtr/cache.py": "7ad53f4913f0c83e63f7a0847300b73563689dce5f12cf64540b3ad7b1358486",
+    "docbenchtr/config.py": "d04ca8b9c209e7f944f889e0eb11125598c012154c2f3bc3d5cd2987fbd7efcc",
+    "docbenchtr/documents.py": "a357f2919462eccaa0fb4e8ffeb64367375bb10d7aa5a22d4f1b6c27004f254b",
+    "docbenchtr/evaluate.py": "072742d44a95f3fba10455b6d5400d74b88f46665ad880562867de4afd10c210",
+    "docbenchtr/ollama_native.py": "0967355c4c7704f9e5dbc118c57bd339c8491ca31699707a814a04953ded63ff",
+    "docbenchtr/plotting.py": "1198838a362962829b7bceddaf32fd47e8246811c87663137f80e4d071c1221f",
+    "docbenchtr/questions.py": "116df4e70dabbf90a56456a1af4f68c108d6bc853424f032179e1068aa69a3ad",
+    "docbenchtr/reanalyze.py": "e13b4af444e552bcf726ff67f10a2003e5b021087462ea815d58c9e995a1e50c",
+    "docbenchtr/repeats.py": "46277a71dea9a9ea5152e42d04094772c3f8156f656ed9d93349c55827226fb2",
+    "docbenchtr/reporting.py": "0e681a14a3e29d980148a3ed1004eb0d81132433937db9e8fcc5911734a062ea",
+    "docbenchtr/rerank.py": "d3d59f619272ccda4e83c3e001b929bc27472359844cc408f2a60b6d2930da6d",
+    "docbenchtr/rerun_failed.py": "7ef44361fbed4c6ae10a2e4577a6fd13d2f3b93c3a4b80b669f5c79128ac4b9a",
+    "docbenchtr/retrievers.py": "e5044e30f1f543a984efbb51d17fa231e07fe20df8db35638e5b0ebbcd15a882",
+    "docbenchtr/run_pilot.py": "ed66aebd7fe873f2db10a62fdff825f705daa5dd5f8f0a7dfef264334d3314ba",
+    "docbenchtr/run_repeats.py": "a2039ddbfdc26d993458b8044a54f9dc954e46d07a088049b9d3298baf6fbcbb"
+  },
+  "questions_sha256": "e4e1f3154f17e5d31a838af304593109d0a9eef377355be109e1440add264be5",
+  "pages_sha256": "49ba98b79e451c0ffde1371df22e728e6ef1ffd8898a0f6eaaf9cd1df893df4b"
+}

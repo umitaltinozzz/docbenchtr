@@ -1,0 +1,660 @@
+[
+  {
+    "question_id": "kvkk_6698-direct_fact-1",
+    "question": "Kişisel veriler, ilgili kişinin açık rızası olmadan hangi şartlarda işlenebilir?",
+    "reference_answer": "(2) Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın kişisel verilerinin işlenmesi mümkündür: a) Kanunlarda açıkça öngörülmesi.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      2
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "açık rızası aranmaksızın",
+        "şartlardan birinin varlığı"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "kvkk_6698-direct_fact-2",
+    "question": "Kişisel veriler hangi koşullarda ilgili kişinin açık rızası olmadan aktarılabilir?",
+    "reference_answer": "(2) Kişisel veriler; a) 5 inci maddenin ikinci fıkrasında, b) Yeterli önlemler alınmak kaydıyla, 6 ncı maddenin üçüncü fıkrasında, belirtilen şartlardan birinin bulunması hâlinde, ilgili kişinin açık rızası aranmaksızın aktarılabilir.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "kvkk_6698-direct_fact-3",
+    "question": "Veri sorumlusu, kişisel verileri korumak için hangi tedbirleri almak zorundadır?",
+    "reference_answer": "(1) Veri sorumlusu; a) Kişisel verilerin hukuka aykırı olarak işlenmesini önlemek, b) Kişisel verilere hukuka aykırı olarak erişilmesini önlemek, c) Kişisel verilerin muhafazasını sağlamak, amacıyla uygun güvenlik düzeyini temin etmeye yönelik gerekli her türlü teknik ve idari tedbirleri almak zorundadır.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "teknik ve idari tedbirleri"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "kvkk_6698-paraphrase-1",
+    "question": "Kişisel veriler toplanırken kişi hangi konularda bilgilendirilmelidir?",
+    "reference_answer": "(1) Kişisel verilerin elde edilmesi sırasında veri sorumlusu veya yetkilendirdiği kişi, ilgili kişilere; a) Veri sorumlusunun ve varsa temsilcisinin kimliği, b) Kişisel verilerin hangi amaçla işleneceği, c) İşlenen kişisel verilerin kimlere ve hangi amaçla aktarılabileceği, ç) Kişisel veri toplamanın yöntemi ve hukuki sebebi, d) 11 inci maddede sayılan diğer hakları, konusunda bilgi vermekle yükümlüdür.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      4
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "hangi amaçla işleneceği",
+        "hukuki sebebi"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "kvkk_6698-paraphrase-2",
+    "question": "Bir kişi, kendisiyle ilgili veriler bakımından veri sorumlusundan neleri öğrenebilir veya talep edebilir?",
+    "reference_answer": "e) 7 nci maddede öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme, f) (d) ve (e) bentleri uyarınca yapılan işlemlerin, kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme, g) İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme, ğ) Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme, haklarına sahiptir.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "haklarına sahiptir",
+        "bilgi talep etme"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "kvkk_6698-paraphrase-3",
+    "question": "Kişisel veriler yurt dışına aktarılırken hangi ek güvenceler aranır?",
+    "reference_answer": "(2) Kişisel veriler, 5 inci maddenin ikinci fıkrası ile 6 ncı maddenin üçüncü fıkrasında belirtilen şartlardan birinin varlığı ve kişisel verinin aktarılacağı yabancı ülkede; a) Yeterli korumanın bulunması, b) Yeterli korumanın bulunmaması durumunda Türkiye’deki ve ilgili yabancı ülkedeki veri sorumlularının yeterli bir korumayı yazılı olarak taahhüt etmeleri ve Kurulun izninin bulunması, kaydıyla ilgili kişinin açık rızası aranmaksızın yurt dışına aktarılabilir.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yeterli korumanın bulunmaması",
+        "Kurulun izninin bulunması"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "kvkk_6698-distractor-1",
+    "question": "Kişisel veri işleme istisnalarından farklı olarak, verilerin aktarımı hangi hâllerde açık rıza olmadan mümkündür?",
+    "reference_answer": "(2) Kişisel veriler; a) 5 inci maddenin ikinci fıkrasında, b) Yeterli önlemler alınmak kaydıyla, 6 ncı maddenin üçüncü fıkrasında, belirtilen şartlardan birinin bulunması hâlinde, ilgili kişinin açık rızası aranmaksızın aktarılabilir.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "kvkk_6698-distractor-2",
+    "question": "Yurt dışına veri aktarımında yeterli koruma yoksa hangi yazılı güvence ve izin gerekir?",
+    "reference_answer": "(2) Kişisel veriler, 5 inci maddenin ikinci fıkrası ile 6 ncı maddenin üçüncü fıkrasında belirtilen şartlardan birinin varlığı ve kişisel verinin aktarılacağı yabancı ülkede; a) Yeterli korumanın bulunması, b) Yeterli korumanın bulunmaması durumunda Türkiye’deki ve ilgili yabancı ülkedeki veri sorumlularının yeterli bir korumayı yazılı olarak taahhüt etmeleri ve Kurulun izninin bulunması, kaydıyla ilgili kişinin açık rızası aranmaksızın yurt dışına aktarılabilir.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yeterli korumanın bulunmaması",
+        "yazılı olarak taahhüt"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "kvkk_6698-distractor-3",
+    "question": "Veri sorumlusu, hukuka aykırı erişimi önlemek ve verileri korumak için ne yapmalıdır?",
+    "reference_answer": "(1) Veri sorumlusu; a) Kişisel verilerin hukuka aykırı olarak işlenmesini önlemek, b) Kişisel verilere hukuka aykırı olarak erişilmesini önlemek, c) Kişisel verilerin muhafazasını sağlamak, amacıyla uygun güvenlik düzeyini temin etmeye yönelik gerekli her türlü teknik ve idari tedbirleri almak zorundadır.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "hukuka aykırı olarak erişilmesini önlemek",
+        "tedbirleri almak"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "kvkk_6698-cross_section-1",
+    "question": "Kişisel verilerin işlenmesi ve aktarılması için açık rıza bakımından hangi kurallar geçerlidir?",
+    "reference_answer": "(2) Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın kişisel verilerinin işlenmesi mümkündür: a) Kanunlarda açıkça öngörülmesi. / (2) Kişisel veriler; a) 5 inci maddenin ikinci fıkrasında, b) Yeterli önlemler alınmak kaydıyla, 6 ncı maddenin üçüncü fıkrasında, belirtilen şartlardan birinin bulunması hâlinde, ilgili kişinin açık rızası aranmaksızın aktarılabilir.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      2,
+      3
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "açık rızası aranmaksızın",
+        "şartlardan birinin varlığı"
+      ],
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "kvkk_6698-cross_section-2",
+    "question": "Veri aktarımı koşulları ile veri güvenliğini sağlama yükümlülüğü nelerdir?",
+    "reference_answer": "(2) Kişisel veriler; a) 5 inci maddenin ikinci fıkrasında, b) Yeterli önlemler alınmak kaydıyla, 6 ncı maddenin üçüncü fıkrasında, belirtilen şartlardan birinin bulunması hâlinde, ilgili kişinin açık rızası aranmaksızın aktarılabilir. / (1) Veri sorumlusu; a) Kişisel verilerin hukuka aykırı olarak işlenmesini önlemek, b) Kişisel verilere hukuka aykırı olarak erişilmesini önlemek, c) Kişisel verilerin muhafazasını sağlamak, amacıyla uygun güvenlik düzeyini temin etmeye yönelik gerekli her türlü teknik ve idari tedbirleri almak zorundadır.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      3,
+      5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "aktarılabilir",
+        "yeterli önlemler"
+      ],
+      [
+        "teknik ve idari tedbirleri"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "kvkk_6698-cross_section-3",
+    "question": "Veri sorumlusunun kişiyi bilgilendirme ve verileri koruma yükümlülükleri nelerdir?",
+    "reference_answer": "(1) Kişisel verilerin elde edilmesi sırasında veri sorumlusu veya yetkilendirdiği kişi, ilgili kişilere; a) Veri sorumlusunun ve varsa temsilcisinin kimliği, b) Kişisel verilerin hangi amaçla işleneceği, c) İşlenen kişisel verilerin kimlere ve hangi amaçla aktarılabileceği, ç) Kişisel veri toplamanın yöntemi ve hukuki sebebi, d) 11 inci maddede sayılan diğer hakları, konusunda bilgi vermekle yükümlüdür. / (1) Veri sorumlusu; a) Kişisel verilerin hukuka aykırı olarak işlenmesini önlemek, b) Kişisel verilere hukuka aykırı olarak erişilmesini önlemek, c) Kişisel verilerin muhafazasını sağlamak, amacıyla uygun güvenlik düzeyini temin etmeye yönelik gerekli her türlü teknik ve idari tedbirleri almak zorundadır.",
+    "document_id": "kvkk_6698",
+    "source_pages": [
+      4,
+      5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "hangi amaçla işleneceği",
+        "hukuki sebebi"
+      ],
+      [
+        "teknik ve idari tedbirleri"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-direct_fact-1",
+    "question": "Kanuna göre bir mal hangi durumda ayıplı sayılır?",
+    "reference_answer": "(1) Ayıplı mal, tüketiciye teslimi anında, taraflarca kararlaştırılmış olan örnek ya da modele uygun olmaması ya da objektif olarak sahip olması gereken özellikleri taşımaması nedeniyle sözleşmeye aykırı olan maldır.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      8
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "sözleşmeye aykırı olan maldır"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-direct_fact-2",
+    "question": "Ayıplı bir mal karşısında tüketici hangi seçimlik hakları kullanabilir?",
+    "reference_answer": "(1) Malın ayıplı olduğunun anlaşılması durumunda tüketici; a) Satılanı geri vermeye hazır olduğunu bildirerek sözleşmeden dönme, b) Satılanı alıkoyup ayıp oranında satış bedelinden indirim isteme, c) Aşırı bir masraf gerektirmediği takdirde, bütün masrafları satıcıya ait olmak üzere satılanın ücretsiz onarılmasını isteme, ç) İmkân varsa, satılanın ayıpsız bir misli ile değiştirilmesini isteme, seçimlik haklarından birini kullanabilir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      9
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "sözleşmeden dönme",
+        "satış bedelinden indirim"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-direct_fact-3",
+    "question": "Kanun, mesafeli sözleşmeyi nasıl tanımlar?",
+    "reference_answer": "(1) Mesafeli sözleşme, satıcı veya sağlayıcı ile tüketicinin eş zamanlı fiziksel varlığı olmaksızın, mal veya hizmetlerin uzaktan pazarlanmasına yönelik olarak oluşturulmuş bir sistem çerçevesinde, taraflar arasında sözleşmenin kurulduğu ana kadar ve kurulduğu an da dâhil olmak üzere uzaktan iletişim araçlarının kullanılması suretiyle kurulan sözleşmelerdir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      21
+    ],
+    "equivalent_pages": {
+      "21": [
+        139
+      ]
+    },
+    "planned_terms": [
+      [
+        "eş zamanlı fiziksel varlığı olmaksızın"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-paraphrase-1",
+    "question": "Taksitle alışveriş yapan tüketici sözleşmeden hangi koşullarda cayabilir?",
+    "reference_answer": "(1) Tüketici, yedi gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin taksitle satış sözleşmesinden cayma hakkına sahiptir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      12
+    ],
+    "equivalent_pages": {
+      "12": [
+        54
+      ]
+    },
+    "planned_terms": [
+      [
+        "herhangi bir gerekçe göstermeksizin",
+        "cayma hakkına sahiptir"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-paraphrase-2",
+    "question": "Tüketici bir ürünün fiyatını satış yerinde nasıl görebilmelidir?",
+    "reference_answer": "(1) Perakende satışa arz edilen malların veya ambalajlarının yahut kaplarının üzerine kolaylıkla görülebilir ve okunabilir şekilde tüketicinin ödeyeceği tüm vergiler dâhil satış fiyatı ve birim fiyatını gösteren, üretim yeri ve ayırıcı özelliklerini içeren etiket konulması; etiket konulması mümkün olmayan hâllerde aynı bilgileri kapsayan listelerin görülebilecek şekilde uygun yerlere asılması zorunludur.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      26
+    ],
+    "equivalent_pages": {
+      "26": [
+        188
+      ]
+    },
+    "planned_terms": [
+      [
+        "kolaylıkla görülebilir ve okunabilir",
+        "birim fiyatını"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-paraphrase-3",
+    "question": "Bir mal satıldıktan sonra bakım ve onarım hizmetlerini kim sağlamakla yükümlüdür?",
+    "reference_answer": "(1) Üretici veya ithalatçılar, ürettikleri veya ithal ettikleri mallar için Bakanlıkça belirlenen kullanım ömrü süresince, satış sonrası bakım ve onarım hizmetlerini sağlamak zorundadır.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      28
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "satış sonrası bakım ve onarım hizmetlerini",
+        "sağlamak zorundadır"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-distractor-1",
+    "question": "Ayıplı bir malın sözleşmeye aykırı sayılmasına yol açan durumlar nelerdir?",
+    "reference_answer": "(1) Ayıplı mal, tüketiciye teslimi anında, taraflarca kararlaştırılmış olan örnek ya da modele uygun olmaması ya da objektif olarak sahip olması gereken özellikleri taşımaması nedeniyle sözleşmeye aykırı olan maldır.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      8
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "taraflarca kararlaştırılmış olan örnek",
+        "özellikleri taşımaması"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-distractor-2",
+    "question": "Mal ayıplı çıktığında tüketici hangi seçimlik haklardan yararlanabilir?",
+    "reference_answer": "(1) Malın ayıplı olduğunun anlaşılması durumunda tüketici; a) Satılanı geri vermeye hazır olduğunu bildirerek sözleşmeden dönme, b) Satılanı alıkoyup ayıp oranında satış bedelinden indirim isteme, c) Aşırı bir masraf gerektirmediği takdirde, bütün masrafları satıcıya ait olmak üzere satılanın ücretsiz onarılmasını isteme, ç) İmkân varsa, satılanın ayıpsız bir misli ile değiştirilmesini isteme, seçimlik haklarından birini kullanabilir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      9
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "satılanı geri vermeye hazır",
+        "sözleşmeden dönme"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-distractor-3",
+    "question": "Genel bir mesafeli mal veya hizmet sözleşmesi nasıl kurulur?",
+    "reference_answer": "(1) Mesafeli sözleşme, satıcı veya sağlayıcı ile tüketicinin eş zamanlı fiziksel varlığı olmaksızın, mal veya hizmetlerin uzaktan pazarlanmasına yönelik olarak oluşturulmuş bir sistem çerçevesinde, taraflar arasında sözleşmenin kurulduğu ana kadar ve kurulduğu an da dâhil olmak üzere uzaktan iletişim araçlarının kullanılması suretiyle kurulan sözleşmelerdir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      21
+    ],
+    "equivalent_pages": {
+      "21": [
+        139
+      ]
+    },
+    "planned_terms": [
+      [
+        "eş zamanlı fiziksel varlığı olmaksızın",
+        "uzaktan pazarlanmasına"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-cross_section-1",
+    "question": "Ayıplı mal ve ayıplı hizmet hangi sözleşmeye aykırılık durumlarını kapsar?",
+    "reference_answer": "(1) Ayıplı mal, tüketiciye teslimi anında, taraflarca kararlaştırılmış olan örnek ya da modele uygun olmaması ya da objektif olarak sahip olması gereken özellikleri taşımaması nedeniyle sözleşmeye aykırı olan maldır. / (1) Ayıplı hizmet, sözleşmede belirlenen süre içinde başlamaması veya taraflarca kararlaştırılmış olan ve objektif olarak sahip olması gereken özellikleri taşımaması nedeniyle sözleşmeye aykırı olan hizmettir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      8,
+      10
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "sözleşmeye aykırı olan maldır"
+      ],
+      [
+        "sözleşmeye aykırı olan hizmettir"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-cross_section-2",
+    "question": "Ayıplı mal ve ayıplı hizmet için tüketici hangi seçimlik haklara sahiptir?",
+    "reference_answer": "(1) Malın ayıplı olduğunun anlaşılması durumunda tüketici; a) Satılanı geri vermeye hazır olduğunu bildirerek sözleşmeden dönme, b) Satılanı alıkoyup ayıp oranında satış bedelinden indirim isteme, c) Aşırı bir masraf gerektirmediği takdirde, bütün masrafları satıcıya ait olmak üzere satılanın ücretsiz onarılmasını isteme, ç) İmkân varsa, satılanın ayıpsız bir misli ile değiştirilmesini isteme, seçimlik haklarından birini kullanabilir. / (1) Hizmetin ayıplı ifa edildiği durumlarda tüketici, hizmetin yeniden görülmesi, hizmet sonucu ortaya çıkan eserin ücretsiz onarımı, ayıp oranında bedelden indirim veya sözleşmeden dönme haklarından birini sağlayıcıya karşı kullanmakta serbesttir.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      9,
+      11
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "satış bedelinden indirim",
+        "sözleşmeden dönme"
+      ],
+      [
+        "bedelden indirim",
+        "sözleşmeden dönme"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "tuketicinin_korunmasi_6502-cross_section-3",
+    "question": "Mesafeli sözleşme ile finansal hizmetlere ilişkin mesafeli sözleşme hangi konuları kapsar?",
+    "reference_answer": "(1) Mesafeli sözleşme, satıcı veya sağlayıcı ile tüketicinin eş zamanlı fiziksel varlığı olmaksızın, mal veya hizmetlerin uzaktan pazarlanmasına yönelik olarak oluşturulmuş bir sistem çerçevesinde, taraflar arasında sözleşmenin kurulduğu ana kadar ve kurulduğu an da dâhil olmak üzere uzaktan iletişim araçlarının kullanılması suretiyle kurulan sözleşmelerdir. / (1) Finansal hizmetler, her türlü banka hizmeti, kredi, sigorta, bireysel emeklilik, yatırım ve ödeme ile ilgili hizmetleri ifade eder.",
+    "document_id": "tuketicinin_korunmasi_6502",
+    "source_pages": [
+      21,
+      22
+    ],
+    "equivalent_pages": {
+      "21": [
+        139
+      ]
+    },
+    "planned_terms": [
+      [
+        "eş zamanlı fiziksel varlığı olmaksızın"
+      ],
+      [
+        "banka hizmeti, kredi, sigorta"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "yuksekogretim_2547-direct_fact-1",
+    "question": "Yükseköğretim Kurulu nasıl bir kurul olarak tanımlanır?",
+    "reference_answer": "Yükseköğretim Kurulu, tüm yüksek öğretimi düzenleyen ve yükseköğretim kurumlarının faaliyetlerine yön veren, bu kanunla kendisine verilen görev ve yetkiler çerçevesinde özerkliğe ve kamu tüzel kişiliğine sahip, bir kuruluştur.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      5
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "özerkliğe ve kamu tüzel kişiliğine sahip"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "yuksekogretim_2547-direct_fact-2",
+    "question": "Devlet ve vakıf üniversitelerine rektör nasıl atanır?",
+    "reference_answer": "a) (Değişik paragraf: 2/7/2018 – KHK-703/135 md.) Devlet ve vakıf üniversitelerine rektör, Cumhurbaşkanınca atanır.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      14
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "rektör, Cumhurbaşkanınca atanır"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "yuksekogretim_2547-direct_fact-3",
+    "question": "Kanunda öğrenciler için sayılan disiplin cezalarından biri nedir?",
+    "reference_answer": "(Değişik:2/2/2023-7437/2 md.) (1) Disiplin cezaları ve disiplin cezalarını gerektiren disiplin suçları: a) Kınama: Öğrenciye öğrencilikle ilgili kusurlu davranışlarından dolayı kınandığının yazılı olarak bildirilmesidir.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      58
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "disiplin cezaları",
+        "kınama"
+      ]
+    ],
+    "question_type": "direct_fact"
+  },
+  {
+    "question_id": "yuksekogretim_2547-paraphrase-1",
+    "question": "Öğretim üyelerinden eğitim ve araştırma yönünden hangi çalışmalar beklenir?",
+    "reference_answer": "Yükseköğretim kurumlarında, bilimsel araştırmalar ve yayımlar yapmak, 23 22/2/2018 tarihli ve 7100 sayılı Kanunun 11 inci maddesiyle, bu fıkrada yer alan “yardımcı doçentler” ibaresi “doktor öğretim üyeleri” şeklinde değiştirilmiştir.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      20
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "eğitim - öğretim",
+        "araştırma"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "yuksekogretim_2547-paraphrase-2",
+    "question": "Doktor öğretim üyesi kadrosu için adaylık süreci nasıl başlatılır?",
+    "reference_answer": "(Değişik: 22/2/2018-7100/4 md.) a) Yükseköğretim kurumlarında açık bulunan doktor öğretim üyesi kadroları rektörlükçe ilan edilir.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      21
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "kadroları rektörlükçe ilan edilir"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "yuksekogretim_2547-paraphrase-3",
+    "question": "Araştırma görevlileri araştırma ve deneylerde nasıl bir görev üstlenir?",
+    "reference_answer": "(Değişik: 17/8/1983 - 2880/16 md.) a) (Değişik: 12/8/1986 - KHK 260/3 md.) Araştırma görevlileri, yükseköğretim kurumlarında yapılan araştırma, inceleme ve deneylerde yardımcı olan ve yetkili organlarca verilen ilgili diğer görevleri yapan öğretim elemanıdır.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      25
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "araştırma, inceleme ve deneylerde yardımcı olan"
+      ]
+    ],
+    "question_type": "paraphrase"
+  },
+  {
+    "question_id": "yuksekogretim_2547-distractor-1",
+    "question": "Doktor öğretim üyesi kadrosuna atanma için hangi ilan ve başvuru koşulu uygulanır?",
+    "reference_answer": "(Değişik: 22/2/2018-7100/4 md.) a) Yükseköğretim kurumlarında açık bulunan doktor öğretim üyesi kadroları rektörlükçe ilan edilir.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      21
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "kadroları rektörlükçe ilan edilir"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "yuksekogretim_2547-distractor-2",
+    "question": "Öğretim görevlileri hangi ders veya uzmanlık ihtiyacını karşılamak üzere atanır?",
+    "reference_answer": "(Değişik: 17/8/1983 - 2880/14 md.) Öğretim görevlileri; üniversitelerde ve bağlı birimlerinde bu Kanun uyarınca atanmış öğretim üyesi bulunmayan dersler veya herhangi bir dersin özel bilgi ve uzmanlık isteyen konularının eğitim - öğretim ve uygulamaları için, kendi uzmanlık alanlarındaki çalışma ve eserleri ile tanınmış kişiler, süreli veya ders saati ücreti ile görevlendirilebilirler.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      24
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "öğretim üyesi bulunmayan dersler",
+        "özel bilgi ve uzmanlık"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "yuksekogretim_2547-distractor-3",
+    "question": "Disiplin soruşturması başlatılırken amir hangi usulü izlemelidir?",
+    "reference_answer": "(Ek: 2/12/2016 - 6764/27 md.) Disiplin soruşturmasında uyulacak esaslar şunlardır: a) Disiplin cezası verilmesini gerektiren bir fiilin işlendiğini öğrenen disiplin amiri yazılı olarak disiplin soruşturması başlatır.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      51
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yazılı olarak disiplin soruşturması başlatır"
+      ]
+    ],
+    "question_type": "distractor"
+  },
+  {
+    "question_id": "yuksekogretim_2547-cross_section-1",
+    "question": "Üniversite yönetiminde rektörün görevi ile senatonun kuruluş ve işleyişi nasıl düzenlenmiştir?",
+    "reference_answer": "(Değişik birinci cümle: 20/8/2016-6745/14 md.) Rektör, çalışmalarında kendisine yardım etmek üzere, üniversitenin aylıklı profesörleri arasından en çok üç kişiyi kendi rektörlük görev süresiyle sınırlı olmak kaydıyla rektör yardımcısı olarak seçer. / Kuruluş ve işleyişi: Senato, rektörün başkanlığında, rektör yardımcıları, dekanlar ve her fakülteden fakülte kurullarınca üç yıl için seçilecek birer öğretim üyesi ile rektörlüğe bağlı enstitü ve yüksekokul müdürlerinden teşekkül eder.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      14,
+      15
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "rektör",
+        "üniversiteyi temsil"
+      ],
+      [
+        "senato, rektörün başkanlığında"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "yuksekogretim_2547-cross_section-2",
+    "question": "Öğretim üyelerinin eğitim ve araştırma görevleri ile araştırma görevlilerinin katkısı nelerdir?",
+    "reference_answer": "Yükseköğretim kurumlarında, bilimsel araştırmalar ve yayımlar yapmak, 23 22/2/2018 tarihli ve 7100 sayılı Kanunun 11 inci maddesiyle, bu fıkrada yer alan “yardımcı doçentler” ibaresi “doktor öğretim üyeleri” şeklinde değiştirilmiştir. / (Değişik: 17/8/1983 - 2880/16 md.) a) (Değişik: 12/8/1986 - KHK 260/3 md.) Araştırma görevlileri, yükseköğretim kurumlarında yapılan araştırma, inceleme ve deneylerde yardımcı olan ve yetkili organlarca verilen ilgili diğer görevleri yapan öğretim elemanıdır.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      20,
+      25
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "eğitim - öğretim",
+        "araştırma"
+      ],
+      [
+        "araştırma, inceleme ve deneylerde yardımcı"
+      ]
+    ],
+    "question_type": "cross_section"
+  },
+  {
+    "question_id": "yuksekogretim_2547-cross_section-3",
+    "question": "Disiplin soruşturmasının başlatılması ve disiplin cezasının belirlenmesinde hangi ilkeler uygulanır?",
+    "reference_answer": "(Ek: 2/12/2016 - 6764/27 md.) Disiplin soruşturmasında uyulacak esaslar şunlardır: a) Disiplin cezası verilmesini gerektiren bir fiilin işlendiğini öğrenen disiplin amiri yazılı olarak disiplin soruşturması başlatır. / Fiilin birden fazla disiplin suçu teşkil etmesi hâlinde bu suçlardan en ağır cezayı gerektiren disiplin cezası verilir.",
+    "document_id": "yuksekogretim_2547",
+    "source_pages": [
+      51,
+      55
+    ],
+    "equivalent_pages": {},
+    "planned_terms": [
+      [
+        "yazılı olarak disiplin soruşturması başlatır"
+      ],
+      [
+        "en ağır cezayı gerektiren"
+      ]
+    ],
+    "question_type": "cross_section"
+  }
+]

@@ -1,0 +1,1556 @@
+
+Batches:   0%|          | 0/2 [00:00<?, ?it/s]
+Batches:  50%|█████     | 1/2 [00:00<00:00,  2.51it/s]
+Batches: 100%|██████████| 2/2 [00:00<00:00,  4.69it/s]
+
+Batches:   0%|          | 0/22 [00:00<?, ?it/s]
+Batches:   5%|▍         | 1/22 [00:00<00:02,  8.91it/s]
+Batches:   9%|▉         | 2/22 [00:00<00:02,  9.09it/s]
+Batches:  14%|█▎        | 3/22 [00:00<00:02,  9.08it/s]
+Batches:  18%|█▊        | 4/22 [00:00<00:01,  9.12it/s]
+Batches:  23%|██▎       | 5/22 [00:00<00:01,  9.14it/s]
+Batches:  27%|██▋       | 6/22 [00:00<00:01,  9.18it/s]
+Batches:  32%|███▏      | 7/22 [00:00<00:01,  9.19it/s]
+Batches:  36%|███▋      | 8/22 [00:00<00:01,  9.21it/s]
+Batches:  41%|████      | 9/22 [00:00<00:01,  9.23it/s]
+Batches:  45%|████▌     | 10/22 [00:01<00:01,  9.22it/s]
+Batches:  50%|█████     | 11/22 [00:01<00:01,  9.23it/s]
+Batches:  55%|█████▍    | 12/22 [00:01<00:01,  9.25it/s]
+Batches:  59%|█████▉    | 13/22 [00:01<00:00,  9.29it/s]
+Batches:  64%|██████▎   | 14/22 [00:01<00:00,  9.28it/s]
+Batches:  68%|██████▊   | 15/22 [00:01<00:00,  9.27it/s]
+Batches:  73%|███████▎  | 16/22 [00:01<00:00,  9.23it/s]
+Batches:  77%|███████▋  | 17/22 [00:01<00:00,  9.28it/s]
+Batches:  82%|████████▏ | 18/22 [00:01<00:00,  9.32it/s]
+Batches:  91%|█████████ | 20/22 [00:02<00:00, 11.37it/s]
+Batches: 100%|██████████| 22/22 [00:02<00:00, 10.42it/s]
+
+Batches:   0%|          | 0/9 [00:00<?, ?it/s]
+Batches:  11%|█         | 1/9 [00:00<00:00,  8.97it/s]
+Batches:  22%|██▏       | 2/9 [00:00<00:00,  8.99it/s]
+Batches:  33%|███▎      | 3/9 [00:00<00:00,  9.08it/s]
+Batches:  44%|████▍     | 4/9 [00:00<00:00,  9.12it/s]
+Batches:  56%|█████▌    | 5/9 [00:00<00:00,  9.11it/s]
+Batches:  67%|██████▋   | 6/9 [00:00<00:00,  9.12it/s]
+Batches:  78%|███████▊  | 7/9 [00:00<00:00,  9.18it/s]
+Batches:  89%|████████▉ | 8/9 [00:00<00:00,  9.20it/s]
+Batches: 100%|██████████| 9/9 [00:00<00:00,  9.31it/s]
+Checking PageIndex cache for kvkk_6698...
+Indexed kvkk_6698 (523.3s).
+Checking PageIndex cache for tuketicinin_korunmasi_6502...
+Indexed tuketicinin_korunmasi_6502 (2893.7s).
+Checking PageIndex cache for yuksekogretim_2547...
+Indexed yuksekogretim_2547 (1080.5s).
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | BM25 START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | Hybrid (RRF) START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | PageIndex LLM Tree Search ran R@5=1.0 12625 ms
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 23485 ms
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 1] [1/36] kvkk_6698-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 33653 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | BM25 START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | Hybrid (RRF) START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | PageIndex LLM Tree Search ran R@5=1.0 13838 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 31866 ms
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 1] [2/36] kvkk_6698-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 39282 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | BM25 START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=1.0 12 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | Hybrid (RRF) START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | PageIndex LLM Tree Search ran R@5=1.0 12243 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | PageIndex agentic (default instructions) ran R@5=1.0 20380 ms
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 1] [3/36] kvkk_6698-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 33340 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | BM25 START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=1.0 1 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | Hybrid (RRF) START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | PageIndex LLM Tree Search ran R@5=1.0 12983 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 16771 ms
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 1] [4/36] kvkk_6698-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 35254 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | BM25 START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | Hybrid (RRF) START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | PageIndex LLM Tree Search ran R@5=1.0 12396 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | PageIndex agentic (default instructions) ran R@5=1.0 23240 ms
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 1] [5/36] kvkk_6698-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 31113 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | BM25 START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 1 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 12 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | Hybrid (RRF) START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | PageIndex LLM Tree Search ran R@5=1.0 10787 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | PageIndex agentic (default instructions) ran R@5=1.0 22032 ms
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 1] [6/36] kvkk_6698-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 33985 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | BM25 START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | Hybrid (RRF) START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | PageIndex LLM Tree Search START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | PageIndex LLM Tree Search ran R@5=1.0 15936 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | PageIndex agentic (default instructions) ran R@5=1.0 35016 ms
+[repeat 1] [7/36] kvkk_6698-distractor-1 | Hybrid + LLM rerank START
+[repeat 1] [7/36] kvkk_6698-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 36405 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | BM25 START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | Hybrid (RRF) START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | PageIndex LLM Tree Search START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | PageIndex LLM Tree Search ran R@5=1.0 11597 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | PageIndex agentic (default instructions) ran R@5=1.0 23841 ms
+[repeat 1] [8/36] kvkk_6698-distractor-2 | Hybrid + LLM rerank START
+[repeat 1] [8/36] kvkk_6698-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 28280 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | BM25 START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | Hybrid (RRF) START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | PageIndex LLM Tree Search START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | PageIndex LLM Tree Search ran R@5=1.0 12855 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | PageIndex agentic (default instructions) ran R@5=1.0 21635 ms
+[repeat 1] [9/36] kvkk_6698-distractor-3 | Hybrid + LLM rerank START
+[repeat 1] [9/36] kvkk_6698-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 29467 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | BM25 START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | BM25 ran R@5=1.0 0 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | Hybrid (RRF) START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | PageIndex LLM Tree Search ran R@5=1.0 13840 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 39244 ms
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | Hybrid + LLM rerank START
+[repeat 1] [10/36] kvkk_6698-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 40355 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | BM25 START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | BM25 ran R@5=0.5 0 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | BM25 (Turkish stemmed) ran R@5=0.5 1 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | Hybrid (RRF) START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | PageIndex LLM Tree Search ran R@5=1.0 14975 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | PageIndex agentic (default instructions) ran R@5=1.0 28103 ms
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | Hybrid + LLM rerank START
+[repeat 1] [11/36] kvkk_6698-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 37623 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | BM25 START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | BM25 ran R@5=0.0 0 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | Hybrid (RRF) START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | PageIndex LLM Tree Search ran R@5=1.0 13438 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | PageIndex agentic (default instructions) ran R@5=1.0 21576 ms
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | Hybrid + LLM rerank START
+[repeat 1] [12/36] kvkk_6698-cross_section-3 | Hybrid + LLM rerank ran R@5=1.0 40344 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 ran R@5=1.0 2 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid (RRF) START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex LLM Tree Search ran R@5=0.0 44535 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 23251 ms
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 1] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 36782 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 ran R@5=1.0 2 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 15 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid (RRF) START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex LLM Tree Search ran R@5=0.0 17190 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 25292 ms
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 1] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 36602 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 ran R@5=0.0 1 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid (RRF) START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex LLM Tree Search ran R@5=0.0 17125 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex agentic (default instructions) ran R@5=0.0 27906 ms
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 1] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 36564 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid (RRF) START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex LLM Tree Search ran R@5=0.0 17139 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 26397 ms
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 1] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 45591 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 ran R@5=0.0 2 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid (RRF) START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid (RRF) ran R@5=0.0 15 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex LLM Tree Search ran R@5=0.0 17143 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex agentic (default instructions) failed R@5=0.0 66534 ms
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 1] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 39242 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 ran R@5=1.0 2 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid (RRF) START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex LLM Tree Search ran R@5=0.0 44665 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex agentic (default instructions) failed R@5=0.0 95454 ms
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 1] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 41850 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 ran R@5=1.0 2 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid (RRF) START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex LLM Tree Search START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex LLM Tree Search ran R@5=0.0 44764 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex agentic (default instructions) ran R@5=1.0 28245 ms
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid + LLM rerank START
+[repeat 1] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 38257 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid (RRF) START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex LLM Tree Search START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex LLM Tree Search ran R@5=0.0 17176 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex agentic (default instructions) ran R@5=1.0 24654 ms
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid + LLM rerank START
+[repeat 1] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 35227 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 ran R@5=0.0 2 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid (RRF) START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex LLM Tree Search START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex LLM Tree Search ran R@5=0.0 17201 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex agentic (default instructions) failed R@5=0.0 71101 ms
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid + LLM rerank START
+[repeat 1] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 42306 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 ran R@5=1.0 2 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid (RRF) START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex LLM Tree Search ran R@5=0.0 44596 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 29607 ms
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid + LLM rerank START
+[repeat 1] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 39135 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 ran R@5=1.0 2 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 (Turkish stemmed) ran R@5=1.0 4 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Dense (multilingual-e5-base) ran R@5=1.0 15 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid (RRF) START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex LLM Tree Search ran R@5=0.0 17175 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex agentic (default instructions) ran R@5=1.0 26592 ms
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid + LLM rerank START
+[repeat 1] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 35436 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 ran R@5=0.5 2 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 (Turkish stemmed) ran R@5=0.5 3 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Dense (multilingual-e5-base) ran R@5=0.5 13 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid (RRF) START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex LLM Tree Search ran R@5=0.0 17121 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex agentic (default instructions) ran R@5=1.0 28201 ms
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid + LLM rerank START
+[repeat 1] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid + LLM rerank ran R@5=0.5 44132 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 ran R@5=0.0 1 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid (RRF) START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex LLM Tree Search ran R@5=1.0 29200 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 27416 ms
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 1] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 36192 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid (RRF) START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex LLM Tree Search ran R@5=1.0 30035 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 19480 ms
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 1] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 37892 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 ran R@5=0.0 1 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid (RRF) START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex LLM Tree Search ran R@5=1.0 29830 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex agentic (default instructions) failed R@5=0.0 62215 ms
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 1] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 37868 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid (RRF) START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex LLM Tree Search ran R@5=1.0 33876 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 55654 ms
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 1] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 44093 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid (RRF) START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex LLM Tree Search ran R@5=1.0 32622 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex agentic (default instructions) ran R@5=0.0 58013 ms
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 1] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 47373 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid (RRF) START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex LLM Tree Search ran R@5=1.0 32863 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex agentic (default instructions) failed R@5=0.0 77438 ms
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 1] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 41110 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | BM25 START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | Hybrid (RRF) START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | PageIndex LLM Tree Search START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | PageIndex LLM Tree Search ran R@5=1.0 33651 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | PageIndex agentic (default instructions) ran R@5=0.0 67319 ms
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | Hybrid + LLM rerank START
+[repeat 1] [31/36] yuksekogretim_2547-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 46317 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | BM25 START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | Hybrid (RRF) START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | PageIndex LLM Tree Search START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | PageIndex LLM Tree Search ran R@5=1.0 30803 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | PageIndex agentic (default instructions) failed R@5=0.0 68619 ms
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | Hybrid + LLM rerank START
+[repeat 1] [32/36] yuksekogretim_2547-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 37184 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | BM25 START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | BM25 ran R@5=1.0 1 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | Hybrid (RRF) START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | PageIndex LLM Tree Search START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | PageIndex LLM Tree Search ran R@5=1.0 31427 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | PageIndex agentic (default instructions) failed R@5=0.0 61421 ms
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | Hybrid + LLM rerank START
+[repeat 1] [33/36] yuksekogretim_2547-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 45430 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | BM25 START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | BM25 ran R@5=0.5 1 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | BM25 (Turkish stemmed) ran R@5=0.5 2 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | Dense (multilingual-e5-base) ran R@5=0.5 15 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid (RRF) START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex LLM Tree Search ran R@5=1.0 28612 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 28569 ms
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid + LLM rerank START
+[repeat 1] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 38991 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | BM25 START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | BM25 ran R@5=0.5 1 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | Dense (multilingual-e5-base) ran R@5=0.5 13 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid (RRF) START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex LLM Tree Search ran R@5=1.0 34236 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex agentic (default instructions) failed R@5=0.0 67701 ms
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid + LLM rerank START
+[repeat 1] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 43303 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | BM25 START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | BM25 ran R@5=0.5 1 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | BM25 (Turkish stemmed) ran R@5=0.5 2 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | Dense (multilingual-e5-base) ran R@5=0.5 13 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid (RRF) START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid (RRF) ran R@5=0.5 13 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex LLM Tree Search ran R@5=1.0 33606 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex agentic (default instructions) ran R@5=0.5 78037 ms
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid + LLM rerank START
+[repeat 1] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid + LLM rerank ran R@5=1.0 51557 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | BM25 START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | Hybrid (RRF) START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | PageIndex LLM Tree Search ran R@5=1.0 12697 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 21631 ms
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 2] [1/36] kvkk_6698-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 33729 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | BM25 START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 12 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | Hybrid (RRF) START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | PageIndex LLM Tree Search ran R@5=1.0 13857 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 29300 ms
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 2] [2/36] kvkk_6698-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 39235 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | BM25 START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | Hybrid (RRF) START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | PageIndex LLM Tree Search ran R@5=1.0 12259 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | PageIndex agentic (default instructions) ran R@5=1.0 20032 ms
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 2] [3/36] kvkk_6698-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 33443 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | BM25 START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=1.0 1 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | Hybrid (RRF) START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | PageIndex LLM Tree Search ran R@5=1.0 12943 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 16459 ms
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 2] [4/36] kvkk_6698-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 35465 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | BM25 START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | Hybrid (RRF) START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | PageIndex LLM Tree Search ran R@5=1.0 12383 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | PageIndex agentic (default instructions) ran R@5=1.0 20177 ms
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 2] [5/36] kvkk_6698-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 31172 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | BM25 START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 1 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | Hybrid (RRF) START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | PageIndex LLM Tree Search ran R@5=1.0 10790 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | PageIndex agentic (default instructions) ran R@5=1.0 21184 ms
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 2] [6/36] kvkk_6698-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 33922 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | BM25 START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | Hybrid (RRF) START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | PageIndex LLM Tree Search START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | PageIndex LLM Tree Search ran R@5=1.0 15941 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | PageIndex agentic (default instructions) ran R@5=1.0 37502 ms
+[repeat 2] [7/36] kvkk_6698-distractor-1 | Hybrid + LLM rerank START
+[repeat 2] [7/36] kvkk_6698-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 36316 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | BM25 START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | Dense (multilingual-e5-base) ran R@5=1.0 12 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | Hybrid (RRF) START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | PageIndex LLM Tree Search START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | PageIndex LLM Tree Search ran R@5=1.0 11608 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | PageIndex agentic (default instructions) ran R@5=1.0 23849 ms
+[repeat 2] [8/36] kvkk_6698-distractor-2 | Hybrid + LLM rerank START
+[repeat 2] [8/36] kvkk_6698-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 28259 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | BM25 START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | Hybrid (RRF) START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | PageIndex LLM Tree Search START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | PageIndex LLM Tree Search ran R@5=1.0 12875 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | PageIndex agentic (default instructions) ran R@5=1.0 21639 ms
+[repeat 2] [9/36] kvkk_6698-distractor-3 | Hybrid + LLM rerank START
+[repeat 2] [9/36] kvkk_6698-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 29444 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | BM25 START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | BM25 ran R@5=1.0 0 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | Hybrid (RRF) START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | PageIndex LLM Tree Search ran R@5=1.0 13838 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 39236 ms
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | Hybrid + LLM rerank START
+[repeat 2] [10/36] kvkk_6698-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 40363 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | BM25 START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | BM25 ran R@5=0.5 0 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | BM25 (Turkish stemmed) ran R@5=0.5 2 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | Hybrid (RRF) START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | PageIndex LLM Tree Search ran R@5=1.0 14974 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | PageIndex agentic (default instructions) ran R@5=1.0 28108 ms
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | Hybrid + LLM rerank START
+[repeat 2] [11/36] kvkk_6698-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 37634 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | BM25 START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | BM25 ran R@5=0.0 0 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | Hybrid (RRF) START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | PageIndex LLM Tree Search ran R@5=1.0 13448 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | PageIndex agentic (default instructions) ran R@5=1.0 21587 ms
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | Hybrid + LLM rerank START
+[repeat 2] [12/36] kvkk_6698-cross_section-3 | Hybrid + LLM rerank ran R@5=1.0 40333 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid (RRF) START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex LLM Tree Search ran R@5=0.0 44551 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 23238 ms
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 2] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 36781 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid (RRF) START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex LLM Tree Search ran R@5=0.0 17202 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 25301 ms
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 2] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 36655 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 ran R@5=0.0 1 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid (RRF) START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex LLM Tree Search ran R@5=0.0 17155 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex agentic (default instructions) ran R@5=0.0 28009 ms
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 2] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 36616 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid (RRF) START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex LLM Tree Search ran R@5=0.0 17167 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 26508 ms
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 2] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 45539 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 ran R@5=0.0 2 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid (RRF) START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex LLM Tree Search ran R@5=0.0 17150 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex agentic (default instructions) failed R@5=0.0 66733 ms
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 2] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 39290 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid (RRF) START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex LLM Tree Search ran R@5=0.0 44686 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex agentic (default instructions) failed R@5=0.0 95402 ms
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 2] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 41888 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 16 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid (RRF) START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex LLM Tree Search START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex LLM Tree Search ran R@5=0.0 44768 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex agentic (default instructions) ran R@5=1.0 28247 ms
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid + LLM rerank START
+[repeat 2] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 38265 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid (RRF) START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex LLM Tree Search START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex LLM Tree Search ran R@5=0.0 17136 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex agentic (default instructions) ran R@5=1.0 24609 ms
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid + LLM rerank START
+[repeat 2] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 35232 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 ran R@5=0.0 2 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid (RRF) START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex LLM Tree Search START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex LLM Tree Search ran R@5=0.0 17161 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex agentic (default instructions) failed R@5=0.0 71098 ms
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid + LLM rerank START
+[repeat 2] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 42278 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Dense (multilingual-e5-base) ran R@5=1.0 12 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid (RRF) START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex LLM Tree Search ran R@5=0.0 44629 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 29615 ms
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid + LLM rerank START
+[repeat 2] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 39177 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 ran R@5=1.0 2 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 (Turkish stemmed) ran R@5=1.0 4 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid (RRF) START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex LLM Tree Search ran R@5=0.0 17160 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex agentic (default instructions) ran R@5=1.0 26605 ms
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid + LLM rerank START
+[repeat 2] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 35473 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 ran R@5=0.5 2 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 (Turkish stemmed) ran R@5=0.5 4 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Dense (multilingual-e5-base) ran R@5=0.5 14 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid (RRF) START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid (RRF) ran R@5=0.5 16 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex LLM Tree Search ran R@5=0.0 17171 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex agentic (default instructions) ran R@5=1.0 28207 ms
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid + LLM rerank START
+[repeat 2] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid + LLM rerank ran R@5=0.5 44220 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 ran R@5=0.0 1 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid (RRF) START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex LLM Tree Search ran R@5=1.0 29207 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 27449 ms
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 2] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 36235 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid (RRF) START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex LLM Tree Search ran R@5=1.0 30040 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 19434 ms
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 2] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 37933 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 ran R@5=0.0 1 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid (RRF) START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex LLM Tree Search ran R@5=1.0 29911 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex agentic (default instructions) failed R@5=0.0 62231 ms
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 2] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 37857 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid (RRF) START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex LLM Tree Search ran R@5=1.0 33889 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 55639 ms
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 2] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 44172 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid (RRF) START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex LLM Tree Search ran R@5=1.0 32645 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex agentic (default instructions) ran R@5=0.0 58052 ms
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 2] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 47417 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid (RRF) START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex LLM Tree Search ran R@5=1.0 32870 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex agentic (default instructions) failed R@5=0.0 77584 ms
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 2] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 41088 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | BM25 START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | Hybrid (RRF) START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | PageIndex LLM Tree Search START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | PageIndex LLM Tree Search ran R@5=1.0 33690 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | PageIndex agentic (default instructions) ran R@5=0.0 67322 ms
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | Hybrid + LLM rerank START
+[repeat 2] [31/36] yuksekogretim_2547-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 46266 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | BM25 START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | Dense (multilingual-e5-base) ran R@5=0.0 12 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | Hybrid (RRF) START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | PageIndex LLM Tree Search START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | PageIndex LLM Tree Search ran R@5=1.0 30791 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | PageIndex agentic (default instructions) failed R@5=0.0 68615 ms
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | Hybrid + LLM rerank START
+[repeat 2] [32/36] yuksekogretim_2547-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 37183 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | BM25 START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | BM25 ran R@5=1.0 1 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | Hybrid (RRF) START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | PageIndex LLM Tree Search START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | PageIndex LLM Tree Search ran R@5=1.0 31430 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | PageIndex agentic (default instructions) failed R@5=0.0 61358 ms
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | Hybrid + LLM rerank START
+[repeat 2] [33/36] yuksekogretim_2547-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 45498 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | BM25 START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | BM25 ran R@5=0.5 1 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | BM25 (Turkish stemmed) ran R@5=0.5 3 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | Dense (multilingual-e5-base) ran R@5=0.5 14 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid (RRF) START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex LLM Tree Search ran R@5=1.0 28680 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 28599 ms
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid + LLM rerank START
+[repeat 2] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 39024 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | BM25 START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | BM25 ran R@5=0.5 1 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | Dense (multilingual-e5-base) ran R@5=0.5 13 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid (RRF) START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex LLM Tree Search ran R@5=1.0 34327 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex agentic (default instructions) failed R@5=0.0 67739 ms
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid + LLM rerank START
+[repeat 2] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 43327 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | BM25 START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | BM25 ran R@5=0.5 1 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | BM25 (Turkish stemmed) ran R@5=0.5 2 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | Dense (multilingual-e5-base) ran R@5=0.5 15 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid (RRF) START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex LLM Tree Search ran R@5=1.0 33634 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex agentic (default instructions) ran R@5=0.5 78042 ms
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid + LLM rerank START
+[repeat 2] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid + LLM rerank ran R@5=1.0 51550 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | BM25 START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | Hybrid (RRF) START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | PageIndex LLM Tree Search ran R@5=1.0 12686 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 21677 ms
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 3] [1/36] kvkk_6698-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 33736 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | BM25 START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | Hybrid (RRF) START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | PageIndex LLM Tree Search ran R@5=1.0 13871 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 29254 ms
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 3] [2/36] kvkk_6698-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 39230 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | BM25 START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | Hybrid (RRF) START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | PageIndex LLM Tree Search ran R@5=1.0 12267 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | PageIndex agentic (default instructions) ran R@5=1.0 20022 ms
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 3] [3/36] kvkk_6698-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 33445 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | BM25 START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | Hybrid (RRF) START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | PageIndex LLM Tree Search ran R@5=1.0 12947 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 16462 ms
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 3] [4/36] kvkk_6698-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 35441 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | BM25 START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | Hybrid (RRF) START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | PageIndex LLM Tree Search ran R@5=1.0 12383 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | PageIndex agentic (default instructions) ran R@5=1.0 20177 ms
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 3] [5/36] kvkk_6698-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 31181 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | BM25 START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 1 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | Hybrid (RRF) START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | PageIndex LLM Tree Search ran R@5=1.0 10790 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | PageIndex agentic (default instructions) ran R@5=1.0 21198 ms
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 3] [6/36] kvkk_6698-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 33968 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | BM25 START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | Hybrid (RRF) START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | PageIndex LLM Tree Search START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | PageIndex LLM Tree Search ran R@5=1.0 15936 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | PageIndex agentic (default instructions) ran R@5=1.0 37540 ms
+[repeat 3] [7/36] kvkk_6698-distractor-1 | Hybrid + LLM rerank START
+[repeat 3] [7/36] kvkk_6698-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 36350 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | BM25 START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | Hybrid (RRF) START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | PageIndex LLM Tree Search START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | PageIndex LLM Tree Search ran R@5=1.0 11601 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | PageIndex agentic (default instructions) ran R@5=1.0 23880 ms
+[repeat 3] [8/36] kvkk_6698-distractor-2 | Hybrid + LLM rerank START
+[repeat 3] [8/36] kvkk_6698-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 28283 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | BM25 START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | Hybrid (RRF) START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | PageIndex LLM Tree Search START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | PageIndex LLM Tree Search ran R@5=1.0 12865 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | PageIndex agentic (default instructions) ran R@5=1.0 21630 ms
+[repeat 3] [9/36] kvkk_6698-distractor-3 | Hybrid + LLM rerank START
+[repeat 3] [9/36] kvkk_6698-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 29425 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | BM25 START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | BM25 ran R@5=1.0 0 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | Hybrid (RRF) START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | PageIndex LLM Tree Search ran R@5=1.0 13824 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 39236 ms
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | Hybrid + LLM rerank START
+[repeat 3] [10/36] kvkk_6698-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 40354 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | BM25 START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | BM25 ran R@5=0.5 0 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | BM25 (Turkish stemmed) ran R@5=0.5 2 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | Hybrid (RRF) START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | Hybrid (RRF) ran R@5=1.0 12 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | PageIndex LLM Tree Search ran R@5=1.0 14967 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | PageIndex agentic (default instructions) ran R@5=1.0 28145 ms
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | Hybrid + LLM rerank START
+[repeat 3] [11/36] kvkk_6698-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 37686 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | BM25 START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | BM25 ran R@5=0.0 0 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | Hybrid (RRF) START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | PageIndex LLM Tree Search ran R@5=1.0 13458 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | PageIndex agentic (default instructions) ran R@5=1.0 21578 ms
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | Hybrid + LLM rerank START
+[repeat 3] [12/36] kvkk_6698-cross_section-3 | Hybrid + LLM rerank ran R@5=1.0 40320 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid (RRF) START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex LLM Tree Search ran R@5=0.0 44574 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 23184 ms
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 3] [13/36] tuketicinin_korunmasi_6502-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 36770 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 ran R@5=1.0 2 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 4 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid (RRF) START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex LLM Tree Search ran R@5=0.0 17181 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 25297 ms
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 3] [14/36] tuketicinin_korunmasi_6502-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 36620 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 ran R@5=0.0 1 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid (RRF) START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex LLM Tree Search ran R@5=0.0 17147 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | PageIndex agentic (default instructions) ran R@5=0.0 27906 ms
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 3] [15/36] tuketicinin_korunmasi_6502-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 36579 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid (RRF) START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex LLM Tree Search ran R@5=0.0 17142 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 26443 ms
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 3] [16/36] tuketicinin_korunmasi_6502-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 45562 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 ran R@5=0.0 1 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid (RRF) START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid (RRF) ran R@5=0.0 15 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex LLM Tree Search ran R@5=0.0 17127 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | PageIndex agentic (default instructions) failed R@5=0.0 66710 ms
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 3] [17/36] tuketicinin_korunmasi_6502-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 39231 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 ran R@5=1.0 2 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 15 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid (RRF) START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex LLM Tree Search ran R@5=0.0 44668 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | PageIndex agentic (default instructions) failed R@5=0.0 95416 ms
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 3] [18/36] tuketicinin_korunmasi_6502-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 41891 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 ran R@5=1.0 2 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid (RRF) START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex LLM Tree Search START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex LLM Tree Search ran R@5=0.0 44815 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | PageIndex agentic (default instructions) ran R@5=1.0 28251 ms
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid + LLM rerank START
+[repeat 3] [19/36] tuketicinin_korunmasi_6502-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 38248 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid (RRF) START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex LLM Tree Search START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex LLM Tree Search ran R@5=0.0 17139 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | PageIndex agentic (default instructions) ran R@5=1.0 24590 ms
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid + LLM rerank START
+[repeat 3] [20/36] tuketicinin_korunmasi_6502-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 35198 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 ran R@5=0.0 2 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | BM25 (Turkish stemmed) ran R@5=0.0 3 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid (RRF) START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid (RRF) ran R@5=0.0 15 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex LLM Tree Search START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex LLM Tree Search ran R@5=0.0 17191 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | PageIndex agentic (default instructions) failed R@5=0.0 71120 ms
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid + LLM rerank START
+[repeat 3] [21/36] tuketicinin_korunmasi_6502-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 42256 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 ran R@5=1.0 2 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid (RRF) START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid (RRF) ran R@5=1.0 16 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex LLM Tree Search ran R@5=0.0 44586 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 29599 ms
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid + LLM rerank START
+[repeat 3] [22/36] tuketicinin_korunmasi_6502-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 39156 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 ran R@5=1.0 2 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Dense (multilingual-e5-base) ran R@5=1.0 15 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid (RRF) START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid (RRF) ran R@5=1.0 15 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex LLM Tree Search ran R@5=0.0 17166 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | PageIndex agentic (default instructions) ran R@5=1.0 26552 ms
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid + LLM rerank START
+[repeat 3] [23/36] tuketicinin_korunmasi_6502-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 35463 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 ran R@5=0.5 2 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | BM25 (Turkish stemmed) ran R@5=0.5 4 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Dense (multilingual-e5-base) ran R@5=0.5 14 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid (RRF) START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex LLM Tree Search ran R@5=0.0 17128 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | PageIndex agentic (default instructions) ran R@5=1.0 28204 ms
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid + LLM rerank START
+[repeat 3] [24/36] tuketicinin_korunmasi_6502-cross_section-3 | Hybrid + LLM rerank ran R@5=0.5 44157 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 ran R@5=0.0 1 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 (Turkish stemmed) START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | Dense (multilingual-e5-base) START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid (RRF) START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex LLM Tree Search START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex LLM Tree Search ran R@5=1.0 29193 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex agentic (default instructions) START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | PageIndex agentic (default instructions) ran R@5=1.0 27504 ms
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid + LLM rerank START
+[repeat 3] [25/36] yuksekogretim_2547-direct_fact-1 | Hybrid + LLM rerank ran R@5=1.0 36220 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 (Turkish stemmed) START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | Dense (multilingual-e5-base) START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid (RRF) START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex LLM Tree Search START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex LLM Tree Search ran R@5=1.0 30047 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex agentic (default instructions) START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | PageIndex agentic (default instructions) ran R@5=1.0 19480 ms
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid + LLM rerank START
+[repeat 3] [26/36] yuksekogretim_2547-direct_fact-2 | Hybrid + LLM rerank ran R@5=1.0 37896 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 ran R@5=0.0 1 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 (Turkish stemmed) START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | Dense (multilingual-e5-base) START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | Dense (multilingual-e5-base) ran R@5=0.0 13 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid (RRF) START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid (RRF) ran R@5=0.0 13 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex LLM Tree Search START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex LLM Tree Search ran R@5=1.0 29849 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex agentic (default instructions) START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | PageIndex agentic (default instructions) failed R@5=0.0 62213 ms
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid + LLM rerank START
+[repeat 3] [27/36] yuksekogretim_2547-direct_fact-3 | Hybrid + LLM rerank ran R@5=1.0 37861 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 (Turkish stemmed) START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | Dense (multilingual-e5-base) START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid (RRF) START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex LLM Tree Search START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex LLM Tree Search ran R@5=1.0 33871 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex agentic (default instructions) START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | PageIndex agentic (default instructions) ran R@5=1.0 55720 ms
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid + LLM rerank START
+[repeat 3] [28/36] yuksekogretim_2547-paraphrase-1 | Hybrid + LLM rerank ran R@5=1.0 44134 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 (Turkish stemmed) START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | Dense (multilingual-e5-base) START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | Dense (multilingual-e5-base) ran R@5=1.0 13 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid (RRF) START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex LLM Tree Search START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex LLM Tree Search ran R@5=1.0 32629 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex agentic (default instructions) START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | PageIndex agentic (default instructions) ran R@5=0.0 58016 ms
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid + LLM rerank START
+[repeat 3] [29/36] yuksekogretim_2547-paraphrase-2 | Hybrid + LLM rerank ran R@5=1.0 47439 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 (Turkish stemmed) START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | Dense (multilingual-e5-base) START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid (RRF) START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex LLM Tree Search START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex LLM Tree Search ran R@5=1.0 32857 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex agentic (default instructions) START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | PageIndex agentic (default instructions) failed R@5=0.0 77526 ms
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid + LLM rerank START
+[repeat 3] [30/36] yuksekogretim_2547-paraphrase-3 | Hybrid + LLM rerank ran R@5=1.0 41144 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | BM25 START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | BM25 (Turkish stemmed) START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | BM25 (Turkish stemmed) ran R@5=1.0 3 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | Dense (multilingual-e5-base) START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | Dense (multilingual-e5-base) ran R@5=1.0 14 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | Hybrid (RRF) START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | Hybrid (RRF) ran R@5=1.0 13 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | PageIndex LLM Tree Search START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | PageIndex LLM Tree Search ran R@5=1.0 33687 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | PageIndex agentic (default instructions) START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | PageIndex agentic (default instructions) ran R@5=0.0 67335 ms
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | Hybrid + LLM rerank START
+[repeat 3] [31/36] yuksekogretim_2547-distractor-1 | Hybrid + LLM rerank ran R@5=1.0 46261 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | BM25 START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | BM25 (Turkish stemmed) START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | BM25 (Turkish stemmed) ran R@5=0.0 2 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | Dense (multilingual-e5-base) START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | Dense (multilingual-e5-base) ran R@5=0.0 14 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | Hybrid (RRF) START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | PageIndex LLM Tree Search START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | PageIndex LLM Tree Search ran R@5=1.0 30827 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | PageIndex agentic (default instructions) START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | PageIndex agentic (default instructions) failed R@5=0.0 68703 ms
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | Hybrid + LLM rerank START
+[repeat 3] [32/36] yuksekogretim_2547-distractor-2 | Hybrid + LLM rerank ran R@5=1.0 37171 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | BM25 START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | BM25 ran R@5=1.0 1 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | BM25 (Turkish stemmed) START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | BM25 (Turkish stemmed) ran R@5=1.0 2 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | Dense (multilingual-e5-base) START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | Dense (multilingual-e5-base) ran R@5=0.0 15 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | Hybrid (RRF) START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | Hybrid (RRF) ran R@5=0.0 14 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | PageIndex LLM Tree Search START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | PageIndex LLM Tree Search ran R@5=1.0 31455 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | PageIndex agentic (default instructions) START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | PageIndex agentic (default instructions) failed R@5=0.0 61511 ms
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | Hybrid + LLM rerank START
+[repeat 3] [33/36] yuksekogretim_2547-distractor-3 | Hybrid + LLM rerank ran R@5=1.0 45474 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | BM25 START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | BM25 ran R@5=0.5 1 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | BM25 (Turkish stemmed) START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | BM25 (Turkish stemmed) ran R@5=0.5 3 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | Dense (multilingual-e5-base) START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | Dense (multilingual-e5-base) ran R@5=0.5 13 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid (RRF) START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex LLM Tree Search START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex LLM Tree Search ran R@5=1.0 28689 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex agentic (default instructions) START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | PageIndex agentic (default instructions) ran R@5=1.0 28651 ms
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid + LLM rerank START
+[repeat 3] [34/36] yuksekogretim_2547-cross_section-1 | Hybrid + LLM rerank ran R@5=1.0 39009 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | BM25 START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | BM25 ran R@5=0.5 1 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | BM25 (Turkish stemmed) START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | BM25 (Turkish stemmed) ran R@5=1.0 4 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | Dense (multilingual-e5-base) START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | Dense (multilingual-e5-base) ran R@5=0.5 14 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid (RRF) START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid (RRF) ran R@5=1.0 14 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex LLM Tree Search START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex LLM Tree Search ran R@5=1.0 34339 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex agentic (default instructions) START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | PageIndex agentic (default instructions) failed R@5=0.0 67830 ms
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid + LLM rerank START
+[repeat 3] [35/36] yuksekogretim_2547-cross_section-2 | Hybrid + LLM rerank ran R@5=1.0 43327 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | BM25 START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | BM25 ran R@5=0.5 1 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | BM25 (Turkish stemmed) START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | BM25 (Turkish stemmed) ran R@5=0.5 3 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | Dense (multilingual-e5-base) START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | Dense (multilingual-e5-base) ran R@5=0.5 15 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid (RRF) START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid (RRF) ran R@5=0.5 14 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex LLM Tree Search START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex LLM Tree Search ran R@5=1.0 33638 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex agentic (default instructions) START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | PageIndex agentic (default instructions) ran R@5=0.5 78039 ms
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid + LLM rerank START
+[repeat 3] [36/36] yuksekogretim_2547-cross_section-3 | Hybrid + LLM rerank ran R@5=1.0 51505 ms
+Saved repeat means, SD, majority and paired statistics: /content/drive/MyDrive/docbenchtr_colab/run3/77c6dbb6bf8cf60890be54a057491de4f6231755/results/index_qwen3.8-27b-ed7293edc5/search_qwen3.8-27b-ed7293edc5/ctx65536_out32768/aggregate.json
