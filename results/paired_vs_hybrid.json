@@ -1,5 +1,5 @@
 {
-  "analysis": "Paired PageIndex vs Hybrid comparison from saved per-query rankings",
+  "analysis": "Paired PageIndex and LLM-rerank vs Hybrid comparison from saved per-query rankings",
   "bootstrap": {
     "resamples": 10000,
     "interval": "percentile 95% CI over paired question resamples",
@@ -2227,6 +2227,377 @@
                 "losses": 20,
                 "ties": 4,
                 "exact_two_sided_sign_test_p": 0.03569813817739487,
+                "n_questions": 32
+              }
+            }
+          }
+        }
+      }
+    },
+    "colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats)": {
+      "PageIndex LLM Tree Search": {
+        "vs_method": "Hybrid (RRF)",
+        "all_questions": {
+          "original_gold": {
+            "n_questions": 36,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.125,
+                "bootstrap_95_ci": [
+                  -0.3194444444444444,
+                  0.06944444444444445
+                ],
+                "wins": 6,
+                "losses": 10,
+                "ties": 20,
+                "exact_two_sided_sign_test_p": 0.454498291015625,
+                "n_questions": 36
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.06996252204585537,
+                "bootstrap_95_ci": [
+                  -0.23579061948853614,
+                  0.10026317239858892
+                ],
+                "wins": 10,
+                "losses": 17,
+                "ties": 9,
+                "exact_two_sided_sign_test_p": 0.24778856337070465,
+                "n_questions": 36
+              }
+            }
+          },
+          "expanded_gold": {
+            "n_questions": 36,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.16666666666666666,
+                "bootstrap_95_ci": [
+                  -0.375,
+                  0.041666666666666664
+                ],
+                "wins": 6,
+                "losses": 11,
+                "ties": 19,
+                "exact_two_sided_sign_test_p": 0.332305908203125,
+                "n_questions": 36
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.09465388007054672,
+                "bootstrap_95_ci": [
+                  -0.2646618716931217,
+                  0.0797858796296296
+                ],
+                "wins": 10,
+                "losses": 17,
+                "ties": 9,
+                "exact_two_sided_sign_test_p": 0.24778856337070465,
+                "n_questions": 36
+              }
+            }
+          }
+        },
+        "validator_pass_only": {
+          "original_gold": {
+            "n_questions": 32,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.15625,
+                "bootstrap_95_ci": [
+                  -0.375,
+                  0.0625
+                ],
+                "wins": 5,
+                "losses": 10,
+                "ties": 17,
+                "exact_two_sided_sign_test_p": 0.3017578125,
+                "n_questions": 32
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.0630828373015873,
+                "bootstrap_95_ci": [
+                  -0.24088758680555555,
+                  0.12321428571428553
+                ],
+                "wins": 10,
+                "losses": 16,
+                "ties": 6,
+                "exact_two_sided_sign_test_p": 0.32693958282470703,
+                "n_questions": 32
+              }
+            }
+          },
+          "expanded_gold": {
+            "n_questions": 32,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.203125,
+                "bootstrap_95_ci": [
+                  -0.421875,
+                  0.03125
+                ],
+                "wins": 5,
+                "losses": 11,
+                "ties": 16,
+                "exact_two_sided_sign_test_p": 0.210113525390625,
+                "n_questions": 32
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.09086061507936508,
+                "bootstrap_95_ci": [
+                  -0.2824190848214286,
+                  0.09584108382936496
+                ],
+                "wins": 10,
+                "losses": 16,
+                "ties": 6,
+                "exact_two_sided_sign_test_p": 0.32693958282470703,
+                "n_questions": 32
+              }
+            }
+          }
+        }
+      },
+      "PageIndex agentic (default instructions)": {
+        "vs_method": "Hybrid (RRF)",
+        "all_questions": {
+          "original_gold": {
+            "n_questions": 36,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.1111111111111111,
+                "bootstrap_95_ci": [
+                  -0.2638888888888889,
+                  0.027777777777777776
+                ],
+                "wins": 3,
+                "losses": 6,
+                "ties": 27,
+                "exact_two_sided_sign_test_p": 0.5078125,
+                "n_questions": 36
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.06385751594084926,
+                "bootstrap_95_ci": [
+                  -0.2156903956383123,
+                  0.08855764991181657
+                ],
+                "wins": 9,
+                "losses": 16,
+                "ties": 11,
+                "exact_two_sided_sign_test_p": 0.2295229434967041,
+                "n_questions": 36
+              }
+            }
+          },
+          "expanded_gold": {
+            "n_questions": 36,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.1527777777777778,
+                "bootstrap_95_ci": [
+                  -0.3055555555555556,
+                  -0.013888888888888888
+                ],
+                "wins": 2,
+                "losses": 7,
+                "ties": 27,
+                "exact_two_sided_sign_test_p": 0.1796875,
+                "n_questions": 36
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.08854887396554062,
+                "bootstrap_95_ci": [
+                  -0.24441232956857953,
+                  0.06746582892416218
+                ],
+                "wins": 9,
+                "losses": 16,
+                "ties": 11,
+                "exact_two_sided_sign_test_p": 0.2295229434967041,
+                "n_questions": 36
+              }
+            }
+          }
+        },
+        "validator_pass_only": {
+          "original_gold": {
+            "n_questions": 32,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.109375,
+                "bootstrap_95_ci": [
+                  -0.265625,
+                  0.03125
+                ],
+                "wins": 2,
+                "losses": 5,
+                "ties": 25,
+                "exact_two_sided_sign_test_p": 0.453125,
+                "n_questions": 32
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.0353813721001221,
+                "bootstrap_95_ci": [
+                  -0.19780944749694754,
+                  0.11924665178571421
+                ],
+                "wins": 9,
+                "losses": 14,
+                "ties": 9,
+                "exact_two_sided_sign_test_p": 0.4048728942871094,
+                "n_questions": 32
+              }
+            }
+          },
+          "expanded_gold": {
+            "n_questions": 32,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": -0.15625,
+                "bootstrap_95_ci": [
+                  -0.3125,
+                  0.0
+                ],
+                "wins": 1,
+                "losses": 6,
+                "ties": 25,
+                "exact_two_sided_sign_test_p": 0.125,
+                "n_questions": 32
+              },
+              "reciprocal_rank": {
+                "mean_difference": -0.06315914987789988,
+                "bootstrap_95_ci": [
+                  -0.23383322840354093,
+                  0.10295696924603163
+                ],
+                "wins": 9,
+                "losses": 14,
+                "ties": 9,
+                "exact_two_sided_sign_test_p": 0.4048728942871094,
+                "n_questions": 32
+              }
+            }
+          }
+        }
+      },
+      "Hybrid + LLM rerank": {
+        "vs_method": "Hybrid (RRF)",
+        "all_questions": {
+          "original_gold": {
+            "n_questions": 36,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": 0.19444444444444445,
+                "bootstrap_95_ci": [
+                  0.08333333333333333,
+                  0.3194444444444444
+                ],
+                "wins": 8,
+                "losses": 0,
+                "ties": 28,
+                "exact_two_sided_sign_test_p": 0.0078125,
+                "n_questions": 36
+              },
+              "reciprocal_rank": {
+                "mean_difference": 0.32818562610229285,
+                "bootstrap_95_ci": [
+                  0.22414985670194004,
+                  0.4337651565255732
+                ],
+                "wins": 20,
+                "losses": 0,
+                "ties": 16,
+                "exact_two_sided_sign_test_p": 1.9073486328125e-06,
+                "n_questions": 36
+              }
+            }
+          },
+          "expanded_gold": {
+            "n_questions": 36,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": 0.1527777777777778,
+                "bootstrap_95_ci": [
+                  0.041666666666666664,
+                  0.2777777777777778
+                ],
+                "wins": 7,
+                "losses": 1,
+                "ties": 28,
+                "exact_two_sided_sign_test_p": 0.0703125,
+                "n_questions": 36
+              },
+              "reciprocal_rank": {
+                "mean_difference": 0.3081238977072311,
+                "bootstrap_95_ci": [
+                  0.19394593253968254,
+                  0.42023809523809524
+                ],
+                "wins": 19,
+                "losses": 1,
+                "ties": 16,
+                "exact_two_sided_sign_test_p": 4.00543212890625e-05,
+                "n_questions": 36
+              }
+            }
+          }
+        },
+        "validator_pass_only": {
+          "original_gold": {
+            "n_questions": 32,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": 0.203125,
+                "bootstrap_95_ci": [
+                  0.078125,
+                  0.34375
+                ],
+                "wins": 7,
+                "losses": 0,
+                "ties": 25,
+                "exact_two_sided_sign_test_p": 0.015625,
+                "n_questions": 32
+              },
+              "reciprocal_rank": {
+                "mean_difference": 0.35358382936507937,
+                "bootstrap_95_ci": [
+                  0.24203869047619048,
+                  0.46825396825396826
+                ],
+                "wins": 19,
+                "losses": 0,
+                "ties": 13,
+                "exact_two_sided_sign_test_p": 3.814697265625e-06,
+                "n_questions": 32
+              }
+            }
+          },
+          "expanded_gold": {
+            "n_questions": 32,
+            "metrics": {
+              "recall@5": {
+                "mean_difference": 0.15625,
+                "bootstrap_95_ci": [
+                  0.03125,
+                  0.296875
+                ],
+                "wins": 6,
+                "losses": 1,
+                "ties": 25,
+                "exact_two_sided_sign_test_p": 0.125,
+                "n_questions": 32
+              },
+              "reciprocal_rank": {
+                "mean_difference": 0.3310143849206349,
+                "bootstrap_95_ci": [
+                  0.20225322420634922,
+                  0.4537217881944445
+                ],
+                "wins": 18,
+                "losses": 1,
+                "ties": 13,
+                "exact_two_sided_sign_test_p": 7.62939453125e-05,
                 "n_questions": 32
               }
             }

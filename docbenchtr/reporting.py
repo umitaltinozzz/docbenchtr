@@ -112,6 +112,8 @@ def update_readme() -> None:
     for summary_path in sorted(RESULTS_DIR.rglob("summary.json")):
         run_dir = summary_path.parent
         relative_run = run_dir.relative_to(RESULTS_DIR).as_posix()
+        if "/repeat_" in relative_run and run_dir.parent.joinpath("aggregate.json").exists():
+            continue
         run_id = "local" if relative_run == "." else relative_run
         run_summary = json.loads(summary_path.read_text(encoding="utf-8"))
         for method in run_summary.get("methods", []):
@@ -124,7 +126,10 @@ def update_readme() -> None:
                     f"{_fmt(original.get('cited_reciprocal_rank'))} | "
                     f"{_fmt(expanded.get('cited_recall@5'))} |"
                 )
-            if method["method"] == "Hybrid (RRF)" or method["method"].startswith("PageIndex "):
+            if (
+                method["method"] in ("Hybrid (RRF)", "Hybrid + LLM rerank")
+                or method["method"].startswith("PageIndex ")
+            ):
                 values = run_summary["gold_sensitivity"]["methods"][method["method"]]
                 original = values["original_gold"]
                 expanded = values["expanded_gold"]
@@ -132,6 +137,60 @@ def update_readme() -> None:
                     f"| {run_id} | {method['method']} | "
                     f"{_fmt(original['recall@5'])} → {_fmt(expanded['expanded_recall@5'])} | "
                     f"{_fmt(original['reciprocal_rank'])} → {_fmt(expanded['expanded_reciprocal_rank'])} |"
+                )
+
+    for agg_path in sorted(RESULTS_DIR.rglob("aggregate.json")):
+        agg_dir = agg_path.parent
+        run_id = (
+            "colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats)"
+            if "colab_a100_run3" in agg_dir.as_posix()
+            else agg_dir.relative_to(RESULTS_DIR).as_posix()
+        )
+        agg = json.loads(agg_path.read_text(encoding="utf-8"))
+        rep_pqs = sorted(agg_dir.glob("repeat_*/per_query.json"))
+        if rep_pqs:
+            from .reanalyze import QUESTIONS_PATH, _gold_groups, _metric_mean, _metrics_for_row, METRIC_KEYS
+            questions_by_id = {
+                q["question_id"]: q
+                for q in json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))
+            }
+            all_rep_rows = []
+            for rep_pq in rep_pqs:
+                for raw_row in json.loads(rep_pq.read_text(encoding="utf-8")):
+                    if not raw_row["method"].startswith("PageIndex agentic ("):
+                        continue
+                    q = questions_by_id[raw_row["question_id"]]
+                    cited = dict(raw_row)
+                    cited["ranked_pages"] = raw_row.get("cited_pages") or []
+                    expanded_groups = _gold_groups(q)
+                    expanded_gold = sorted({p for g in expanded_groups for p in g})
+                    cited.update({
+                        f"cited_{k}": v
+                        for k, v in _metrics_for_row(cited, q["source_pages"]).items()
+                    })
+                    cited.update({
+                        f"expanded_cited_{k}": v
+                        for k, v in _metrics_for_row(
+                            cited, expanded_gold, field_prefix="", relevant_groups=expanded_groups
+                        ).items()
+                    })
+                    all_rep_rows.append(cited)
+            for m_name in sorted({r["method"] for r in all_rep_rows}):
+                m_rows = [r for r in all_rep_rows if r["method"] == m_name and r.get("status") != "not_run"]
+                original = _metric_mean(m_rows, tuple(f"cited_{k}" for k in METRIC_KEYS), include_failed=True)
+                expanded = _metric_mean(m_rows, tuple(f"expanded_cited_{k}" for k in METRIC_KEYS), include_failed=True)
+                citation_rows.append(
+                    f"| {run_id} | {m_name} | {_fmt(original.get('cited_recall@5'))} | "
+                    f"{_fmt(original.get('cited_reciprocal_rank'))} | "
+                    f"{_fmt(expanded.get('expanded_cited_recall@5'))} |"
+                )
+        for m_name, m_data in agg.get("methods", {}).items():
+            if m_name in ("Hybrid (RRF)", "Hybrid + LLM rerank") or m_name.startswith("PageIndex "):
+                mt = m_data["metrics"]
+                expanded_gold_rows.append(
+                    f"| {run_id} | {m_name} | "
+                    f"{_fmt(mt['recall@5']['mean'])} → {_fmt(mt['expanded_recall@5']['mean'])} | "
+                    f"{_fmt(mt['reciprocal_rank']['mean'])} → {_fmt(mt['expanded_reciprocal_rank']['mean'])} |"
                 )
 
     pageindex = summary.get("pageindex") or {}
@@ -217,11 +276,11 @@ Reported means count every failed query as zero. Infrastructure rows marked not-
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 {chr(10).join(type_rows)}
 
-### PageIndex vs Hybrid: paired question-level comparison
+### PageIndex and LLM rerank vs Hybrid: paired question-level comparison
 
-Each row uses the same questions for PageIndex and Hybrid. Intervals are percentile 95% paired-bootstrap CIs (10,000 resamples; fixed seed); p values are exact two-sided sign tests. Win/loss/tie counts are shown for each metric. Original `source_pages` are the primary labels; expanded-gold results treat documented equivalent pages as alternatives within the same provision, so the number of targets per question stays fixed. Full results and validator-pass subsets are in [`results/paired_vs_hybrid.json`](results/paired_vs_hybrid.json).
+Each row uses the same questions for the evaluated method and Hybrid. Intervals are percentile 95% paired-bootstrap CIs (10,000 resamples; fixed seed); p values are exact two-sided sign tests. Win/loss/tie counts are shown for each metric. Original `source_pages` are the primary labels; expanded-gold results treat documented equivalent pages as alternatives within the same provision, so the number of targets per question stays fixed. Full results and validator-pass subsets are in [`results/paired_vs_hybrid.json`](results/paired_vs_hybrid.json).
 
-| Run | PageIndex variant | Recall@5 Δ [95% CI] | W/L/T | p | MRR Δ [95% CI] | W/L/T | p | Expanded-gold Recall@5 Δ [95% CI] |
+| Run | Method / PageIndex variant | Recall@5 Δ [95% CI] | W/L/T | p | MRR Δ [95% CI] | W/L/T | p | Expanded-gold Recall@5 Δ [95% CI] |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 {chr(10).join(paired_rows)}
 

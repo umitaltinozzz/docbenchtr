@@ -7,7 +7,7 @@ DocBenchTR is a research proposal comparing retrieval methods for retrieval-augm
 
 This public pilot reports retrieval only. It evaluates physical PDF pages as retrieval units so results are comparable across methods with different internal indexes. It does not generate answers or assess answer faithfulness.
 
-**What the 36-question pilot supports:** PageIndex with a 7B model is clearly and significantly behind Hybrid. With the 27B model at 64k, Tree Search scores numerically higher than Hybrid, but the difference is not statistically distinguishable on these 36 questions (Recall@5 Δ +0.125, paired 95% CI [−0.028, +0.278], exact sign-test p = 0.227).
+**What the 36-question pilot supports:** The strongest result in this pilot comes from a simple same-model baseline: **Hybrid + LLM rerank** (`qwen3.8:27b` reranking Hybrid's top 20 pages) reaches **Recall@5 0.986** and **MRR 0.940** across three repeats, outperforming Hybrid alone by **+0.194 Recall@5** (paired 95% CI [+0.083, +0.319], 8/0/28 wins/losses/ties, exact two-sided sign test **p = 0.008**) and **+0.328 MRR** (20/0/16, **p < 0.001**). This is the only statistically significant improvement over Hybrid in the pilot. By contrast, PageIndex with a 7B model is clearly and significantly behind Hybrid, while PageIndex LLM Tree Search with the 27B model at 64k is either statistically indistinguishable from Hybrid when using the compact 7B-built trees (Recall@5 0.917 vs 0.792; Δ +0.125, 95% CI [−0.028, +0.278], p = 0.227) or drops below Hybrid when using verbose 27B-built trees whose 340-page document outline exceeds the effective prompt window (Recall@5 0.667; Δ −0.125, p = 0.454). Under matched model capacity, the gain comes from the language model reranking candidate pages rather than from PageIndex's tree-search architecture.
 
 ## Methods
 
@@ -15,7 +15,8 @@ This public pilot reports retrieval only. It evaluates physical PDF pages as ret
 - **BM25 (Turkish stemmed):** Snowball Turkish stemming before lexical ranking.
 - **Dense:** `intfloat/multilingual-e5-base`, with query and passage prefixes.
 - **Hybrid (RRF):** reciprocal rank fusion of the unstemmed BM25 and dense rankings.
-- **PageIndex agentic (default instructions):** the [PageIndex](https://github.com/VectifyAI/PageIndex) local SDK uses its built-in instructions with `qwen2.5:7b-instruct` through LiteLLM's `ollama_chat/` route for tool-using chat/search.
+- **Hybrid + LLM rerank (Run 3 control):** sends the full extracted text of Hybrid's top 20 candidate pages to the search LLM (`qwen3.8:27b` at 64k) and requires an exact JSON-schema permutation of those 20 page numbers, appending the unchanged Hybrid tail. Invalid permutations fail and score zero without falling back to Hybrid.
+- **PageIndex agentic (default instructions):** the [PageIndex](https://github.com/VectifyAI/PageIndex) local SDK uses its built-in instructions with a local Ollama model (`qwen2.5:7b-instruct` in the initial pilot; `qwen3.8:27b` / `gpt-oss:20b` on A100) for tool-using chat/search.
 - **PageIndex agentic (read-pages instruction):** the same SDK with our additional retrieval instruction requiring a successful `get_page_content` result before answering. This is an explicit modification of the default agentic method. For both rows, `tool_call_count` counts every tool call; only successful `get_page_content` results contribute pages to its ranking.
 - **PageIndex LLM Tree Search:** gives the local model the cached PageIndex tree (titles, node IDs, inclusive physical page ranges, and summaries) plus the question. It requests `{"thinking": ..., "node_list": [...]}` with Ollama JSON-schema output. The ranking expands each selected node's inclusive `start_index..end_index` range in returned `node_list` order and deduplicates pages by first occurrence. Parse failures remain in the per-query results as failed rows.
 
@@ -44,7 +45,7 @@ For PageIndex, install and start Ollama locally and pull `qwen2.5:7b-instruct` b
 
 ## Results
 
-The generated table and chart below are populated from the run's `results/summary.json`. Per-query values are in [`results/results.csv`](results/results.csv) and [`results/per_query.json`](results/per_query.json).
+The generated table and chart below are populated from the local 7B run's `results/summary.json`. Per-query values are in [`results/results.csv`](results/results.csv) and [`results/per_query.json`](results/per_query.json). The paired comparison and expanded-gold tables inside the generated block include all local and Colab A100 runs, including [Run 3](#run-3-27b-trees-hybrid--llm-rerank-control-and-three-repeats-colab-a100).
 
 > **Correction history.** An earlier version of this table (2026-10-16) published PageIndex rows produced while Ollama served the model with its default 4,096-token context window, which silently truncated PageIndex prompts. Those rows were invalid and have been replaced. The current run serves the model with a 32,768-token context (`OLLAMA_CONTEXT_LENGTH=32768`, `num_ctx 32768`) and caps each response at 4,096 tokens; the PageIndex trees and node summaries were rebuilt under the same setting. Recorded PageIndex inputs now exceed 4,096 tokens (up to ~16,400 for one tree-search prompt and ~76,000 cumulative for one agentic query). In the first pass, 8 LLM Tree Search queries hit a 180 s client HTTP timeout; they were re-run with an 1,800 s timeout (`python -m docbenchtr.rerun_failed`) and the re-run is recorded in `results/summary.json`. The BM25 / Dense / Hybrid rows are unchanged.
 
@@ -55,9 +56,9 @@ Every PageIndex variant in the generated local table runs on `qwen2.5:7b-instruc
 - **Agentic mode reads pages only some of the time.** In 14 of 36 queries (default instructions) and 12 of 36 (read-pages instruction), the model finished without calling `get_page_content`, so those rankings are empty and score zero. Where it did read pages, its rankings still trail the classical baselines.
 - **With 7B, PageIndex is significantly behind Hybrid.** Tree Search has Recall@5 0.472 vs 0.792 locally; the paired-comparison table below gives the question-level intervals and exact tests.
 - Queries a method attempted but could not answer are **counted as zero, not dropped**; the coverage columns show how many.
-- The classical results match on laptop and A100; 7B PageIndex remains significantly behind Hybrid in both runs (see [Hardware control](#hardware-control-colab-a100)). The 27B, 64k comparison is numerically higher but statistically indistinguishable on 36 questions (see [Current models](#current-models-colab-a100)).
+- The classical results match on laptop and A100; 7B PageIndex remains significantly behind Hybrid in both runs (see [Hardware control](#hardware-control-colab-a100)). With 27B at 64k on 7B-built trees, Tree Search is numerically higher than Hybrid but not statistically distinguishable on 36 questions (see [Current models](#current-models-colab-a100)). When matched against a same-model **Hybrid + LLM rerank** control and 27B-built trees across three repeats, Hybrid + LLM rerank significantly beats Hybrid (`p = 0.008`) while both PageIndex variants trail Hybrid (see [Run 3](#run-3-27b-trees-hybrid--llm-rerank-control-and-three-repeats-colab-a100)).
 
-**The generated table below is the 7B pilot.** With `qwen3.8:27b` at 64k, Tree Search has Recall@5 0.917 against 0.792 for Hybrid, but the paired 95% CI includes zero ([Current models](#current-models-colab-a100)). The pilot does not establish a difference across more documents or repeated runs.
+**The generated main table below is the local 7B pilot; the paired and sensitivity tables cover all runs.**
 
 <!-- GENERATED:START -->
 ## Pilot results
@@ -111,11 +112,11 @@ Reported means count every failed query as zero. Infrastructure rows marked not-
 | PageIndex LLM Tree Search | distractor | 9 | 9 | 0 | 0 | 0 | 0.444 | 0.444 | 0.556 | 0.467 | 32511.824 ms |
 | PageIndex LLM Tree Search | cross section | 9 | 9 | 0 | 0 | 0 | 0.222 | 0.389 | 0.444 | 0.500 | 32095.740 ms |
 
-### PageIndex vs Hybrid: paired question-level comparison
+### PageIndex and LLM rerank vs Hybrid: paired question-level comparison
 
-Each row uses the same questions for PageIndex and Hybrid. Intervals are percentile 95% paired-bootstrap CIs (10,000 resamples; fixed seed); p values are exact two-sided sign tests. Win/loss/tie counts are shown for each metric. Original `source_pages` are the primary labels; expanded-gold results treat documented equivalent pages as alternatives within the same provision, so the number of targets per question stays fixed. Full results and validator-pass subsets are in [`results/paired_vs_hybrid.json`](results/paired_vs_hybrid.json).
+Each row uses the same questions for the evaluated method and Hybrid. Intervals are percentile 95% paired-bootstrap CIs (10,000 resamples; fixed seed); p values are exact two-sided sign tests. Win/loss/tie counts are shown for each metric. Original `source_pages` are the primary labels; expanded-gold results treat documented equivalent pages as alternatives within the same provision, so the number of targets per question stays fixed. Full results and validator-pass subsets are in [`results/paired_vs_hybrid.json`](results/paired_vs_hybrid.json).
 
-| Run | PageIndex variant | Recall@5 Δ [95% CI] | W/L/T | p | MRR Δ [95% CI] | W/L/T | p | Expanded-gold Recall@5 Δ [95% CI] |
+| Run | Method / PageIndex variant | Recall@5 Δ [95% CI] | W/L/T | p | MRR Δ [95% CI] | W/L/T | p | Expanded-gold Recall@5 Δ [95% CI] |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 | colab_a100_models/gpt-oss-20b_ctx32k | agentic (default instructions) | -0.264 [-0.458, -0.056] | 5/15/16 | 0.041 | -0.159 [-0.335, +0.028] | 9/20/7 | 0.061 | -0.306 [-0.514, -0.097] |
 | colab_a100_models/gpt-oss-20b_ctx32k | agentic (read-pages instruction) | -0.306 [-0.500, -0.097] | 4/16/16 | 0.012 | -0.153 [-0.333, +0.034] | 8/21/7 | 0.024 | -0.347 [-0.542, -0.139] |
@@ -135,6 +136,9 @@ Each row uses the same questions for PageIndex and Hybrid. Intervals are percent
 | local | agentic (default instructions) | -0.569 [-0.708, -0.417] | 0/23/13 | <0.001 | -0.394 [-0.554, -0.226] | 4/29/3 | <0.001 | -0.611 [-0.764, -0.458] |
 | local | agentic (read-pages instruction) | -0.639 [-0.778, -0.486] | 0/25/11 | <0.001 | -0.481 [-0.641, -0.311] | 5/31/0 | <0.001 | -0.681 [-0.819, -0.528] |
 | local | LLM Tree Search | -0.319 [-0.528, -0.097] | 5/17/14 | 0.017 | -0.216 [-0.392, -0.029] | 8/23/5 | 0.011 | -0.361 [-0.569, -0.153] |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | LLM Tree Search | -0.125 [-0.319, +0.069] | 6/10/20 | 0.454 | -0.070 [-0.236, +0.100] | 10/17/9 | 0.248 | -0.167 [-0.375, +0.042] |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | agentic (default instructions) | -0.111 [-0.264, +0.028] | 3/6/27 | 0.508 | -0.064 [-0.216, +0.089] | 9/16/11 | 0.230 | -0.153 [-0.306, -0.014] |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | Hybrid + LLM rerank | +0.194 [+0.083, +0.319] | 8/0/28 | 0.008 | +0.328 [+0.224, +0.434] | 20/0/16 | <0.001 | +0.153 [+0.042, +0.278] |
 
 ### Original and expanded gold: absolute scores by run
 
@@ -166,6 +170,10 @@ Each pair shows the primary pre-registered score followed by the expanded-gold s
 | local | PageIndex agentic (default instructions) | 0.222 → 0.222 | 0.218 → 0.218 |
 | local | PageIndex agentic (read-pages instruction) | 0.153 → 0.153 | 0.131 → 0.131 |
 | local | PageIndex LLM Tree Search | 0.472 → 0.472 | 0.396 → 0.396 |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | Hybrid (RRF) | 0.792 → 0.833 | 0.612 → 0.636 |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | Hybrid + LLM rerank | 0.986 → 0.986 | 0.940 → 0.944 |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | PageIndex LLM Tree Search | 0.667 → 0.667 | 0.542 → 0.542 |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | PageIndex agentic (default instructions) | 0.681 → 0.681 | 0.548 → 0.548 |
 
 Validator-pass sensitivity for qwen3.8 27B at 64k (32 of 36 questions; Tree Search vs Hybrid):
 
@@ -205,6 +213,7 @@ This row scores `cited_pages` rather than reconstructed page-read order. Failed 
 | colab_a100_qwen2.5-7b | PageIndex agentic (read-pages instruction) | 0.139 | 0.125 | 0.139 |
 | local | PageIndex agentic (default instructions) | 0.083 | 0.111 | 0.083 |
 | local | PageIndex agentic (read-pages instruction) | 0.083 | 0.083 | 0.083 |
+| colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats) | PageIndex agentic (default instructions) | 0.764 | 0.741 | 0.764 |
 
 ### Run metadata
 
@@ -283,38 +292,37 @@ Recall@5 over all 36 questions. Failed agentic queries count as zero; scored-onl
 
 Per-query outputs for all four runs: [`results/colab_a100_models/`](results/colab_a100_models/).
 
-## Limitations
+### Run 3: 27B trees, Hybrid + LLM rerank control, and three repeats (Colab A100)
 
-- This is a small pilot set, not a statistically powered comparison.
-- Question stems are hand-written; four fail the planned-term check. The set has not yet been reviewed by human annotators. Matching source text confirms provenance, not question quality or answer completeness.
-- Evaluation measures retrieval only; generation, answer correctness, and faithfulness are out of scope.
-- The dense comparison uses a single multilingual embedding model.
-- PDF pagination, extraction quality, edition dates, and the balance of document topics can affect retrieval scores.
-- Every attempted query that fails receives Recall@k = 0 and reciprocal rank = 0 and is included in overall and per-question-type means. Completed queries with no usable ranking also receive zero. A query that never starts because its document was not indexed is marked not-run and excluded. Summaries report failed-as-zero, zero-ranking, scored, and excluded counts; scored-only values are separate.
-- PageIndex agentic page rankings are reconstructed from successful `get_page_content` tool results, ordered by the agent's tool-call sequence and each result's `returned_pages`; repeated pages keep their first rank. Outline-only calls count in `tool_call_count` but do not rank pages. PageIndex returns no page scores. Per-query traces and SDK token usage, when present, are retained.
-- PageIndex LLM Tree Search is a separate non-agentic method. It ranks inclusive one-based page ranges from model-selected cached-tree nodes in returned node order, deduplicating by first occurrence. JSON parse or schema failures are recorded per query and are not silently dropped.
-- PageIndex used the small local `qwen2.5:7b-instruct` model for both indexing and search. Its developers say a basic model is sufficient for indexing but recommend the [best model you can afford for chat/search](https://github.com/VectifyAI/PageIndex#model-recommendations); the 7B search model may disadvantage its results against that recommendation.
-- PageIndex's tree `toc_source`, per-document build time, and any document or query failures are listed in the generated run metadata and per-query files.
+To separate **model capacity** from **tree-based retrieval** and test whether building PageIndex trees with the 27B model improves search, Run 3 evaluated seven methods across **three repeated search runs** on a Colab **NVIDIA A100-SXM4-40GB** using `qwen3.8:27b` (`aaee06c39dcf…`) for **both indexing and search** (`num_ctx = 65536`, `num_predict = 32768`, temperature 0, `OLLAMA_FLASH_ATTENTION=1`, pinned commit `77c6dbb`). Fresh 27B trees were built once (`kvkk_6698`: 523.3 s; `yuksekogretim_2547`: 1,080.5 s; `tuketicinin_korunmasi_6502`: 2,893.7 s; total ~75 min) and reused across the three repeats. Notebook: [`colab/run3_a100.ipynb`](colab/run3_a100.ipynb); full outputs, trees, and [`aggregate.json`](results/colab_a100_run3/results/index_qwen3.8-27b-ed7293edc5/search_qwen3.8-27b-ed7293edc5/ctx65536_out32768/aggregate.json): [`results/colab_a100_run3/`](results/colab_a100_run3/).
 
-## Roadmap to the full study
+| Method (3 repeats × 36 questions) | Recall@1 | Recall@3 | Recall@5 | Repeat SD | MRR | Failed / 108 | Mean latency |Recall@5 Δ vs Hybrid [95% CI] | W/L/T | Exact p | Expanded Δ |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Hybrid + LLM rerank** | **0.778** | **0.986** | **0.986** | 0.000 | **0.940** | 0 | 38.8 s | **+0.194 [+0.083, +0.319]** | **8/0/28** | **0.008** | **+0.153** |
+| Hybrid (RRF) | 0.333 | 0.708 | 0.792 | 0.000 | 0.612 | 0 | 13.5 ms | — | — | — | — |
+| BM25 | 0.278 | 0.653 | 0.764 | 0.000 | 0.532 | 0 | 1.0 ms | −0.028 [−0.153, +0.083] | 2/4/30 | 0.688 | −0.069 |
+| Dense (multilingual-e5-base) | 0.403 | 0.667 | 0.750 | 0.000 | 0.627 | 0 | 13.5 ms | −0.042 [−0.111, +0.000] | 0/2/34 | 0.500 | −0.014 |
+| BM25 (Turkish stemmed) | 0.250 | 0.708 | 0.722 | 0.000 | 0.526 | 0 | 2.4 ms | −0.069 [−0.208, +0.056] | 2/5/29 | 0.453 | −0.083 |
+| PageIndex agentic (default instructions) | 0.319 | 0.667 | 0.681 | 0.000 | 0.548 | 24 | 40.2 s | −0.111 [−0.264, +0.028] | 3/6/27 | 0.508 | −0.153 |
+| PageIndex LLM Tree Search | 0.361 | 0.667 | 0.667 | 0.000 | 0.542 | 0 | 23.7 s | −0.125 [−0.319, +0.069] | 6/10/20 | 0.454 | −0.167 |
 
-The proposed full study will expand to approximately one thousand human-reviewed questions, compare nine retrieval methods plus two controls (an agentic hybrid control and a long-context baseline), and use one fixed generator LLM for any answer-generation evaluation. The final protocol will preregister document snapshots, question sampling, model versions, and scoring rules before the full comparison.
+### Key findings from Run 3
 
-## External review
+- **The gain comes from the LLM reranker, not from PageIndex's tree structure.** Giving `qwen3.8:27b` the full extracted text of Hybrid's top 20 candidate pages (~14.8k–20.3k input tokens per query) and asking for a strict JSON-schema permutation raises Recall@5 from **0.792 to 0.986** (35.5 / 36 questions) and Recall@1 from **0.333 to 0.778** (MRR **0.940**). Across the 36 questions it wins 8, loses 0, and ties 28 against Hybrid (**p = 0.008**; MRR 20/0/16, **p < 0.001**; validator-pass 32-question subset: Recall@5 Δ +0.203 [+0.078, +0.344], 7/0/25, **p = 0.016**). Unlike PageIndex, it requires **zero index-building LLM calls**.
+- **Building PageIndex trees with the 27B model hurt long-document Tree Search (`0.917 → 0.667`).** The 7B and 27B models produced identical tree topologies (`6698.pdf`: 23 nodes; `6502.pdf`: 300 nodes; `2547.pdf`: 101 nodes), because headings come from PageIndex's TOC detector. However, `qwen3.8:27b` wrote **~3× longer node summaries**: the serialized `6502.pdf` tree grew from **114,014 characters** (7B) to **347,441 characters** (27B). In Tree Search, the entire tree JSON is embedded in the prompt before the question. For `6502.pdf`, that prompt exceeded the effective 32,770-token prompt budget (`input_tokens = 32770` on all 12 queries), truncating the user question at the end of the prompt. The model explicitly recorded in `tree_search_thinking`: *"No specific question was provided, so I'll identify the most central and comprehensive nodes..."* and returned generic regulation nodes (`[215..222]`), scoring **0.000** on `6502` while scoring **1.000** on both `6698` (5,006–5,017 input tokens) and `2547` (25,639–25,650 input tokens):
 
-The [17 October 2026 review by Barış Şavk](docs/reviews/2026-10-17_review_baris_savk.md) is included unchanged.
+  | Document (12 questions each) | Hybrid (RRF) | **Hybrid + LLM rerank** | Tree Search (7B trees) | Tree Search (27B trees) | Agentic default (27B trees) |
+  |---|---:|---:|---:|---:|---:|
+  | 6698 KVKK (18 pages) | 1.000 | **1.000** | 1.000 | 1.000 | 1.000 |
+  | 6502 Consumer protection (340 pages) | 0.792 | **0.958** | 0.833 | 0.000 | 0.667 |
+  | 2547 Higher education (142 pages) | 0.583 | **1.000** | 0.917 | 1.000 | 0.375 |
 
-**Fixed in this revision:** softened the headline and added paired bootstrap intervals and exact sign tests; made failed-query-as-zero the reported rule; added the 6502 equivalent gold pages and original-versus-expanded rescoring; retained and listed the four planned-term validator failures; added first-five and random-order baselines, citation-page scores, saved-ranking analysis, CI tests, and pinned Colab checkouts.
+- **Native Ollama transport eliminated `500` / LiteLLM stream errors, exposing true agentic turn-limit failures.** Replacing LiteLLM's streaming chat route with buffered native `/api/chat` calls reduced HTTP/parse errors to **0**. However, 8 of 36 agentic queries per repeat (24 / 108 total) failed with `PageIndexAPIError: The agent did not finish within max_turns (the default limit)` while exploring the larger 27B trees. On the 28 queries where the agent finished within `max_turns`, its scored-only Recall@5 was 0.875, but under the pre-registered failed-as-zero rule it scores **0.681** overall.
+- **Same-session, same-GPU repeats at temperature 0 are deterministic (`SD = 0.000`).** Every method produced the exact same status and page ranking on 36/36 questions across `repeat_001`, `repeat_002`, and `repeat_003`. Repeated runs within a single GPU session therefore confirm execution stability but do not capture the cross-GPU / cross-session floating-point variance observed between the laptop RTX 3070, earlier A100 sessions, and Run 3.
 
-**Prepared for run 3, awaiting measurement:** same-model Hybrid top-20 reranking, three search repeats, and trees built by the 27B model. The larger human-reviewed question set and unified text extraction remain open for the full study. Preparing this protocol does not change any published scores.
+### Reproducing Run 3 on Colab A100
 
-## Next run
-
-Open [`colab/run3_a100.ipynb`](colab/run3_a100.ipynb) in Colab, choose **Runtime → Change runtime type → A100 GPU**, then **Run all**. Authorize Drive and upload the local Git bundle when the source cell asks. The notebook checks out its full `REPO_COMMIT` parameter, including unpushed commits via `SOURCE_MODE='bundle'`; it never follows `main`. To package the current local history without pushing: `git bundle create .run3/docbenchtr-run3.bundle HEAD` (create `.run3/` first). Upload the notebook through **File → Upload notebook** and select the bundle when prompted. The final notebook pin identifies the tested implementation commit; a later commit only sets that pin.
-
-Run 3 uses `qwen3.8:27b` for both indexing and search, a 65,536-token context, a 32,768-token output cap, temperature 0, and three repeats of the four classical methods, PageIndex Tree Search, the default PageIndex agent, and **Hybrid + LLM rerank**. Planning budget: **4–8 A100 hours**; at an assumed 15 compute units/hour, **60–120 units**. Replace that assumed rate with the assigned rate in Colab's resource panel. The notebook explains the estimate using the previous A100 latencies; indexing and reranking have not been timed yet.
-
-The runner is `python -m docbenchtr.run_repeats --repeats 3 --output-root PATH --resume`. Its environment settings are:
+Open [`colab/run3_a100.ipynb`](colab/run3_a100.ipynb) in Colab, choose **Runtime → Change runtime type → A100 GPU**, then **Run all**. The notebook checks out the pinned `REPO_COMMIT` (`77c6dbb6bf8cf60890be54a057491de4f6231755`) and runs `python -m docbenchtr.run_repeats --repeats 3 --output-root PATH --resume` with:
 
 | Variable | Purpose | Default |
 |---|---|---|
@@ -326,21 +334,41 @@ The runner is `python -m docbenchtr.run_repeats --repeats 3 --output-root PATH -
 | `DOCBENCHTR_OLLAMA_BASE_URL` | Ollama endpoint; notebook uses a dedicated port | `http://127.0.0.1:11434` |
 | `DOCBENCHTR_MODEL_DIGESTS` | JSON model-to-weight-digest map, supplied by notebook | `{}` |
 
-New caches are separated by a portable model slug plus context/output settings. Each document's SDK manifest records its index model, weight digest when supplied, source hash, and generation settings. Cache validation rejects mismatched provenance. The committed `.pageindex/docbenchtr-pilot/` trees are read-only; the original 7B configuration can copy them into its own namespace without modifying the originals. Run 3 builds fresh 27B trees once, then reuses those trees for all three repeats. It measures search variability conditional on a fixed index, not variability across tree builds.
+New caches are separated by a portable model slug plus context/output settings, and cache validation verifies the index model, weight digest, source hash, and generation settings while keeping `.pageindex/docbenchtr-pilot/` read-only.
 
-Hybrid + LLM rerank sends the same search model the **full text of Hybrid's first 20 pages**, using the same `num_ctx`, `num_predict`, and temperature. JSON-schema output must be an exact permutation of those candidates. The complete ranking appends the unchanged Hybrid tail. Invalid responses fail and score zero; there is no fallback that would hide failures. Its page texts come from the classical extractor; PageIndex still uses PDFium.
+## Limitations
 
-The native Ollama adapter preserves PageIndex 0.4.0's default agent instructions and tools, while buffering each `/api/chat` response before forwarding SDK events. Tool arguments are emitted once, reasoning is preserved across tool calls, and Ollama error objects are surfaced explicitly. To prevent loss of the user question, an auditable context guard reserves the output budget, conservatively estimates prompt size using UTF-8 bytes, and shortens oversized tool results oldest first. Shortening is recorded in `transport_events`; oversized fixed prompts fail explicitly. Genuine provider tool-parsing errors can still fail a query and remain in the results. Regression tests use the recorded A100 error bodies/traces, a stubbed round trip through PageIndex's actual default agent/tools, and both indexing completion paths.
+- This is a small pilot set, not a statistically powered comparison.
+- Question stems are hand-written; four fail the planned-term check. The set has not yet been reviewed by human annotators. Matching source text confirms provenance, not question quality or answer completeness.
+- Evaluation measures retrieval only; generation, answer correctness, and faithfulness are out of scope.
+- The dense comparison uses a single multilingual embedding model.
+- PDF pagination, extraction quality, edition dates, and the balance of document topics can affect retrieval scores. Classical methods and Hybrid + LLM rerank use `pdftotext` page text, whereas PageIndex uses PDFium.
+- Every attempted query that fails receives Recall@k = 0 and reciprocal rank = 0 and is included in overall and per-question-type means. Completed queries with no usable ranking also receive zero. A query that never starts because its document was not indexed is marked not-run and excluded. Summaries report failed-as-zero, zero-ranking, scored, and excluded counts; scored-only values are separate.
+- PageIndex agentic page rankings are reconstructed from successful `get_page_content` tool results, ordered by the agent's tool-call sequence and each result's `returned_pages`; repeated pages keep their first rank. Outline-only calls count in `tool_call_count` but do not rank pages. PageIndex returns no page scores. Per-query traces and SDK token usage, when present, are retained.
+- PageIndex LLM Tree Search is a separate non-agentic method. It ranks inclusive one-based page ranges from model-selected cached-tree nodes in returned node order, deduplicating by first occurrence. Because the full tree JSON is sent in a single prompt, verbose node summaries on long documents can overflow the effective prompt window and truncate the trailing question, as observed on `6502.pdf` in Run 3.
+- Same-session repeats at temperature 0 on a single GPU yield zero variance (`SD = 0.000`), whereas rankings vary across different GPUs or server configurations (e.g., flash attention).
 
-Drive outputs are under `MyDrive/docbenchtr_colab/run3/<commit>/results/index_<model>/search_<model>/ctx65536_out32768/repeat_001/` (then `002`, `003`). Every row has `run_index`, index/search model names, and a per-question progress line. Checkpoints allow `--resume` without retrying already-recorded failures. Each repeat includes CSV/JSON, summary, source/question metadata, the index manifest and environment record; trees and logs are also retained on Drive. Different code, weights, questions, page text or trees cannot silently mix on resume.
+## Roadmap to the full study
 
-After a disconnect, reconnect to an A100 and **Run all** with the same parameters. The saved bundle, model-specific trees and completed query rows are reused. Stopping the runner cell also terminates its PageIndex worker; the unfinished query is attempted again on resume. Source/question metadata and tree provenance are saved before querying, so interrupted runs remain inspectable.
+The proposed full study will expand to approximately one thousand human-reviewed questions, unify PDF text extraction across all methods, compare classical, reranking, and tree/agentic methods under matched LLM budgets, and use one fixed generator LLM for any answer-generation evaluation. The final protocol will preregister document snapshots, question sampling, model versions, and scoring rules before the full comparison.
 
-The configuration's `aggregate.json` reports metric means and **sample SD across repeat means**, per-question metric distributions, strict-majority top-five page votes and full-recall outcomes. Paired comparisons reuse the existing paired-analysis functions: match repeats within each question, average them, then bootstrap the **36 questions**, with exact two-sided sign tests against Hybrid. Original and expanded gold are both reported. Failed attempts score zero; infrastructure exclusions are counted. Repeated questions still share targets, and three repeats do not increase the number of independent questions. The final cell downloads a results-and-trees ZIP; then select **Runtime → Disconnect and delete runtime**.
+## External review
+
+The [17 October 2026 review by Barış Şavk](docs/reviews/2026-10-17_review_baris_savk.md) is included unchanged.
+
+**Addressed across revisions and Run 3:**
+- Softened the initial headline and added paired bootstrap 95% confidence intervals and exact two-sided sign tests across all runs ([`results/paired_vs_hybrid.json`](results/paired_vs_hybrid.json)).
+- Made failed-query-as-zero the primary reported rule everywhere; added the 6502 equivalent gold pages (`original_gold` vs `expanded_gold`), retained and listed the four planned-term validator failures, and added first-five and random-order baselines plus agentic citation-page scores.
+- Replaced LiteLLM streaming tool calls with a buffered native Ollama `/api/chat` adapter and context guard, pinned Colab notebooks to immutable Git commits, and added 45 unit and regression tests.
+- **Executed Run 3 ([`results/colab_a100_run3/`](results/colab_a100_run3/)):** tested `qwen3.8:27b` for both tree indexing and search across 3 repeats alongside the reviewer-recommended **Hybrid + LLM rerank** control. Confirmed that same-model reranking of Hybrid's top 20 pages achieves Recall@5 **0.986** (`p = 0.008` vs Hybrid) and MRR **0.940** (`p < 0.001`), demonstrating that the LLM's relevance judgment over Hybrid candidates—not PageIndex's tree indexing—drives the retrieval gain.
 
 ## Kısa Türkçe özet
 
-DocBenchTR, uzun ve maddeli Türkçe belgelerde RAG erişim yöntemlerini karşılaştıran bir pilot çalışmadır. Bu herkese açık pilot; üç mevzuat PDF'inde 36 elle yazılmış soruyu değerlendirir. Dört soru planlanan terim kontrolünden geçmemiştir; bu sorular sonuçlarda tutulur ve ayrı duyarlılık analizinde incelenir. Küçük ve henüz insan incelemesinden geçmemiş soru kümesi yalnızca ilk sonuçları gösterir; yanıt üretimi ve doğruluğu kapsam dışındadır.
+DocBenchTR, uzun ve maddeli Türkçe mevzuat belgelerinde (KVKK, 6502 sayılı Tüketici Kanunu ve İkincil Mevzuatı, 2547 sayılı Yükseköğretim Kanunu; toplam 500 sayfa, 36 soru) RAG erişim yöntemlerini karşılaştıran bir pilot çalışmadır.
+
+- **Ana bulgu (Run 3):** Klasik **Hybrid (BM25 + Dense)** aramasının getirdiği ilk 20 sayfayı `qwen3.8:27b` dil modeliyle yeniden sıralayan **Hybrid + LLM rerank**, **Recall@5 = 0,986** ve **MRR = 0,940** ile en yüksek başarıyı elde etmiş ve Hybrid'i istatistiksel olarak anlamlı biçimde geçmiştir (Recall@5 Δ **+0,194**, %95 GA [+0,083; +0,319], 8 kazanç / 0 kayıp, kesin işaret testi **p = 0,008**; MRR **p < 0,001**).
+- **PageIndex karşılaştırması:** Küçük modelle (`qwen2.5:7b`) PageIndex, Hybrid'in anlamlı biçimde gerisindedir. Büyük modelle (`qwen3.8:27b`, 64k) 7B ağaçları üzerinde çalışan Tree Search sayısal olarak yüksek (0,917) olsa da fark 36 soruda istatistiksel olarak ayırt edilememektedir (`p = 0,227`). Ağaçlar doğrudan `qwen3.8:27b` ile kurulduğunda ise modelin ürettiği uzun bölüm özetleri 340 sayfalık kanunun ağacını ~3 kat büyütmüş, istemin sonundaki sorunun kesilmesine yol açarak Tree Search skorunu **0,667**'ye düşürmüştür. Ajan modu ise 27B ağaçlarda sorguların 8/36'sında adım sınırına (`max_turns`) takılmıştır (Recall@5 **0,681**).
+- **Sonuç:** Türkçe mevzuatta kazanım, pahalı ve kırılgan ağaç kurulumundan değil, klasik hibrit aramanın aday sayfalarını güçlü bir dil modeliyle yeniden sıralamaktan gelmektedir.
 
 ## License
 

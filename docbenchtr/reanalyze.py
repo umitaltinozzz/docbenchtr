@@ -17,6 +17,7 @@ VERIFICATION_PATH = ROOT / "data" / "question_verification.json"
 METRIC_KEYS = ("recall@1", "recall@3", "recall@5", "reciprocal_rank")
 PAGEINDEX_PREFIX = "PageIndex "
 HYBRID_METHOD = "Hybrid (RRF)"
+RERANK_METHOD = "Hybrid + LLM rerank"
 BOOTSTRAP_RESAMPLES = 10_000
 BOOTSTRAP_SEED = 20261017
 
@@ -343,11 +344,13 @@ def reanalyze_saved_results() -> dict[str, Any]:
     summaries: dict[str, dict[str, Any]] = {}
     run_paths: dict[str, Path] = {}
     for per_query_path in run_files:
+        run_dir = per_query_path.parent
+        relative_run = run_dir.relative_to(RESULTS).as_posix()
+        if "/repeat_" in relative_run and run_dir.parent.joinpath("aggregate.json").exists():
+            continue
         rows = _read_json(per_query_path)
         if not rows:
             continue
-        run_dir = per_query_path.parent
-        relative_run = run_dir.relative_to(RESULTS).as_posix()
         run_id = "local" if relative_run == "." else relative_run
         summary_path = run_dir / "summary.json"
         previous = _read_json(summary_path)
@@ -429,7 +432,7 @@ def reanalyze_saved_results() -> dict[str, Any]:
         run_paths[run_id] = run_dir
 
     paired = {
-        "analysis": "Paired PageIndex vs Hybrid comparison from saved per-query rankings",
+        "analysis": "Paired PageIndex and LLM-rerank vs Hybrid comparison from saved per-query rankings",
         "bootstrap": {
             "resamples": BOOTSTRAP_RESAMPLES,
             "interval": "percentile 95% CI over paired question resamples",
@@ -441,11 +444,14 @@ def reanalyze_saved_results() -> dict[str, Any]:
     }
     for run_id, rows in all_runs.items():
         method_names = list(dict.fromkeys(row["method"] for row in rows))
-        pageindex_methods = [name for name in method_names if name.startswith(PAGEINDEX_PREFIX)]
+        compared_methods = [
+            name for name in method_names
+            if name.startswith(PAGEINDEX_PREFIX) or name == RERANK_METHOD
+        ]
         ids = sorted({row["question_id"] for row in rows})
         validator_pass = [qid for qid in ids if qid not in failed_validator_ids]
         comparisons = {}
-        for method in pageindex_methods:
+        for method in compared_methods:
             comparisons[method] = {
                 "vs_method": HYBRID_METHOD,
                 "all_questions": {
@@ -455,6 +461,64 @@ def reanalyze_saved_results() -> dict[str, Any]:
                 "validator_pass_only": {
                     "original_gold": _paired_comparison(rows, method, "", validator_pass, run_id, "validator_pass"),
                     "expanded_gold": _paired_comparison(rows, method, "expanded_", validator_pass, run_id, "validator_pass"),
+                },
+            }
+        paired["runs"][run_id] = comparisons
+
+    for agg_path in sorted(RESULTS.rglob("aggregate.json")):
+        agg_dir = agg_path.parent
+        repeat_rows: list[dict[str, Any]] = []
+        for rep_pq in sorted(agg_dir.glob("repeat_*/per_query.json")):
+            for raw_row in _read_json(rep_pq):
+                row = dict(raw_row)
+                question = question_by_id[row["question_id"]]
+                original_gold = question["source_pages"]
+                expanded_groups = _gold_groups(question)
+                expanded_gold = sorted({page for group in expanded_groups for page in group})
+                row.update(_metrics_for_row(row, original_gold))
+                row.update(_metrics_for_row(row, expanded_gold, field_prefix="expanded_", relevant_groups=expanded_groups))
+                repeat_rows.append(row)
+        if not repeat_rows:
+            continue
+        run_id = "colab_a100_run3/qwen3.8-27b_27b-trees_ctx64k (3 repeats)" if "colab_a100_run3" in agg_dir.as_posix() else agg_dir.relative_to(RESULTS).as_posix()
+        ids = sorted({row["question_id"] for row in repeat_rows})
+        validator_pass = [qid for qid in ids if qid not in failed_validator_ids]
+        method_names = list(dict.fromkeys(row["method"] for row in repeat_rows))
+        compared_methods = [
+            name for name in method_names
+            if name.startswith(PAGEINDEX_PREFIX) or name == RERANK_METHOD
+        ]
+        # Average matched repeats within question before question-level bootstrap.
+        by_m_q_run: dict[tuple[str, str], dict[int, dict[str, Any]]] = {}
+        for r in repeat_rows:
+            by_m_q_run.setdefault((r["method"], r["question_id"]), {})[int(r["run_index"])] = r
+        comparisons = {}
+        for method in compared_methods:
+            paired_rows = []
+            for qid in ids:
+                m_trials = by_m_q_run.get((method, qid), {})
+                h_trials = by_m_q_run.get((HYBRID_METHOD, qid), {})
+                matched = [
+                    (m_trials[k], h_trials[k])
+                    for k in sorted(set(m_trials) & set(h_trials))
+                    if m_trials[k].get("status") != "not_run" and h_trials[k].get("status") != "not_run"
+                ]
+                for side_name, idx in ((method, 0), (HYBRID_METHOD, 1)):
+                    avg_row: dict[str, Any] = {"method": side_name, "question_id": qid}
+                    for prefix in ("", "expanded_"):
+                        for mk in METRIC_KEYS:
+                            key = f"{prefix}{mk}"
+                            avg_row[key] = fmean(float(pair[idx][key]) for pair in matched) if matched else None
+                    paired_rows.append(avg_row)
+            comparisons[method] = {
+                "vs_method": HYBRID_METHOD,
+                "all_questions": {
+                    "original_gold": _paired_comparison(paired_rows, method, "", ids, "run3_repeat_means", "all"),
+                    "expanded_gold": _paired_comparison(paired_rows, method, "expanded_", ids, "run3_repeat_means", "all"),
+                },
+                "validator_pass_only": {
+                    "original_gold": _paired_comparison(paired_rows, method, "", validator_pass, "run3_repeat_means", "validator_pass"),
+                    "expanded_gold": _paired_comparison(paired_rows, method, "expanded_", validator_pass, "run3_repeat_means", "validator_pass"),
                 },
             }
         paired["runs"][run_id] = comparisons
